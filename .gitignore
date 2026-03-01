@@ -1,0 +1,42 @@
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Node (if using Eleventy or tooling) ---
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# --- Build output (Eleventy default) ---
+_site/
+dist/
+build/
+
+# --- Logs ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Temporary files ---
+*.tmp
+*.temp
+
+# --- OS-generated files ---
+Thumbs.db
+
+# --- Python (if ever used for tooling) ---
+__pycache__/
+*.pyc
+
+# --- Local environment files ---
+.env
+.env.*
