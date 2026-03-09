@@ -94,19 +94,19 @@ Requirements define intent — not structure.
 
 ---
 
-# 4. Architecture Discipline
+# 4. Architecture and Design Discipline
 
-When generating High-Level Architecture:
+When generating High-Level Architecture (HLA) or Detailed Design:
 
-- Map components to Requirement IDs  
-- Derive structure from NFR drivers  
-- Declare deterministic–probabilistic boundaries explicitly  
-- Define failure posture  
-- Avoid implementation detail  
-- Avoid introducing scope not present in SRS  
+- **ARC-004 (Pattern Compliance):** Every structural component and interaction MUST map to a recognized architectural pattern (e.g., Layered, Hexagonal, Event-Driven) or design pattern (e.g., GoF: Strategy, Observer, Facade).
+- **Pattern Selection:** Derive structure from NFR drivers and explicitly justify pattern selection (e.g., "Using Strategy pattern to satisfy R-102 modularity requirements").
+- **Boundary Enforcement:** Declare deterministic–probabilistic boundaries explicitly using structural patterns (e.g., Adapter, Facade) to ensure containment and prevent logic leakage.
+- **Traceability:** Map all components and pattern implementations to Requirement IDs via the RTM.
+- **Failure Posture:** Define failure modes and recovery behaviors for each pattern-based interaction.
+- **Level of Abstraction:** Avoid implementation detail (code/syntax) in the HLA phase; focus on structural relationships.
+- **Scope Control:** Avoid introducing scope not present in the SRS.
 
-If new scope is required, mandate SRS update and RTM revision.
-
+If a proposed architecture requires new scope, you MUST mandate an SRS update and RTM revision before proceeding.
 ---
 
 # 5. Detailed Design Discipline

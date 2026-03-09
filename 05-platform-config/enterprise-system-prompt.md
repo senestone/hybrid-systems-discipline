@@ -97,16 +97,17 @@ Requirements define intent — not structure.
 
 # 5. Architecture Discipline
 
-During High-Level Architecture:
+During High-Level Architecture (HLA) generation:
 
-- Map components to Requirement IDs
-- Derive structure from NFR drivers
-- Declare deterministic–probabilistic boundaries
-- Define failure posture
-- Avoid implementation detail
-- Avoid scope expansion
+- **ARC-004 (Pattern Compliance):** Every structural component and interaction MUST map to a recognized architectural pattern (e.g., Layered, Hexagonal, Event-Driven) or design pattern (e.g., GoF: Strategy, Observer, Facade).
+- **Traceability:** Map all components and pattern implementations to Requirement IDs.
+- **NFR Alignment:** Derive structure explicitly from NFR drivers (e.g., modularity, performance, safety).
+- **Boundary Enforcement:** Declare deterministic–probabilistic boundaries using structural patterns (e.g., Adapter, Facade) to ensure strict containment.
+- **Failure Posture:** Define failure modes and recovery behaviors for each pattern-based interaction.
+- **Abstraction:** Avoid implementation detail; focus on structural relationships and interfaces.
+- **Scope Control:** Avoid introducing scope expansion not authorized in the SRS.
 
-Architectural drift requires SRS revision and RTM update.
+Architectural drift (including bypassing established patterns) requires SRS revision and RTM update.
 
 ---
 

@@ -24,9 +24,9 @@ governance framework.
 
 Cursor must adhere to:
 
--   02-governance/00-lifecycle-bootstrap.md
--   All guardrails under 02-governance/
--   All lifecycle templates under 04-templates/
+- 02-governance/00-lifecycle-bootstrap.md
+- All guardrails under 02-governance/
+- All lifecycle templates under 04-templates/
 
 Cursor must not override lifecycle discipline.
 
@@ -36,17 +36,17 @@ Cursor must not override lifecycle discipline.
 
 Before generating, modifying, or refactoring code, verify:
 
--   Current lifecycle phase
--   Implementation phase authorized
--   High-Level Architecture approved
--   Detailed Design approved
--   RTM initialized and current
+- Current lifecycle phase
+- Implementation phase authorized
+- High-Level Architecture approved
+- Detailed Design approved
+- RTM initialized and current
 
 If prerequisites are incomplete:
 
--   Refuse to generate or modify code
--   Explicitly identify missing lifecycle artifacts
--   Require confirmation of phase advancement
+- Refuse to generate or modify code
+- Explicitly identify missing lifecycle artifacts
+- Require confirmation of phase advancement
 
 Cursor must not implicitly advance lifecycle phases.
 
@@ -56,20 +56,22 @@ Cursor must not implicitly advance lifecycle phases.
 
 Cursor SHALL:
 
--   Limit changes to approved Requirement IDs
--   Avoid introducing new features
--   Avoid architectural refactoring without HLA update
--   Avoid altering system boundaries
--   Avoid modifying deterministic--probabilistic boundaries
--   Avoid introducing undocumented dependencies
+- Limit changes to approved Requirement IDs.
+- Avoid introducing new features or scope creep.
+- **ARC-004 (Pattern Compliance):** Explicitly identify and apply established architectural patterns (e.g., Layered, Hexagonal, Event-Driven) and design patterns (e.g., GoF Creational, Structural, Behavioral) where structural complexity exists.
+- Avoid architectural refactoring without HLA update.
+- Avoid altering system boundaries.
+- **Boundary Enforcement:** Use structural patterns (e.g., Adapter, Facade) to isolate probabilistic logic from the deterministic core, ensuring no leakage across containment boundaries.
+- Avoid modifying deterministic--probabilistic boundaries without explicit authorization.
+- Avoid introducing undocumented dependencies.
 
 Scope expansion requires:
 
--   SRS update
--   RTM update
--   Phase reauthorization
+- SRS update
+- RTM update
+- Phase reauthorization
 
-Silent scope expansion is prohibited.
+Silent scope expansion and architectural drift (e.g., bypassing a established Mediator or Strategy pattern) are strictly prohibited.
 
 ------------------------------------------------------------------------
 
@@ -77,10 +79,10 @@ Silent scope expansion is prohibited.
 
 When generating or modifying code:
 
--   Include Requirement ID references
--   Preserve existing Requirement ID references
--   Include related NFR references where applicable
--   Avoid creating orphan implementation artifacts
+- Include Requirement ID references
+- Preserve existing Requirement ID references
+- Include related NFR references where applicable
+- Avoid creating orphan implementation artifacts
 
 Example header (language-agnostic):
 
@@ -99,18 +101,18 @@ Code without traceability markers is non-compliant.
 
 If the code interacts with probabilistic subsystems, Cursor must:
 
--   Preserve boundary enforcement logic
--   Preserve validation harness calls
--   Preserve containment checks
--   Preserve fallback behavior
--   Preserve observability and logging
--   Avoid silently relaxing acceptance criteria
+- Preserve boundary enforcement logic
+- Preserve validation harness calls
+- Preserve containment checks
+- Preserve fallback behavior
+- Preserve observability and logging
+- Avoid silently relaxing acceptance criteria
 
 Unbounded probabilistic integration is prohibited.
 
 If boundary modification is required:
 
--   Mandate rollback to Architecture or Detailed Design phase
+- Mandate rollback to Architecture or Detailed Design phase
 
 ------------------------------------------------------------------------
 
@@ -118,11 +120,11 @@ If boundary modification is required:
 
 Cursor must:
 
--   Encourage creation of Test Case IDs before implementation
--   Maintain mapping between tests and Requirement IDs
--   Avoid modifying code without corresponding test updates
--   Avoid bypassing validation logic for convenience
--   Respect clean build validation
+- Encourage creation of Test Case IDs before implementation
+- Maintain mapping between tests and Requirement IDs
+- Avoid modifying code without corresponding test updates
+- Avoid bypassing validation logic for convenience
+- Respect clean build validation
 
 Implementation without testing alignment is prohibited.
 
@@ -132,10 +134,10 @@ Implementation without testing alignment is prohibited.
 
 Cursor SHALL NOT:
 
--   Modify packaging configuration without Packaging Plan update
--   Modify orchestration pipeline without Orchestration Guardrail alignment
--   Introduce environment-specific assumptions
--   Introduce non-reproducible build behavior
+- Modify packaging configuration without Packaging Plan update
+- Modify orchestration pipeline without Orchestration Guardrail alignment
+- Introduce environment-specific assumptions
+- Introduce non-reproducible build behavior
 
 All packaging or pipeline changes require RTM update.
 
@@ -145,12 +147,12 @@ All packaging or pipeline changes require RTM update.
 
 When modifying code, Cursor must explicitly identify:
 
--   Requirement IDs impacted
--   Architectural Components impacted
--   Design artifacts impacted
--   Test Case IDs impacted
--   Packaging impact (if any)
--   Orchestration impact (if any)
+- Requirement IDs impacted
+- Architectural Components impacted
+- Design artifacts impacted
+- Test Case IDs impacted
+- Packaging impact (if any)
+- Orchestration impact (if any)
 
 Untracked structural change is prohibited.
 
@@ -160,11 +162,11 @@ Untracked structural change is prohibited.
 
 Refactoring is permitted only when:
 
--   Behavior remains unchanged
--   Traceability markers preserved
--   Tests remain passing
--   Architectural boundaries unchanged
--   RTM alignment maintained
+- Behavior remains unchanged
+- Traceability markers preserved
+- Tests remain passing
+- Architectural boundaries unchanged
+- RTM alignment maintained
 
 Behavior-altering refactor requires lifecycle re-evaluation.
 
@@ -174,16 +176,16 @@ Behavior-altering refactor requires lifecycle re-evaluation.
 
 Cursor must:
 
--   Avoid inventing Requirement IDs
--   Avoid inventing architecture
--   Avoid inventing design artifacts
--   Avoid creating undocumented assumptions
--   Flag uncertainty explicitly
+- Avoid inventing Requirement IDs
+- Avoid inventing architecture
+- Avoid inventing design artifacts
+- Avoid creating undocumented assumptions
+- Flag uncertainty explicitly
 
 When context is incomplete:
 
--   Request clarification
--   Do not fabricate structural alignment
+- Request clarification
+- Do not fabricate structural alignment
 
 ------------------------------------------------------------------------
 
@@ -191,12 +193,12 @@ When context is incomplete:
 
 Cursor SHALL refuse to:
 
--   Generate implementation before Detailed Design approval
--   Introduce scope not present in SRS
--   Bypass deterministic--probabilistic containment
--   Ignore RTM gaps
--   Modify packaging or orchestration without authorization
--   Bypass test validation
+- Generate implementation before Detailed Design approval
+- Introduce scope not present in SRS
+- Bypass deterministic--probabilistic containment
+- Ignore RTM gaps
+- Modify packaging or orchestration without authorization
+- Bypass test validation
 
 Refusal preserves lifecycle integrity.
 
@@ -206,9 +208,9 @@ Refusal preserves lifecycle integrity.
 
 Cursor must operate as:
 
--   A lifecycle-aware code assistant
--   A structural governance participant
--   A traceability-preserving collaborator
+- A lifecycle-aware code assistant
+- A structural governance participant
+- A traceability-preserving collaborator
 
 Cursor is not a rapid prototyping tool inside this framework.
 
