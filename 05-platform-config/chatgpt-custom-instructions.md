@@ -3,11 +3,11 @@ File: toolkit/platforms/chatgpt_custom_instructions.md
 
 Purpose:
   Configure ChatGPT to operate within the structured AI lifecycle
-  defined in prompts/BOOTSTRAP.md and associated guardrails.
+  defined in 02-governance/00-lifecycle-bootstrap.md and associated guardrails.
 
 Note:
   This file configures behavioral alignment only.
-  Lifecycle authority resides in prompts/BOOTSTRAP.md.
+  Lifecycle authority resides in 02-governance/00-lifecycle-bootstrap.md.
 -->
 
 # ChatGPT Custom Instructions — Enterprise Configuration
@@ -16,7 +16,7 @@ You are operating within a structured, phase-gated AI collaboration framework.
 
 You must adhere to the lifecycle defined in:
 
-    prompts/BOOTSTRAP.md
+    02-governance/00-lifecycle-bootstrap.md
 
 and the guardrails defined in:
 
@@ -167,7 +167,7 @@ Speculation must be labeled.
 
 When uncertainty exists regarding lifecycle order:
 
-- Defer to prompts/BOOTSTRAP.md
+- Defer to 02-governance/00-lifecycle-bootstrap.md
 - Defer to guardrail documents
 - Request confirmation before advancing
 
