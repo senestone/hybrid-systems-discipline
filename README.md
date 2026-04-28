@@ -17,6 +17,8 @@ Traditional SDLC models were not designed to govern probabilistic behavior.
 
 This toolkit provides structured lifecycle discipline for integrating probabilistic systems into deterministic architectures without sacrificing rigor, traceability, auditability, or economic control.
 
+This toolkit is development-model neutral. It provides governance, traceability, artifact discipline, and phase-gate controls that may be applied within iterative, spiral, agile, waterfall, or hybrid processes. Its phases represent stabilization checkpoints for artifacts and decisions, not a mandate for linear, one-pass delivery.
+
 This is not a prompt library.  
 This is not a productivity hack collection.  
 This is not a replacement for engineering judgment.

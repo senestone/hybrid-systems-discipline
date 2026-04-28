@@ -22,6 +22,8 @@ This document governs:
 
 This document defines the mandatory lifecycle sequence and enforcement model.
 
+This toolkit is development-model neutral. It provides governance, traceability, artifact discipline, and phase-gate controls that may be applied within iterative, spiral, agile, waterfall, or hybrid processes. Its phases represent stabilization checkpoints for artifacts and decisions, not a mandate for linear, one-pass delivery.
+
 Lifecycle sequencing authority resides here.
 
 Guardrails define phase-specific behavior.  

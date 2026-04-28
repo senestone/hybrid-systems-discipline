@@ -95,6 +95,8 @@ Governance must scale with capability.
 
 This toolkit differs from traditional SDLC models in three key ways:
 
+The toolkit is development-model neutral: its phases are stabilization checkpoints for artifacts and decisions, not a mandate for linear waterfall delivery.
+
 ## 1. Deterministic–Probabilistic Boundary Governance
 
 Probabilistic systems are explicitly bounded, validated, and traceable.
