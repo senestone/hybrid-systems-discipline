@@ -195,7 +195,8 @@ Enforce reproducibility and release gating.
 
 Load:
 
-- System Documentation template
+- System Documentation Package template
+- Applicable Documentation deliverable templates
 - RTM release snapshot
 - Packaging plan
 - Lifecycle Bootstrap
