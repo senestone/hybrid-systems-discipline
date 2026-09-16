@@ -19,6 +19,8 @@ This toolkit provides structured lifecycle discipline for integrating probabilis
 
 This toolkit is development-model neutral. It provides governance, traceability, artifact discipline, and phase-gate controls that may be applied within iterative, spiral, agile, waterfall, or hybrid processes. Its phases represent stabilization checkpoints for artifacts and decisions, not a mandate for linear, one-pass delivery.
 
+The toolkit governs decision readiness, artifact integrity, and traceability continuity. It does not prescribe sprint structure, implementation cadence, team ceremonies, or delivery mechanics. Teams may implement incrementally, iteratively, or continuously so long as requirements, architecture, design, validation, and release evidence remain coherent.
+
 This is not a prompt library.  
 This is not a productivity hack collection.  
 This is not a replacement for engineering judgment.
@@ -203,7 +205,7 @@ Tool configuration follows architecture — never the reverse.
 
 ## Governance Model
 
-The lifecycle is mandatory and phase-gated:
+The lifecycle is mandatory and phase-gated at the governance level:
 
 1. Ideation  
 2. Requirements (SRS)  
@@ -215,7 +217,9 @@ The lifecycle is mandatory and phase-gated:
 8. Packaging and Orchestration  
 9. Documentation Closure  
 
-No phase may be skipped or collapsed without explicit authorization.
+No governance phase may be skipped or collapsed without explicit authorization.
+
+This does not require waterfall implementation. It requires that implementation not be used as a substitute for unresolved ideation, requirements, architecture, design, traceability, or validation work.
 
 Release is prohibited without:
 
@@ -276,9 +280,9 @@ It is structural risk management for hybrid systems.
 
 Copyright (c) 2026 Charles McKnight
 
-Licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+Licensed under the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
 
-You are free to share and adapt this material for any purpose, including commercial use, provided appropriate attribution is given.
+You are free to share and adapt this material for any purpose, including commercial use, provided appropriate attribution is given and adaptations are distributed under the same license.
 
 See the LICENSE file for full details.
 

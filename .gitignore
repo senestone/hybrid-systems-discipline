@@ -40,3 +40,5 @@ __pycache__/
 # --- Local environment files ---
 .env
 .env.*
+# --- Local archives ---
+toolkit.zip
