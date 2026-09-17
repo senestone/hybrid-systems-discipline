@@ -17,6 +17,7 @@ Unlogged structural decisions are prohibited.
 Project Name:  
 Version / Branch:  
 Maintainer:  
+Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
 RTM Version Reference:  
 
 ---
@@ -25,6 +26,7 @@ RTM Version Reference:
 Date (YYYY-MM-DD):  
 Lifecycle Phase:  
 Author:  
+Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
 
 Status:
 - Proposed

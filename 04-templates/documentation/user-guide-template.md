@@ -15,6 +15,7 @@ Project Name:
 Version:  
 Date (YYYY-MM-DD):  
 Author(s):  
+Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
 Status: Draft / Approved  
 Requirement Version Reference:  
 RTM Version Reference:  

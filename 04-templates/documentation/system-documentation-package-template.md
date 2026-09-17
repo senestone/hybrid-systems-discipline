@@ -22,6 +22,7 @@ Project Name:
 Version:  
 Date (YYYY-MM-DD):  
 Author(s):  
+Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
 Status: Draft / Approved  
 Requirement Version Reference:  
 Architecture Version Reference:  
@@ -165,8 +166,10 @@ If any checklist item fails, documentation closure is prohibited.
 # 8. Approval
 
 Prepared By:  
+Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
 Reviewed By:  
 Approved By:  
+Approval accountability: Human/organizational authority only; AI tools must not be listed as approvers or approval authorities.
 Role:  
 Date:  
 Version Incremented: Yes / No  

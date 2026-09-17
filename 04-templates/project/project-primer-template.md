@@ -17,6 +17,7 @@ It does not authorize architecture or implementation.
 Project Name:  
 Initiation Date (YYYY-MM-DD):  
 Author(s):  
+Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
 Lifecycle Phase: Ideation  
 Version:  
 RTM Scaffold Created? (Yes / No)  

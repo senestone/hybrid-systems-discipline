@@ -19,6 +19,7 @@ Project Name:
 Version:  
 Date (YYYY-MM-DD):  
 Author(s):  
+Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
 Status: Draft / Approved  
 Architecture Version Reference:  
 Requirement Version Reference:  
@@ -297,6 +298,7 @@ If any answer is “No,” remain in Detailed Design.
 # Approval
 
 Approved By:  
+Approval accountability: Human/organizational authority only; AI tools must not be listed as approvers or approval authorities.
 Role:  
 Date:  
 Version Incremented: Yes / No  
