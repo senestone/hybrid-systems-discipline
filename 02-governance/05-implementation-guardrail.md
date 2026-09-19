@@ -99,6 +99,8 @@ Scope drift is a governance violation.
 
 All deviations MUST be documented and approved.
 
+For a material language, runtime, framework, storage, build, or deployment choice, record the alternatives, evidence, impacts, and accountable human approval in a [technology selection record](../04-templates/project/technology-selection-template.md) linked to the [decision log](../04-templates/project/decision-log-template.md). Verify this record against the [review checklist](../04-templates/project/technology-selection-review-checklist.md) before adopting the choice in implementation. A record does not authorize a requirement, architecture, or design change; apply rollback and reauthorization when one is needed. Routine dependency updates with no material design or operational impact remain subject to normal design, test, and change controls.
+
 ---
 
 ## 5. Deterministic–Probabilistic Boundary Preservation

@@ -83,7 +83,7 @@ Instead:
 
 Correct loading is part of governance.
 
-See `01-foundations/05-toolkit-usage-model.md` for operational guidance.
+See the [Toolkit Usage Model](01-foundations/05-toolkit-usage-model.md) for operational guidance.
 
 ---
 
@@ -111,9 +111,9 @@ Conceptual, strategic, and operational posture:
 
 - `00-whitepaper.md`
 - `01-executive-positioning.md`
-- `01-ai-operating-rules.md`
-- `02-debug-triage-playbook.md`
-- `03-pilot-program-guide.md`
+- `02-ai-operating-rules.md`
+- `03-debug-triage-playbook.md`
+- `04-pilot-program-guide.md`
 - `05-toolkit-usage-model.md`
 
 These documents define why the discipline exists and how it is operationalized.
@@ -124,7 +124,7 @@ These documents define why the discipline exists and how it is operationalized.
 
 Constitutional lifecycle control and guardrails:
 
-- `00-lifecycle-bootstrap.md` (authoritative sequencing control)
+- [Lifecycle Bootstrap](02-governance/00-lifecycle-bootstrap.md) (authoritative sequencing control)
 - Phase-specific guardrails:
   - Ideation
   - Requirements
@@ -137,7 +137,9 @@ Constitutional lifecycle control and guardrails:
   - Traceability
   - Packaging
   - Orchestration
-- `Phase Gate Checklist`
+- [Phase Gate Checklist](02-governance/12-phase-gate-checklist.md)
+
+The [Guardrails Index](02-governance/guardrails-index.md) links every phase guardrail.
 
 Guardrails enforce behavior within phases.  
 Lifecycle sequencing authority resides in the Bootstrap.
@@ -160,27 +162,32 @@ Supports leadership-level governance alignment and integration maturity planning
 Structured execution artifacts.
 
 **Project Templates**
-- Daily Log Template
-- Decision Log Template
-- Project Primer Template
+- [Project Primer](04-templates/project/project-primer-template.md): intent and scope during Ideation.
+- [Decision Log](04-templates/project/decision-log-template.md): approved decisions, authority, and change lineage across phases.
+- [Daily Log](04-templates/project/daily-log-template.md): phase status, work, issues, and traceability updates.
+- [Technology Selection Record](04-templates/project/technology-selection-template.md): evidence and impacts for material implementation choices; link its ID to the Decision Log.
+- [Technology Selection Review Checklist](04-templates/project/technology-selection-review-checklist.md): review the selection record before approval and adoption.
+- [Work Effort Log](04-templates/project/work-effort-log-template.md): measured human effort with artifact or commit links, separate from the Daily Log.
+
+Create project-specific copies of these templates. Use stable IDs and links between a technology selection record, its Decision Log entry, and the affected Requirements, Architecture, Detailed Design, RTM, Test Plan, and release artifacts. Mark downstream references pending until that phase produces them; resolve them before the applicable approval gate. The [Lifecycle Bootstrap](02-governance/00-lifecycle-bootstrap.md) and [Phase Gate Checklist](02-governance/12-phase-gate-checklist.md) govern when those links become required.
 
 **System Templates**
-- Requirements Template
-- Architecture Template
-- Detailed Design Template
-- Test Plan Template
-- Packaging Plan Template
-- Traceability Matrix Template
+- [Requirements](04-templates/system/requirements-template.md)
+- [Architecture](04-templates/system/architecture-template.md)
+- [Detailed Design](04-templates/system/detailed-design-template.md)
+- [Traceability Matrix](04-templates/system/traceability-matrix-template.md)
+- [Test Plan](04-templates/system/test-plan-template.md)
+- [Packaging Plan](04-templates/system/packaging-plan-template.md)
 
 **Documentation Templates**
-- System Documentation Package Template
-- System Overview Template
-- Installation Guide Template
-- User Guide Template
-- Administration Guide Template
-- Online Help / In-Product Help Template
-- Release Notes Template
-- Operational Runbook Template
+- [System Documentation Package](04-templates/documentation/system-documentation-package-template.md)
+- [System Overview](04-templates/documentation/system-overview-template.md)
+- [Installation Guide](04-templates/documentation/installation-guide-template.md)
+- [User Guide](04-templates/documentation/user-guide-template.md)
+- [Administration Guide](04-templates/documentation/administration-guide-template.md)
+- [Online Help / In-Product Help](04-templates/documentation/online-help-template.md)
+- [Release Notes](04-templates/documentation/release-notes-template.md)
+- [Operational Runbook](04-templates/documentation/operational-runbook-template.md)
 
 Templates convert abstract discipline into executable structure.
 

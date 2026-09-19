@@ -171,6 +171,7 @@ Load:
 - RTM
 - Platform configuration
 - Cursor rules (if using Cursor)
+- Technology selection record and review checklist when a material implementation choice is pending
 
 Purpose:
 Controlled execution with traceability preservation.

@@ -158,6 +158,7 @@ Human approval required.
 - Failure scenario coverage defined  
 - Deterministic–probabilistic containment validation defined  
 - RTM updated with Test Case IDs  
+- Material implementation technology choices have approved, linked selection and decision records, or remain explicitly pending until before adoption in Implementation
 
 Implementation without defined validation SHALL NOT begin.
 

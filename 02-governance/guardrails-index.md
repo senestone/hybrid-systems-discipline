@@ -84,6 +84,7 @@ Enforces:
 - Traceability preservation  
 - Controlled refactoring  
 - Scope discipline  
+- Evidence and approval for material implementation technology choices ([selection record](../04-templates/project/technology-selection-template.md), [review checklist](../04-templates/project/technology-selection-review-checklist.md))
 
 ---
 

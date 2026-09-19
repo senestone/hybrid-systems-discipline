@@ -176,6 +176,7 @@ Record:
 - System documentation version
 - Artifact version (if applicable)
 - Related prior Decision Log entries
+- Related technology selection record ID and link (when the decision selects a material implementation technology)
 
 Decision lineage must be reconstructable.
 
