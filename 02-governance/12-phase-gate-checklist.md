@@ -47,6 +47,13 @@ Advancement requires explicit human approval.
 
 No phase skipping is permitted.
 
+At every gate:
+
+- The Project Risk Register SHALL be reviewed and current.
+- Material changes SHALL have approved Change Proposal and Impact Assessments linked to affected artifacts.
+- New or revised controlled terminology SHALL be reflected in the Project Glossary.
+- Unresolved High or Critical risks, unapproved material changes, or invalidated assumptions SHALL block advancement unless explicitly dispositioned by accountable human authority.
+
 ---
 
 # Gate 1 → 2  
@@ -58,6 +65,7 @@ No phase skipping is permitted.
 - Stakeholders identified  
 - Constraints documented  
 - Risks identified  
+- Initial Project Risk Register created
 - Success criteria defined  
 - Alternative solution paths explored  
 - Initial project glossary for the governed project instance created or explicitly deferred with justification
@@ -83,6 +91,7 @@ Human approval required.
 - Requirement IDs stable  
 - Initial RTM scaffold created  
 - Glossary entries current for SRS terminology, acronyms, and abbreviations
+- Requirement risks and assumptions linked to the Project Risk Register
 
 Requirements instability SHALL block architectural work.
 
@@ -104,6 +113,7 @@ Human approval required.
 - Deployment model declared  
 - Requirement-to-Architecture mapping complete  
 - Glossary entries current for architectural terminology, acronyms, and abbreviations
+- Architecture risks and dependencies linked to the Project Risk Register
 
 If boundary modeling is incomplete, advancement is prohibited.
 
@@ -125,6 +135,7 @@ Human approval required.
 - Performance assumptions documented  
 - Requirement-to-Design mapping complete  
 - Glossary entries current for design terminology, acronyms, and abbreviations
+- Design risks, assumptions, and interface dependencies linked to the Project Risk Register
 
 Design without traceability linkage SHALL block advancement.
 
@@ -143,6 +154,7 @@ Human approval required.
 - No orphaned design artifacts  
 - Version identifier assigned  
 - Impact analysis completed for recent changes  
+- Material changes linked to approved Change Proposal and Impact Assessments
 - Glossary terminology consistent with RTM mappings
 
 Traceability gaps SHALL block advancement.
@@ -165,6 +177,7 @@ Human approval required.
 - RTM updated with Test Case IDs  
 - Material implementation technology choices have approved, linked selection and decision records, or remain explicitly pending until before adoption in Implementation
 - Glossary entries current for test terminology, acronyms, and abbreviations
+- Verification and Validation Report structure and evidence-retention approach defined
 
 Implementation without defined validation SHALL NOT begin.
 
@@ -181,6 +194,7 @@ Human approval required.
 - No unauthorized scope present  
 - Code documentation complete  
 - Tests implemented and passing  
+- Verification and Validation Report reconciles executed tests, evidence, defects, and deviations
 - Deterministic–probabilistic containment verified  
 - RTM fully updated  
 - Clean build succeeds  
@@ -204,6 +218,7 @@ Human approval required.
 - Version metadata embedded  
 - Deterministic–probabilistic boundaries intact in packaged form  
 - Observability verified  
+- Packaged-environment validation recorded in the Verification and Validation Report
 - RTM reflects release state  
 - Glossary entries current for packaging and orchestration terminology, acronyms, and abbreviations
 
@@ -224,6 +239,9 @@ Human approval required.
 - Known limitations documented  
 - Change log updated  
 - Project glossary for the governed project instance updated and linked from documentation package
+- Project Risk Register current with release-relevant items dispositioned
+- Verification and Validation Report approved as an accurate evidence record
+- Release-relevant Change Proposal and Impact Assessments closed or explicitly carried forward
 - Version identifiers aligned across artifacts  
 - RTM version state finalized  
 - Audit review completed  

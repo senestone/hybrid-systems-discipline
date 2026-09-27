@@ -48,9 +48,15 @@ This establishes:
 - Refusal protocol
 - Rollback rules
 
-No templates are required during ideation.
+No phase-specific specification templates are required during ideation. Cross-lifecycle control templates remain applicable when their triggers occur.
 
 The Project Glossary template MAY be loaded during Ideation when controlled terminology, abbreviations, or acronyms begin to emerge.
+
+The Project Risk Register template SHALL be loaded when risks, assumptions, issues, or dependencies are identified. Once created, the active register remains available throughout the lifecycle.
+
+The Change Proposal and Impact Assessment template SHALL be loaded whenever a proposed change may affect an approved artifact, lifecycle boundary, validation obligation, or release posture.
+
+The Work Effort Log template MAY be loaded in any phase when the project elects to measure human effort. It is a planning and audit-support artifact, not a phase-gate deliverable or evidence of engineering quality.
 
 ---
 
@@ -64,6 +70,7 @@ Load:
 - Enterprise System Prompt
 - Platform configuration
 - Project Glossary template when terminology is being formalized
+- Project Risk Register template
 
 Do NOT load:
 
@@ -86,6 +93,8 @@ Load:
 - SRS template
 - Traceability template (optional scaffold)
 - Project Glossary template
+- Active Project Risk Register
+- Change Proposal and Impact Assessment template when approved requirements or scope may change
 - Enterprise System Prompt
 - Platform config
 
@@ -109,6 +118,8 @@ Load:
 - Architecture template
 - RTM template
 - Active Project Glossary
+- Active Project Risk Register
+- Change Proposal and Impact Assessment template when an approved artifact may change
 - Enterprise System Prompt
 - Platform config
 
@@ -127,6 +138,8 @@ Load:
 - Detailed Design template
 - RTM template
 - Active Project Glossary
+- Active Project Risk Register
+- Change Proposal and Impact Assessment template when an approved artifact may change
 - Enterprise System Prompt
 - Platform config
 
@@ -145,6 +158,8 @@ Load:
 - Detailed Design
 - Lifecycle Bootstrap
 - Active Project Glossary
+- Active Project Risk Register
+- Active Change Proposal and Impact Assessments
 
 Purpose:
 Confirm structural completeness before implementation.
@@ -161,6 +176,8 @@ Load:
 - Lifecycle Bootstrap
 - Enterprise System Prompt
 - Active Project Glossary
+- Active Project Risk Register
+- Active Change Proposal and Impact Assessments
 
 Purpose:
 Define validation strategy prior to implementation.
@@ -178,6 +195,9 @@ Load:
 - Test Plan
 - RTM
 - Active Project Glossary
+- Active Project Risk Register
+- Active Change Proposal and Impact Assessments
+- Verification and Validation Report template when recording executed results
 - Platform configuration
 - Cursor rules (if using Cursor)
 - Technology selection record and review checklist when a material implementation choice is pending
@@ -196,6 +216,9 @@ Load:
 - RTM
 - Lifecycle Bootstrap
 - Active Project Glossary
+- Active Project Risk Register
+- Active Change Proposal and Impact Assessments
+- Verification and Validation Report
 
 Purpose:
 Enforce reproducibility and release gating.
@@ -211,6 +234,9 @@ Load:
 - RTM release snapshot
 - Packaging plan
 - Active Project Glossary
+- Active Project Risk Register
+- Closed or release-relevant Change Proposal and Impact Assessments
+- Approved Verification and Validation Report
 - Lifecycle Bootstrap
 
 Purpose:
@@ -227,6 +253,7 @@ Load:
 - Lifecycle Bootstrap
 - Platform config
 - Current phase template only
+- Active cross-lifecycle control artifacts when applicable
 
 Use for:
 - Smaller teams

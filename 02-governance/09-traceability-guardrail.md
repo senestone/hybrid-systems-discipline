@@ -74,6 +74,9 @@ Optional but recommended:
 
 - Owner
 - Risk classification
+- Risk Register ID(s)
+- Change Proposal and Impact Assessment ID(s)
+- Validation evidence reference
 - Release target
 
 RTM schema SHALL be stable and governed.
@@ -148,6 +151,7 @@ Each Test Case ID MUST:
 - Reference Implementation artifact
 - Define explicit validation criteria
 - Record validation result
+- Link to retained evidence in the Verification and Validation Report or another approved evidence artifact
 
 If a requirement cannot be tested, it SHALL be revised.
 
@@ -182,7 +186,7 @@ When any artifact changes:
 - Implementation
 - Test
 
-The RTM SHALL be updated immediately.
+The RTM SHALL be updated immediately. A material change SHALL reference an approved Change Proposal and Impact Assessment.
 
 Impact analysis SHALL include:
 
@@ -191,6 +195,8 @@ Impact analysis SHALL include:
 - Failure posture impact
 - Boundary integrity impact
 - Packaging and orchestration implications
+- Project Risk Register implications
+- Glossary and documentation implications
 
 Unassessed change impact is prohibited.
 
@@ -268,6 +274,9 @@ Traceability is valid only when:
 - All Implementation artifacts are mapped
 - All Test Cases are mapped
 - Validation status is visible
+- Material changes link to Change IDs
+- Release-state validation links to approved evidence
+- Relevant risks link to Risk IDs
 - No orphaned artifacts exist
 - Version metadata is present
 - Human approval is granted

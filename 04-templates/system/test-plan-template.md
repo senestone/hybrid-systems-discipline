@@ -24,6 +24,9 @@ Requirement Version Reference:
 Architecture Version Reference:  
 RTM Version Reference:  
 Glossary Version Reference:
+Risk Register Version Reference:
+Relevant Change Assessment References:
+Verification and Validation Report Reference:
 
 ---
 
@@ -267,8 +270,11 @@ Define:
 - Defect density  
 - Pass/fail thresholds  
 - Trend tracking  
+- Verification and Validation Report ownership, evidence locations, and reporting cadence
 
 Metrics SHALL support governance and audit reconstruction.
+
+The Verification and Validation Report SHALL reconcile planned tests with executed results, retained evidence, deviations, defects, requirement coverage, and residual risk.
 
 ---
 
@@ -280,6 +286,8 @@ Identify:
 - Architectural risk concentration points  
 - Integration fragility  
 - Probabilistic containment risk (if applicable)  
+
+Persistent or cross-cutting risks SHALL reference stable IDs in the Project Risk Register.
 - Operational risk  
 
 High-risk items SHALL receive increased validation depth.

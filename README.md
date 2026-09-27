@@ -164,12 +164,15 @@ Structured execution artifacts.
 **Project Templates**
 - [Project Primer](04-templates/project/project-primer-template.md): intent and scope during Ideation.
 - [Decision Log](04-templates/project/decision-log-template.md): approved decisions, authority, and change lineage across phases.
+- [Project Glossary](04-templates/project/project-glossary-template.md): authoritative normative terms, abbreviations, and acronyms for a project instantiated from the toolkit.
+- [Project Risk Register](04-templates/project/project-risk-register-template.md): lifecycle-wide risks, assumptions, issues, dependencies, responses, and human acceptance.
+- [Change Proposal and Impact Assessment](04-templates/project/change-impact-assessment-template.md): proposed change scope, affected artifacts, rollback phase, risks, verification, and authorization.
 - [Daily Log](04-templates/project/daily-log-template.md): phase status, work, issues, and traceability updates.
 - [Technology Selection Record](04-templates/project/technology-selection-template.md): evidence and impacts for material implementation choices; link its ID to the Decision Log.
 - [Technology Selection Review Checklist](04-templates/project/technology-selection-review-checklist.md): review the selection record before approval and adoption.
-- [Work Effort Log](04-templates/project/work-effort-log-template.md): measured human effort with artifact or commit links, separate from the Daily Log.
+- [Work Effort Log](04-templates/project/work-effort-log-template.md): optional measured human effort with lifecycle, artifact, and governed-ID links; automated runtime remains separate.
 
-Create project-specific copies of these templates. Use stable IDs and links between a technology selection record, its Decision Log entry, and the affected Requirements, Architecture, Detailed Design, RTM, Test Plan, and release artifacts. Mark downstream references pending until that phase produces them; resolve them before the applicable approval gate. The [Lifecycle Bootstrap](02-governance/00-lifecycle-bootstrap.md) and [Phase Gate Checklist](02-governance/12-phase-gate-checklist.md) govern when those links become required.
+Create project-specific copies of these templates. Use stable IDs and links among decisions, changes, risks, technology selections, and affected Requirements, Architecture, Detailed Design, RTM, Test Plan, validation evidence, and release artifacts. Mark downstream references pending until that phase produces them; resolve them before the applicable approval gate. The [Lifecycle Bootstrap](02-governance/00-lifecycle-bootstrap.md) and [Phase Gate Checklist](02-governance/12-phase-gate-checklist.md) govern when those links become required.
 
 **System Templates**
 - [Requirements](04-templates/system/requirements-template.md)
@@ -177,6 +180,7 @@ Create project-specific copies of these templates. Use stable IDs and links betw
 - [Detailed Design](04-templates/system/detailed-design-template.md)
 - [Traceability Matrix](04-templates/system/traceability-matrix-template.md)
 - [Test Plan](04-templates/system/test-plan-template.md)
+- [Verification and Validation Report](04-templates/system/verification-validation-report-template.md)
 - [Packaging Plan](04-templates/system/packaging-plan-template.md)
 
 **Documentation Templates**
@@ -269,6 +273,7 @@ Repository agents must:
 - Preserve traceability discipline and human gate authority.
 - Use adversarial collaboration while preserving epistemic fidelity.
 - Avoid turning qualified claims into stronger claims before critique.
+- Maintain active change, risk, glossary, and validation-evidence records when the applicable triggers occur.
 
 For monorepos or nested workspaces, keep root `AGENTS.md` canonical and add narrower local guidance only when a subproject genuinely requires different behavior.
 

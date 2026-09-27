@@ -118,9 +118,11 @@ If any of the following occur:
 
 Then:
 
+- A Change Proposal and Impact Assessment SHALL identify the affected artifacts, risks, validation obligations, and earliest impacted phase.
 - The lifecycle SHALL roll back to the earliest impacted phase.
 - RTM SHALL be updated.
 - Decision Log SHALL record the change.
+- Project Risk Register SHALL be updated when risk, assumption, issue, or dependency posture changes.
 - Human reauthorization SHALL be required.
 
 Untracked structural change is prohibited.
@@ -181,6 +183,8 @@ Passing tests are mandatory before Packaging.
 
 Testing without traceability is invalid.
 
+Executed results, deviations, evidence references, residual risks, and release recommendation SHALL be recorded in a Verification and Validation Report.
+
 ---
 
 # 9. Packaging and Release Gating
@@ -191,6 +195,8 @@ Before release authorization:
 - Artifact integrity validated
 - Version alignment confirmed
 - Deterministic–probabilistic containment preserved
+- Verification and Validation Report approved as an accurate evidence record
+- Open release-relevant risks reviewed and explicitly dispositioned
 - RTM release snapshot finalized
 - Documentation aligned
 
@@ -210,6 +216,9 @@ Lifecycle completion requires:
 - Updated architecture summary
 - Updated packaging details
 - Updated project glossary for the governed project instance
+- Current Project Risk Register with release-relevant items dispositioned
+- Approved Verification and Validation Report
+- Closed or explicitly carried-forward release-relevant change assessments
 - Final RTM snapshot
 - Formal human approval
 
@@ -243,6 +252,7 @@ The AI agent SHALL:
 - Enforce rollback when required
 - Preserve traceability integrity
 - Preserve glossary and terminology integrity
+- Preserve change-impact, risk, and verification-evidence integrity
 - Promote reproducibility
 - Preserve deterministic–probabilistic containment
 - Maintain professional tone

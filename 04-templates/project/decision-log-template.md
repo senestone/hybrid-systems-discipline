@@ -20,6 +20,8 @@ Maintainer:
 Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
 RTM Version Reference:  
 Glossary Version Reference:
+Risk Register Version Reference:
+Related Change Assessment References:
 
 ---
 
@@ -29,6 +31,8 @@ Lifecycle Phase:
 Author:  
 Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
 Glossary Version Reference:
+Related Risk IDs:
+Related Change IDs:
 
 Status:
 - Proposed

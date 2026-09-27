@@ -63,6 +63,9 @@ System documentation SHALL include, at minimum:
 - System purpose and scope
 - Requirement scope reference
 - Project glossary reference
+- Project Risk Register reference
+- Verification and Validation Report reference
+- Release-relevant Change Proposal and Impact Assessment references
 - Architectural summary
 - Component inventory
 - Deterministic–probabilistic boundary declaration
@@ -227,6 +230,9 @@ System documentation is considered lifecycle-complete only when:
 - Failure posture is summarized
 - Traceability references are visible
 - Glossary reference is current
+- Project Risk Register reference is current
+- Verification and Validation Report and RTM evidence references align
+- Release-relevant change assessments are closed or explicitly carried forward
 - Acronym and abbreviation first-use links are present
 - Version and update metadata are present
 - Human approval is granted

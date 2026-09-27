@@ -24,6 +24,8 @@ Status: Draft / Approved
 Project Primer Version Reference:  
 RTM Scaffold Version:  
 Glossary Version Reference:
+Risk Register Version Reference:
+Relevant Change Assessment References:
 
 ---
 

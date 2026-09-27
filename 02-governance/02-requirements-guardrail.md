@@ -110,6 +110,8 @@ All assumptions must be:
 
 Unstated assumptions become hidden risks.
 
+Assumptions whose invalidation could affect scope, feasibility, acceptance criteria, or lifecycle progression SHALL be linked to the Project Risk Register.
+
 ---
 
 # Scope Control
@@ -189,6 +191,8 @@ If architectural reasoning begins to dominate, surface the phase violation.
 
 Progression requires approval.
 
+Material revision to approved requirements SHALL use a Change Proposal and Impact Assessment and return to the earliest affected lifecycle phase before downstream work continues.
+
 ---
 
 # Advancement Conditions
@@ -204,6 +208,7 @@ The Requirements Phase is complete only when:
 - Unique requirement IDs are assigned.
 - Traceability structure is established.
 - Glossary entries and first-use links are current.
+- Requirement-level risks and assumptions are reflected in the Project Risk Register.
 - Explicit human approval is granted.
 
 Architecture must not begin until Requirements are formally approved.

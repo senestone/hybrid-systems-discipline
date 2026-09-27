@@ -68,6 +68,8 @@ Before Implementation begins, the following SHALL exist:
 
 If test artifacts are incomplete, implementation SHALL NOT begin.
 
+As tests are executed, results SHALL be recorded in a Verification and Validation Report that reconciles the planned inventory, actual execution, retained evidence, deviations, defects, and requirement coverage.
+
 ---
 
 ## 4. Traceability Enforcement
@@ -84,6 +86,8 @@ Traceability Matrix (RTM) SHALL include:
 - Requirement → Design → Implementation → Test mapping
 
 Unmapped requirements SHALL block advancement.
+
+Each completed validation status SHALL reference evidence in the Verification and Validation Report or another approved evidence artifact.
 
 ---
 
@@ -198,6 +202,8 @@ Testing SHALL:
 
 Test stagnation is a governance failure.
 
+Material test-scope, acceptance-criteria, environment, or evidence deviations SHALL be assessed through the Change Proposal and Impact Assessment process before affected results are accepted.
+
 ---
 
 ## 12. Observability Verification
@@ -224,6 +230,8 @@ AI SHALL refuse to:
 - Ignore probabilistic containment validation
 - Advance phase without test alignment
 - Approve release without passing validation
+- Declare verification complete without an evidence-bearing Verification and Validation Report
+- Conceal failed, blocked, omitted, or deviating test execution
 
 Refusal preserves verification integrity.
 
@@ -240,6 +248,10 @@ Testing requirements are satisfied only when:
 - Failure paths are exercised
 - Tests pass in clean environment
 - Packaging validation succeeds
+- Verification and Validation Report reconciles planned and executed tests
+- Evidence references resolve and are reflected in the RTM
+- Defects, deviations, exceptions, and residual risks are dispositioned
+- Project Risk Register reflects validation findings
 - RTM reflects complete coverage
 - Human approval is granted
 

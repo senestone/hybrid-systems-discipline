@@ -134,7 +134,7 @@ Selection occurs in later phases.
 
 # Risk Identification
 
-Document:
+Create or update the Project Risk Register and document:
 
 - Technical risks
 - Organizational risks
@@ -144,6 +144,8 @@ Document:
 - External dependencies
 
 Risk surfacing is mandatory.
+
+Each continuing risk, assumption, issue, or dependency SHALL receive a stable register ID, owner or accountable role, and review posture before advancement.
 
 ---
 
@@ -169,6 +171,7 @@ The Ideation Phase is complete only when:
 - Stakeholders are identified.
 - Constraints are documented.
 - Risks are surfaced.
+- The Project Risk Register is current for identified risks, assumptions, issues, and dependencies.
 - Alternative solution directions are explored.
 - Conceptual success criteria are defined.
 

@@ -24,6 +24,8 @@ Architecture version:
 Detailed Design version:
 RTM version:
 Glossary version:
+Risk Register version:
+Related Change ID(s):
 
 Use `Not yet available` with a reason for downstream artifact versions that do not exist in the current phase. Replace these before approval for implementation.
 

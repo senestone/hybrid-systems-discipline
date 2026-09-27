@@ -25,6 +25,8 @@ Architecture Version Reference:
 Design Version Reference:  
 Test Plan Version Reference:  
 Glossary Version Reference:
+Risk Register Version Reference:
+Verification and Validation Report Version Reference:
 
 ---
 
@@ -60,12 +62,12 @@ Traceability SHALL be bidirectional and complete.
 
 # 3. Core Traceability Matrix
 
-| Req ID | Req Type | HLA Component ID | DD Artifact | Implementation Unit | Test Case ID | Packaging Ref | Orchestration Ref | Validation Status | Evidence Ref |
-|--------|----------|------------------|------------|---------------------|--------------|---------------|-------------------|-------------------|--------------|
+| Req ID | Req Type | HLA Component ID | DD Artifact | Implementation Unit | Test Case ID | Change Ref | Risk Ref | Packaging Ref | Orchestration Ref | Validation Status | Evidence Ref |
+|--------|----------|------------------|-------------|---------------------|--------------|------------|----------|---------------|-------------------|-------------------|--------------|
 
 Example:
 
-| FR-001 | FR | HLA-Auth | DD-Login | auth/login.py | TC-001 | PKG-v1.0 | ORCH-Build-01 | Verified | TEST-REPORT-001 |
+| FR-001 | FR | HLA-Auth | DD-Login | auth/login.py | TC-001 | CHG-001 | RSK-001 | PKG-v1.0 | ORCH-Build-01 | Verified | VAL-001 |
 
 ---
 
@@ -88,6 +90,12 @@ Code module, package, service, or deployment unit.
 
 **Test Case ID**  
 Validation case identifier.
+
+**Change Ref**
+Change Proposal and Impact Assessment ID when the row is affected by a material change.
+
+**Risk Ref**
+Project Risk Register ID for release-relevant exposure associated with the row.
 
 **Packaging Ref**  
 Reference to packaging plan artifact or release identifier.
@@ -175,11 +183,12 @@ When any of the following change:
 - Packaging configuration  
 - Orchestration pipeline  
 
-The RTM SHALL be updated immediately.
+The RTM SHALL be updated immediately. Material changes SHALL reference the applicable Change ID.
 
 Each update SHALL record:
 
 - Date  
+- Change ID, when material
 - Change summary  
 - Impacted IDs  
 - Phase rollback requirement (if any)  
@@ -212,6 +221,9 @@ Before release authorization:
 - RTM Version incremented  
 - Validation status updated to release state  
 - Evidence references finalized  
+- Verification and Validation Report version aligned
+- Release-relevant Risk IDs dispositioned
+- Change IDs closed or explicitly carried forward
 - Packaging reference aligned to artifact  
 - Orchestration reference aligned to build  
 - Documentation version aligned  

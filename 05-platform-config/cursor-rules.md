@@ -181,6 +181,15 @@ For each project instantiated from this toolkit, Cursor must preserve project gl
 - Do not create competing local definitions unless the document-specific nuance is explicitly required and reconciled with the glossary.
 - Treat unresolved terminology conflicts as documentation and traceability risks.
 
+Cross-lifecycle record discipline:
+
+- Update the Project Risk Register when implementation work identifies or changes a material risk, assumption, issue, or dependency.
+- Require a Change Proposal and Impact Assessment before proceeding with a material change to an approved artifact or lifecycle obligation.
+- Record executed validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
+- Keep Change IDs, Risk IDs, validation status, and evidence references aligned with the RTM.
+- Never treat a generated record or recommendation as human authorization, risk acceptance, phase advancement, or release approval.
+- When Work Effort Log tracking is active, record only reliable human effort measurements; use `Unmeasured` rather than infer effort from conversation timestamps, commits, artifact changes, or automated runtime.
+
 ------------------------------------------------------------------------
 
 # 10. Hallucination Guardrails

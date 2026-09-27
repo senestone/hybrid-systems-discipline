@@ -19,6 +19,17 @@ Agents must maintain the project-wide glossary for each project instantiated fro
 - Do not create competing local definitions unless a document-specific nuance is explicitly required and reconciled with the glossary.
 - Treat unresolved terminology conflicts as documentation and traceability risks.
 
+## Cross-Lifecycle Record Discipline
+
+Agents must maintain the governed records that connect change, risk, and validation evidence for each project instantiated from this toolkit.
+
+- Add or update Project Risk Register entries when work identifies or changes a material risk, assumption, issue, or dependency.
+- Require a Change Proposal and Impact Assessment before proceeding with a material change to approved scope, requirements, architecture, design, validation obligations, packaging, operations, or documentation.
+- Record executed verification and validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
+- Keep Change IDs, Risk IDs, validation status, and evidence references aligned with the RTM and affected lifecycle artifacts.
+- Do not treat a generated record, recommendation, or status as human authorization, risk acceptance, phase advancement, or release approval.
+- When a Work Effort Log is active, record only reliable human effort measurements supplied by an accountable person or captured under an agreed measurement protocol. Mark effort `Unmeasured` rather than infer it from conversation timestamps, artifact changes, commits, or agent runtime; record automated runtime separately.
+
 ## Review Behavior
 
 Use adversarial collaboration during design, implementation, and review.

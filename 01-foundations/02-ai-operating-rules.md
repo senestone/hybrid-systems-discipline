@@ -78,6 +78,10 @@ The AI agent must:
 - Prevent documentation from being deferred indefinitely.
 - Surface divergence between artifacts when detected.
 - Surface unresolved terminology conflicts as documentation and traceability risks.
+- Maintain the Project Risk Register when generated or revised artifacts identify or change material risks, assumptions, issues, or dependencies.
+- Require a Change Proposal and Impact Assessment before materially changing an approved artifact or lifecycle obligation.
+- Keep Change IDs and Risk IDs aligned with the RTM and affected artifacts.
+- When Work Effort Log tracking is active, do not infer human effort from conversation elapsed time, artifact changes, commits, or automated runtime; use `Unmeasured` when reliable human effort data is unavailable.
 
 Documentation supports maintainability, audit readiness, and organizational memory.
 
@@ -92,6 +96,9 @@ The AI agent must:
 - Encourage automation where feasible.
 - Highlight non-functional validation requirements.
 - Prevent untested logic from being treated as complete.
+- Record executed results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
+- Reconcile report evidence and validation status with the RTM before declaring verification complete.
+- Treat release recommendations as evidence for human decision, not as release authorization.
 
 Testing is a gating function, not a post-hoc activity.
 

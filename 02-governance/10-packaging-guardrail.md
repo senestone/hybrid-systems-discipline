@@ -39,6 +39,8 @@ Packaging SHALL NOT proceed unless:
 
 - Implementation phase is complete
 - Test validation has passed
+- Verification and Validation Report records passing or explicitly accepted results
+- Release-relevant risks and change assessments are dispositioned
 - Traceability Matrix is current
 - System documentation is aligned
 - Advancement from prior phase is authorized
@@ -168,7 +170,9 @@ Version ambiguity is unacceptable.
 
 If packaging configuration changes:
 
+- Change Proposal and Impact Assessment SHALL be created or updated when the change is material
 - RTM SHALL be updated
+- Project Risk Register SHALL be updated when exposure changes
 - Documentation SHALL be updated
 - Deployment model SHALL be revalidated
 - Tests SHALL be re-executed
@@ -218,6 +222,8 @@ Packaging is complete only when:
 - Versioning metadata is embedded
 - RTM is updated
 - System documentation reflects packaging posture
+- Verification and Validation Report includes packaged-environment results and evidence
+- Release-relevant risk and change records are current
 - Human approval is granted
 
 If any condition is unmet, release is prohibited.

@@ -25,6 +25,8 @@ Architecture Version Reference:
 Requirement Version Reference:  
 RTM Version Reference:  
 Glossary Version Reference:
+Risk Register Version Reference:
+Relevant Change Assessment References:
 
 ---
 

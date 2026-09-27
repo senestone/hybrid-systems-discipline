@@ -23,6 +23,9 @@ Status: Draft / Approved
 Architecture Version Reference:  
 RTM Version Reference:  
 Glossary Version Reference:
+Risk Register Version Reference:
+Relevant Change Assessment References:
+Verification and Validation Report Reference:
 
 ---
 

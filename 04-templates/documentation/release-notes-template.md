@@ -20,6 +20,9 @@ Status: Draft / Approved
 Packaging Artifact Reference:  
 RTM Release Snapshot Reference:  
 Glossary Version Reference:
+Risk Register Version Reference:
+Verification and Validation Report Reference:
+Release-Relevant Change Assessment References:
 
 ---
 
@@ -52,11 +55,8 @@ Release notes SHALL align with approved scope and packaged artifact version.
 
 Document:
 
-- New capabilities
-- Changed behavior
-- Removed or deprecated behavior
-- Configuration changes
-- Operational changes
+| Change ID | Summary | Affected Requirement IDs | Compatibility or Operational Impact | Evidence Reference |
+|-----------|---------|--------------------------|-------------------------------------|--------------------|
 
 Behavioral changes SHALL be traceable to approved requirements or change control.
 
@@ -76,7 +76,7 @@ Document:
 
 - Known limitations
 - Workarounds
-- Risk posture
+- Risk IDs and posture
 - Planned follow-up, if approved
 
 Known limitations SHALL NOT contradict release approval criteria.

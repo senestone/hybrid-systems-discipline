@@ -151,6 +151,8 @@ Record:
 - Probabilistic containment validation status (if applicable)
 - Clean build result
 - CI/CD result (if applicable)
+- Verification and Validation Report updated? (Yes / No / Not Applicable)
+- Evidence references added or changed
 
 Validation gaps must be visible daily.
 
@@ -164,6 +166,8 @@ Indicate explicitly:
 - New mappings added?
 - Orphaned artifacts detected?
 - Version identifier incremented?
+- Change IDs updated?
+- Risk IDs updated?
 
 If RTM is not updated during structural change, advancement is prohibited.
 

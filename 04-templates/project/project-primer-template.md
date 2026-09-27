@@ -22,6 +22,7 @@ Lifecycle Phase: Ideation
 Version:  
 RTM Scaffold Created? (Yes / No)  
 Glossary Created? (Yes / No)
+Project Risk Register Created? (Yes / No)
 
 ---
 

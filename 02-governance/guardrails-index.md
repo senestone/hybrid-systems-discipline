@@ -190,3 +190,6 @@ Enforces:
 - Human approval is required for phase transitions.
 - Traceability must remain intact throughout the lifecycle.
 - Project glossary discipline must be maintained across generated and revised artifacts for each project instantiated from this toolkit.
+- The Project Risk Register must remain current across lifecycle phases.
+- Material changes must be assessed and authorized through a Change Proposal and Impact Assessment before affected work proceeds.
+- Executed validation must be captured in a Verification and Validation Report with evidence linked from the RTM.

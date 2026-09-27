@@ -31,6 +31,9 @@ Test Plan Version Reference:
 RTM Version Reference:  
 Packaging Plan Version Reference:  
 Glossary Version Reference:
+Risk Register Version Reference:
+Verification and Validation Report Version Reference:
+Release-Relevant Change Assessment References:
 
 ---
 
@@ -44,6 +47,9 @@ Confirm:
 - Test Plan aligned? (Yes / No)
 - RTM updated to current system state? (Yes / No)
 - Project Glossary updated? (Yes / No)
+- Project Risk Register reviewed and current? (Yes / No)
+- Verification and Validation Report approved as an accurate evidence record? (Yes / No)
+- Release-relevant change assessments closed or explicitly carried forward? (Yes / No)
 - Packaging and deployment posture documented? (Yes / No)
 - Advancement to Documentation Closure authorized? (Yes / No)
 
@@ -139,6 +145,9 @@ System documentation SHALL reference:
 - Packaging artifact version
 - RTM release snapshot
 - Project Glossary version
+- Project Risk Register version and release-relevant Risk IDs
+- Verification and Validation Report version and evidence references
+- Release-relevant Change IDs
 
 No documentation deliverable SHALL describe behavior outside approved requirements and design.
 
@@ -160,6 +169,9 @@ Before approval, confirm:
 - Online help verified, if applicable
 - Deterministic-probabilistic boundaries disclosed, if applicable
 - Project Glossary current
+- Project Risk Register current and release-relevant risks dispositioned
+- Verification and Validation Report approved and aligned with RTM evidence references
+- Release-relevant change assessments closed or explicitly carried forward
 - Acronyms and abbreviations linked on first appearance in each deliverable
 - Failure posture and recovery procedures documented
 - Configuration and secrets handling documented safely
