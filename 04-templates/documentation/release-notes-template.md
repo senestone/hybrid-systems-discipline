@@ -19,6 +19,7 @@ Attribution: Human/organizational accountability only; AI tools must not be list
 Status: Draft / Approved  
 Packaging Artifact Reference:  
 RTM Release Snapshot Reference:  
+Glossary Version Reference:
 
 ---
 

@@ -50,6 +50,8 @@ This establishes:
 
 No templates are required during ideation.
 
+The Project Glossary template MAY be loaded during Ideation when controlled terminology, abbreviations, or acronyms begin to emerge.
+
 ---
 
 # 2. Phase-Specific Loading Model
@@ -61,6 +63,7 @@ Load:
 - Lifecycle Bootstrap
 - Enterprise System Prompt
 - Platform configuration
+- Project Glossary template when terminology is being formalized
 
 Do NOT load:
 
@@ -82,6 +85,7 @@ Load:
 - Lifecycle Bootstrap
 - SRS template
 - Traceability template (optional scaffold)
+- Project Glossary template
 - Enterprise System Prompt
 - Platform config
 
@@ -104,6 +108,7 @@ Load:
 - Approved SRS
 - Architecture template
 - RTM template
+- Active Project Glossary
 - Enterprise System Prompt
 - Platform config
 
@@ -121,6 +126,7 @@ Load:
 - Approved HLA
 - Detailed Design template
 - RTM template
+- Active Project Glossary
 - Enterprise System Prompt
 - Platform config
 
@@ -138,6 +144,7 @@ Load:
 - HLA
 - Detailed Design
 - Lifecycle Bootstrap
+- Active Project Glossary
 
 Purpose:
 Confirm structural completeness before implementation.
@@ -153,6 +160,7 @@ Load:
 - RTM
 - Lifecycle Bootstrap
 - Enterprise System Prompt
+- Active Project Glossary
 
 Purpose:
 Define validation strategy prior to implementation.
@@ -169,6 +177,7 @@ Load:
 - Detailed Design
 - Test Plan
 - RTM
+- Active Project Glossary
 - Platform configuration
 - Cursor rules (if using Cursor)
 - Technology selection record and review checklist when a material implementation choice is pending
@@ -186,6 +195,7 @@ Load:
 - Test Plan
 - RTM
 - Lifecycle Bootstrap
+- Active Project Glossary
 
 Purpose:
 Enforce reproducibility and release gating.
@@ -200,6 +210,7 @@ Load:
 - Applicable Documentation deliverable templates
 - RTM release snapshot
 - Packaging plan
+- Active Project Glossary
 - Lifecycle Bootstrap
 
 Purpose:

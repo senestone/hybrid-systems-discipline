@@ -30,6 +30,7 @@ Design Version Reference:
 Test Plan Version Reference:  
 RTM Version Reference:  
 Packaging Plan Version Reference:  
+Glossary Version Reference:
 
 ---
 
@@ -42,6 +43,7 @@ Confirm:
 - Detailed Design approved? (Yes / No)
 - Test Plan aligned? (Yes / No)
 - RTM updated to current system state? (Yes / No)
+- Project Glossary updated? (Yes / No)
 - Packaging and deployment posture documented? (Yes / No)
 - Advancement to Documentation Closure authorized? (Yes / No)
 
@@ -93,6 +95,7 @@ The documentation package SHALL include, at minimum:
 | DOC-005 | Online Help / In-Product Help | `04-templates/documentation/online-help-template.md` | Conditional | Systems with an interactive UI or user-facing workflow where embedded assistance is applicable | | | Draft / Approved | |
 | DOC-006 | Release Notes | `04-templates/documentation/release-notes-template.md` | Yes | Released systems | | | Draft / Approved | |
 | DOC-007 | Operational Runbook | `04-templates/documentation/operational-runbook-template.md` | Conditional | Production, hosted, distributed, regulated, or business-critical systems | | | Draft / Approved | |
+| DOC-008 | Project Glossary | `04-templates/project/project-glossary-template.md` | Yes | All systems | | | Draft / Approved | |
 
 Conditional deliverables SHALL be either provided or explicitly justified as not applicable.
 
@@ -135,10 +138,13 @@ System documentation SHALL reference:
 - Test Case IDs validating installation, administration, help, and recovery procedures
 - Packaging artifact version
 - RTM release snapshot
+- Project Glossary version
 
 No documentation deliverable SHALL describe behavior outside approved requirements and design.
 
 Documentation drift SHALL trigger RTM and lifecycle review.
+
+Terminology drift SHALL trigger glossary and lifecycle review.
 
 ---
 
@@ -153,6 +159,8 @@ Before approval, confirm:
 - Administration procedures align with operational model
 - Online help verified, if applicable
 - Deterministic-probabilistic boundaries disclosed, if applicable
+- Project Glossary current
+- Acronyms and abbreviations linked on first appearance in each deliverable
 - Failure posture and recovery procedures documented
 - Configuration and secrets handling documented safely
 - Version references align across SRS, HLA, DD, Test Plan, RTM, Packaging Plan, and documentation

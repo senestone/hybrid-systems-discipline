@@ -60,6 +60,7 @@ No phase skipping is permitted.
 - Risks identified  
 - Success criteria defined  
 - Alternative solution paths explored  
+- Initial project glossary for the governed project instance created or explicitly deferred with justification
 - No unresolved ambiguity in problem framing  
 
 If ambiguity persists, advancement is prohibited.
@@ -81,6 +82,7 @@ Human approval required.
 - Waiting room items captured  
 - Requirement IDs stable  
 - Initial RTM scaffold created  
+- Glossary entries current for SRS terminology, acronyms, and abbreviations
 
 Requirements instability SHALL block architectural work.
 
@@ -101,6 +103,7 @@ Human approval required.
 - Failure posture summarized  
 - Deployment model declared  
 - Requirement-to-Architecture mapping complete  
+- Glossary entries current for architectural terminology, acronyms, and abbreviations
 
 If boundary modeling is incomplete, advancement is prohibited.
 
@@ -121,6 +124,7 @@ Human approval required.
 - Security posture refined  
 - Performance assumptions documented  
 - Requirement-to-Design mapping complete  
+- Glossary entries current for design terminology, acronyms, and abbreviations
 
 Design without traceability linkage SHALL block advancement.
 
@@ -139,6 +143,7 @@ Human approval required.
 - No orphaned design artifacts  
 - Version identifier assigned  
 - Impact analysis completed for recent changes  
+- Glossary terminology consistent with RTM mappings
 
 Traceability gaps SHALL block advancement.
 
@@ -159,6 +164,7 @@ Human approval required.
 - Deterministic–probabilistic containment validation defined  
 - RTM updated with Test Case IDs  
 - Material implementation technology choices have approved, linked selection and decision records, or remain explicitly pending until before adoption in Implementation
+- Glossary entries current for test terminology, acronyms, and abbreviations
 
 Implementation without defined validation SHALL NOT begin.
 
@@ -178,6 +184,7 @@ Human approval required.
 - Deterministic–probabilistic containment verified  
 - RTM fully updated  
 - Clean build succeeds  
+- Glossary entries current for implementation-facing terminology, acronyms, and abbreviations
 
 Unvalidated implementation SHALL NOT proceed.
 
@@ -198,6 +205,7 @@ Human approval required.
 - Deterministic–probabilistic boundaries intact in packaged form  
 - Observability verified  
 - RTM reflects release state  
+- Glossary entries current for packaging and orchestration terminology, acronyms, and abbreviations
 
 Packaging without validation SHALL block release.
 
@@ -215,6 +223,7 @@ Human approval required.
 - Deployment documentation current  
 - Known limitations documented  
 - Change log updated  
+- Project glossary for the governed project instance updated and linked from documentation package
 - Version identifiers aligned across artifacts  
 - RTM version state finalized  
 - Audit review completed  

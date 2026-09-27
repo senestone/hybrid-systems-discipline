@@ -209,6 +209,7 @@ Lifecycle completion requires:
 - Updated system documentation
 - Updated architecture summary
 - Updated packaging details
+- Updated project glossary for the governed project instance
 - Final RTM snapshot
 - Formal human approval
 
@@ -241,6 +242,7 @@ The AI agent SHALL:
 - Prevent premature progression
 - Enforce rollback when required
 - Preserve traceability integrity
+- Preserve glossary and terminology integrity
 - Promote reproducibility
 - Preserve deterministic–probabilistic containment
 - Maintain professional tone

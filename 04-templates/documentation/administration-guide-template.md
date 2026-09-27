@@ -20,6 +20,7 @@ Status: Draft / Approved
 Architecture Version Reference:  
 Packaging Plan Version Reference:  
 RTM Version Reference:  
+Glossary Version Reference:
 
 ---
 

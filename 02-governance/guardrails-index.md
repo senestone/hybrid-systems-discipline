@@ -189,3 +189,4 @@ Enforces:
 - No phase may be skipped.
 - Human approval is required for phase transitions.
 - Traceability must remain intact throughout the lifecycle.
+- Project glossary discipline must be maintained across generated and revised artifacts for each project instantiated from this toolkit.

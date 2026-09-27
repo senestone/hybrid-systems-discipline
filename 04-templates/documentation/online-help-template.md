@@ -20,6 +20,7 @@ Status: Draft / Approved
 Requirement Version Reference:  
 User Guide Version Reference:  
 RTM Version Reference:  
+Glossary Version Reference:
 
 ---
 

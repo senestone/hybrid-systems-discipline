@@ -62,6 +62,7 @@ System documentation SHALL include, at minimum:
 
 - System purpose and scope
 - Requirement scope reference
+- Project glossary reference
 - Architectural summary
 - Component inventory
 - Deterministic–probabilistic boundary declaration
@@ -78,6 +79,10 @@ System documentation SHALL include, at minimum:
 Documentation SHALL reflect the current system state.
 
 Outdated documentation is a governance failure.
+
+System documentation SHALL use the project glossary for the governed project instance as the authoritative source for normative terms, abbreviations, and acronyms.
+
+Acronyms and abbreviations SHALL link to the glossary on first appearance in each documentation deliverable.
 
 ---
 
@@ -171,6 +176,7 @@ Documentation SHALL be updated:
 - After architectural modification
 - After major design decisions
 - After significant implementation change
+- When controlled terminology, acronyms, or abbreviations are introduced or changed
 - Before packaging approval
 - Before release approval
 
@@ -200,6 +206,7 @@ Documentation must support enterprise review standards.
 AI SHALL refuse to:
 
 - Declare documentation complete when artifacts are outdated
+- Declare documentation complete when glossary entries or first-use acronym and abbreviation links are missing
 - Suppress deterministic–probabilistic boundary disclosure
 - Skip traceability references
 - Advance lifecycle phase without documentation alignment
@@ -219,6 +226,8 @@ System documentation is considered lifecycle-complete only when:
 - Configuration and operational constraints are documented
 - Failure posture is summarized
 - Traceability references are visible
+- Glossary reference is current
+- Acronym and abbreviation first-use links are present
 - Version and update metadata are present
 - Human approval is granted
 

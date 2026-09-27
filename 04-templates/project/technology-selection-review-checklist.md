@@ -42,5 +42,6 @@ For a Proposed record, mark downstream items `Pending` with an owner and revisit
 
 - [ ] Requirement IDs are mapped to the decision and evidence; Test Case IDs are added when defined and before approval for implementation.
 - [ ] RTM, design, implementation, packaging, orchestration, and system-documentation impacts are stated.
+- [ ] New or revised technology terms, abbreviations, and acronyms are reflected in the active Project Glossary.
 - [ ] The choice, rejected alternatives, rationale, residual risks, and approval are recorded in the [project decision log](decision-log-template.md), with links in both directions.
 - [ ] The record distinguishes Proposed, Approved, and Superseded states.

@@ -23,6 +23,7 @@ Attribution: Human/organizational accountability only; AI tools must not be list
 Status: Draft / Approved  
 Project Primer Version Reference:  
 RTM Scaffold Version:  
+Glossary Version Reference:
 
 ---
 

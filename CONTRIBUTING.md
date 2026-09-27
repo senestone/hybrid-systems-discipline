@@ -41,9 +41,10 @@ For adversarial collaboration and epistemic fidelity, the core principles are:
 
 For authorship and attribution, the core principles are:
 
-- AI agents, assistants, models, tools, and automation must not claim authorship, ownership, preparation credit, contribution credit, maintenance responsibility, approval authority, or other attribution.
-- Authorship, maintainer, owner, preparer, contributor, reviewer, approver, and equivalent fields must identify accountable humans, teams, roles, or organizations only.
-- AI systems must not appear as authors, co-authors, committers, signers, reviewers, or attribution recipients in source control commits, commit messages, commit trailers, tags, changelogs, release logs, repository logs, or version-control metadata.
+- AI agents, assistants, models, tools, and automation must not claim authorship, collaborator status, ownership, preparation credit, contribution credit, maintenance responsibility, approval authority, or other attribution.
+- Authorship, collaborator, maintainer, owner, preparer, contributor, reviewer, approver, and equivalent attribution or role fields must identify accountable humans, teams, roles, or organizations only.
+- AI systems must not appear as repository collaborators, authors, co-authors, contributors, committers, signers, reviewers, or attribution recipients in access-control settings, source control commits, commit messages, commit trailers, tags, changelogs, release logs, repository logs, or version-control metadata.
+- Behavioral collaboration language describes an operating method only; it confers no collaborator status, authorship, contribution credit, repository access, or other human or organizational role.
 - If AI assistance must be disclosed for process, audit, or compliance reasons, record it as tooling or process context, not as authorship or attribution.
 
 ## Versioning Guidance

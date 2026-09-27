@@ -21,6 +21,7 @@ Lifecycle Phase:
 Author:  
 Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
 RTM Version Reference:  
+Glossary Version Reference:
 
 ---
 

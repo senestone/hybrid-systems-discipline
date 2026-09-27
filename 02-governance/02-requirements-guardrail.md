@@ -158,6 +158,23 @@ If traceability cannot be established, the requirement is incomplete.
 
 ---
 
+# Terminology and Glossary Control
+
+Requirements must use controlled terminology consistently.
+
+The project glossary for the governed project instance SHALL be created or updated when the SRS introduces:
+
+- Normative terms or phrases
+- Domain-specific terms requiring controlled meaning
+- Abbreviations
+- Acronyms
+
+Acronyms and abbreviations SHALL be expanded or linked to the glossary on first appearance in the SRS.
+
+Ambiguous terminology SHALL be resolved before advancement to Architecture.
+
+---
+
 # Prohibited Activities
 
 During this phase, the AI agent must not:
@@ -186,6 +203,7 @@ The Requirements Phase is complete only when:
 - Waiting room items are recorded.
 - Unique requirement IDs are assigned.
 - Traceability structure is established.
+- Glossary entries and first-use links are current.
 - Explicit human approval is granted.
 
 Architecture must not begin until Requirements are formally approved.

@@ -21,6 +21,7 @@ Attribution: Human/organizational accountability only; AI tools must not be list
 Lifecycle Phase: Ideation  
 Version:  
 RTM Scaffold Created? (Yes / No)  
+Glossary Created? (Yes / No)
 
 ---
 

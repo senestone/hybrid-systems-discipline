@@ -19,6 +19,7 @@ Attribution: Human/organizational accountability only; AI tools must not be list
 Status: Draft / Approved  
 Requirement Version Reference:  
 RTM Version Reference:  
+Glossary Version Reference:
 
 ---
 

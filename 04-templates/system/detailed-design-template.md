@@ -24,6 +24,7 @@ Status: Draft / Approved
 Architecture Version Reference:  
 Requirement Version Reference:  
 RTM Version Reference:  
+Glossary Version Reference:
 
 ---
 

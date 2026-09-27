@@ -22,6 +22,7 @@ Attribution: Human/organizational accountability only; AI tools must not be list
 Status: Draft / Approved  
 Architecture Version Reference:  
 RTM Version Reference:  
+Glossary Version Reference:
 
 ---
 
