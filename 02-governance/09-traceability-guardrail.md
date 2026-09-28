@@ -23,8 +23,8 @@ It SHALL:
 - Bind intent to execution
 - Bind requirements to structure
 - Bind structure to behavior
-- Bind behavior to validation
-- Bind validation to release
+- Bind behavior to verification
+- Bind verification and validation evidence to release
 - Preserve change impact visibility
 - Prevent scope drift
 - Enable audit reconstruction
@@ -54,6 +54,8 @@ Forward linkage alone is insufficient.
 
 Reverse linkage is mandatory.
 
+Traceability completeness is phase-aware. Mappings to artifacts already required by the current or completed phase SHALL be resolved. Future-phase mappings MAY be marked `Pending` only when the target artifact and required resolution gate are identified. `Pending` SHALL NOT be used for an overdue or missing mapping.
+
 ---
 
 ## 3. Minimum RTM Schema
@@ -65,8 +67,11 @@ The RTM SHALL include, at minimum:
 - Architectural Component ID(s)
 - Detailed Design reference(s)
 - Implementation reference(s)
-- Test Case ID(s)
-- Validation Status
+- Verification Case ID(s)
+- Verification method
+- Test Case ID(s), when the method is Test
+- Verification status
+- Validation Scenario ID(s), where the requirement supports a validated stakeholder need or intended use
 - Version identifier
 - Last-updated timestamp
 
@@ -76,7 +81,7 @@ Optional but recommended:
 - Risk classification
 - Risk Register ID(s)
 - Change Proposal and Impact Assessment ID(s)
-- Validation evidence reference
+- Verification or validation evidence reference
 - Release target
 
 RTM schema SHALL be stable and governed.
@@ -87,14 +92,14 @@ Ad hoc formats are prohibited.
 
 ## 4. Requirement Traceability
 
-Each Requirement ID MUST:
+Each Requirement ID MUST, as the lifecycle produces the applicable artifacts:
 
 - Map to ≥1 Architectural Component
 - Map to ≥1 Detailed Design element
 - Map to ≥1 Implementation artifact
-- Map to ≥1 Test Case ID
+- Map to ≥1 Verification Case ID with an appropriate method
 
-If any mapping is missing, the requirement is incomplete.
+If a mapping required by the current or a completed phase is missing, the requirement is incomplete. Future mappings SHALL identify their target phase or gate.
 
 Unmapped requirements SHALL block advancement.
 
@@ -121,7 +126,7 @@ Each Detailed Design element MUST:
 - Reference parent Architectural Component ID
 - Reference Requirement ID(s)
 - Map to Implementation artifact(s)
-- Map to Test Case ID(s)
+- Map to Verification Case ID(s)
 
 Design without traceability is invalid.
 
@@ -134,7 +139,7 @@ Each implemented unit SHALL:
 - Embed Requirement ID reference
 - Embed Architectural Component reference
 - Embed Detailed Design reference
-- Map to Test Case ID(s)
+- Map to Verification Case ID(s)
 
 Code without traceability markers SHALL block release.
 
@@ -142,20 +147,35 @@ Retroactive traceability insertion after implementation is prohibited.
 
 ---
 
-## 8. Test Traceability
+## 8. Verification and Validation Traceability
+
+Each Verification Case ID MUST:
+
+- Reference one or more Requirement IDs
+- Identify a method: Test / Analysis / Inspection / Demonstration / Review / Measurement
+- Define explicit acceptance criteria
+- Record a verification result and evidence reference when executed
+
+When the method is Test, the Verification Case SHALL link to one or more Test Case IDs. A requirement that is not appropriately verified by test SHALL use another justified method; it SHALL NOT be forced into an artificial test.
 
 Each Test Case ID MUST:
 
 - Reference Requirement ID
+- Reference its parent Verification Case ID
 - Reference Design element
-- Reference Implementation artifact
-- Define explicit validation criteria
-- Record validation result
+- Reference the planned Implementation target during Test Planning and the actual Implementation artifact before execution closure
+- Define explicit expected results or thresholds
+- Record test result
 - Link to retained evidence in the Verification and Validation Report or another approved evidence artifact
 
-If a requirement cannot be tested, it SHALL be revised.
+Each Validation Scenario ID MUST:
 
-Untestable requirements are governance failures.
+- Reference a stakeholder need, intended use, operational outcome, or other approved validation basis
+- Identify the representative users, operators, environment, and assumptions
+- Define validation criteria and record a result
+- Link to affected Requirement IDs and retained evidence
+
+A requirement that cannot be verified by any appropriate method is incomplete. A system that cannot be validated against its intended use lacks release evidence.
 
 ---
 
@@ -225,7 +245,7 @@ Traceability SHALL be reviewed at:
 - Architecture completion
 - Detailed Design completion
 - Pre-Implementation gate
-- Pre-Test validation
+- Pre-verification execution review
 - Pre-Packaging gate
 - Pre-Release approval
 
@@ -256,7 +276,7 @@ AI SHALL refuse to:
 - Generate artifacts without ID structure
 - Accept scope not present in RTM
 - Proceed when mappings are incomplete
-- Declare validation sufficient without RTM confirmation
+- Declare verification or validation sufficient without RTM confirmation
 - Advance phase without RTM review
 - Suppress probabilistic boundary traceability
 
@@ -272,14 +292,17 @@ Traceability is valid only when:
 - All Architecture elements are mapped
 - All Design elements are mapped
 - All Implementation artifacts are mapped
-- All Test Cases are mapped
-- Validation status is visible
+- All Test Cases are mapped to Test-method Verification Cases
+- All Verification Cases are mapped with methods and status
+- Validation scenarios and status are visible
 - Material changes link to Change IDs
-- Release-state validation links to approved evidence
+- Release-state verification and validation link to approved evidence
 - Relevant risks link to Risk IDs
 - No orphaned artifacts exist
 - Version metadata is present
 - Human approval is granted
+
+At release, no required mapping may remain `Pending`.
 
 If any condition is unmet, release is prohibited.
 

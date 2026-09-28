@@ -78,7 +78,7 @@ Distinguish verified behavior from documentation claims and inference. Link dire
 |---|---|---|---|
 | | Reproducible command, fixture, hardware, and version | | |
 
-Include failure and rollback behavior, clean build, runtime dependencies, portability, and applicable Requirement IDs. Add Test Case IDs once Test Planning defines them. State which criteria remain untested. A successful narrow prototype does not establish system-wide conformance.
+Include failure and rollback behavior, clean build, runtime dependencies, portability, and applicable Requirement IDs. Add Verification Case IDs, methods, and applicable Test Case IDs once Test Planning defines them. State which criteria remain unverified. A successful narrow prototype does not establish system-wide conformance.
 
 ## 5. Decision and Rationale
 

@@ -121,9 +121,10 @@ Enforces:
 
 Enforces:
 
-- Requirement-to-test mapping  
+- Requirement-to-verification mapping with explicit methods
+- Validation against stakeholder needs and intended use
 - Functional coverage  
-- Non-functional validation  
+- Non-functional verification
 - Automation discipline  
 - Regression protection  
 
@@ -138,7 +139,7 @@ Enforces:
 - End-to-end requirement mapping  
 - Change impact analysis  
 - Prevention of orphaned artifacts  
-- Requirement → Architecture → Design → Implementation → Test integrity  
+- Requirement → Architecture → Design → Implementation → Verification → Evidence integrity
 
 ---
 

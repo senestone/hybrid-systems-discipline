@@ -43,7 +43,7 @@ For a pre-baseline record, mark downstream items `Pending` with an owner and rev
 
 ## Traceability and Decision
 
-- [ ] Requirement IDs are mapped to the decision and evidence; Test Case IDs are added when defined and before approval for implementation.
+- [ ] Requirement IDs are mapped to the decision and evidence; Verification Case IDs, methods, and applicable Test Case IDs are added when defined and before approval for implementation.
 - [ ] RTM, design, implementation, packaging, orchestration, and system-documentation impacts are stated.
 - [ ] New or revised technology terms, abbreviations, and acronyms are reflected in the active Project Glossary.
 - [ ] Material lifecycle impacts have an approved Change Proposal and Impact Assessment.

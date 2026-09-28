@@ -177,7 +177,7 @@ The lifecycle SHALL ensure:
 - 100% Architecture mapping
 - 100% Design mapping
 - 100% Implementation mapping
-- 100% Test mapping
+- 100% Verification Case mapping with an appropriate verification method
 - Packaging traceability
 - Orchestration traceability
 
@@ -187,9 +187,13 @@ Traceability gaps block release.
 
 ---
 
-# 8. Testing Authority
+# 8. Verification and Validation Authority
 
-Testing SHALL validate:
+Verification establishes objective evidence that specified requirements are fulfilled. Permitted methods include Test, Analysis, Inspection, Demonstration, Review, and Measurement. Each Requirement ID SHALL map to at least one Verification Case ID and an appropriate method.
+
+Validation establishes objective evidence that the delivered system supports stakeholder needs, intended use, and the operational context. Validation SHALL be planned and traced separately from requirement verification.
+
+Testing SHALL verify:
 
 - All Functional Requirements
 - All Critical Non-Functional Requirements
@@ -202,6 +206,8 @@ Testing SHALL validate:
 Passing tests are mandatory before Packaging.
 
 Testing without traceability is invalid.
+
+Testing is a major verification method. It SHALL NOT be treated as synonymous with all verification or with validation.
 
 Executed results, deviations, evidence references, residual risks, and release recommendation SHALL be recorded in a Verification and Validation Report.
 

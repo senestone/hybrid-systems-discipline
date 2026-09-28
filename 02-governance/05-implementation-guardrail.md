@@ -175,7 +175,8 @@ Every implemented unit MUST map to:
 - Requirement ID
 - Architectural Component ID
 - Detailed Design reference
-- Test Case ID
+- Verification Case ID and method
+- Test Case ID, when applicable
 
 Traceability SHALL be updated continuously.
 

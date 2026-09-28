@@ -133,7 +133,7 @@ Identify impacts across lifecycle artifacts:
 - Architecture sections
 - Detailed Design artifacts
 - Implementation units
-- Test Case IDs
+- Verification Case IDs and applicable Test Case IDs
 - Packaging configuration
 - Orchestration pipeline
 - System documentation
@@ -151,7 +151,7 @@ Mandatory references:
 - Requirement ID(s)
 - Architectural Component ID(s)
 - Detailed Design reference(s)
-- Test Case ID(s) (if applicable)
+- Verification Case ID(s), method(s), and Test Case ID(s) (if applicable)
 - Packaging reference (if applicable)
 - Orchestration reference (if applicable)
 

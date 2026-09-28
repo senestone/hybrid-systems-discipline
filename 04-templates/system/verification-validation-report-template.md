@@ -39,7 +39,9 @@ Confirm:
 - Approved Test Plan used? (Yes / No)
 - Test environment controlled and recorded? (Yes / No)
 - Test data authorized and versioned where required? (Yes / No)
-- Requirement-to-test mappings current? (Yes / No)
+- Requirement-to-Verification Case mappings and methods current? (Yes / No)
+- Test Case mappings current for Test-method Verification Cases? (Yes / No)
+- Validation scenarios trace to stakeholder needs, intended use, or operational outcomes? (Yes / No)
 - Raw evidence retained and accessible? (Yes / No)
 - Deviations and exceptions disclosed? (Yes / No)
 
@@ -66,7 +68,7 @@ Unstated exclusions SHALL NOT be inferred as passing.
 
 ---
 
-# 3. Test Item and Environment Identification
+# 3. Evaluation Item and Environment Identification
 
 Record:
 
@@ -81,7 +83,7 @@ Record:
 - Test data set identifiers
 - Probabilistic component, model, prompt, threshold, or seed versions where applicable
 
-Results without reproducible test-item identity are invalid unless an approved limitation explicitly states otherwise.
+Results without reproducible evaluation-item identity are invalid unless an approved limitation explicitly states otherwise.
 
 ---
 
@@ -89,14 +91,24 @@ Results without reproducible test-item identity are invalid unless an approved l
 
 | Metric | Count |
 |--------|-------|
+| Planned Verification Cases | |
+| Completed Verification Cases | |
+| Verified Verification Cases | |
+| Failed Verification Cases | |
+| Blocked Verification Cases | |
 | Planned Test Cases | |
-| Executed | |
-| Passed | |
-| Failed | |
-| Blocked | |
-| Not Run | |
-| Added During Execution | |
-| Retired with Approval | |
+| Executed Test Cases | |
+| Passed Test Cases | |
+| Failed Test Cases | |
+| Blocked Test Cases | |
+| Not Run Test Cases | |
+| Planned Validation Scenarios | |
+| Completed Validation Scenarios | |
+| Validated Scenarios | |
+| Failed Validation Scenarios | |
+| Blocked Validation Scenarios | |
+| Cases or Scenarios Added During Execution | |
+| Cases or Scenarios Retired with Approval | |
 
 Execution Start:
 Execution End:
@@ -110,33 +122,55 @@ Overall Disposition: Passed / Passed with Exceptions / Failed / Blocked
 
 # 5. Detailed Results
 
-| Test Case ID | Requirement / NFR ID | Configuration | Result | Evidence Ref | Defect / Deviation Ref | Executed By | Date |
-|--------------|----------------------|---------------|--------|--------------|------------------------|-------------|------|
+| Verification Case ID | Requirement / NFR ID | Method | Test Case ID (if applicable) | Configuration | Result | Evidence Ref | Defect / Deviation Ref | Executed By | Date |
+|----------------------|----------------------|--------|------------------------------|---------------|--------|--------------|------------------------|-------------|------|
 
-Allowed Result values: Passed / Failed / Blocked / Not Run / Not Applicable
+Allowed Method values: Test / Analysis / Inspection / Demonstration / Review / Measurement
 
-Evidence references SHALL resolve to retained logs, reports, screenshots, measurements, audit records, or other reviewable outputs. A result without evidence SHALL NOT be treated as verified when evidence is required by the Test Plan.
+Allowed Result values: Verified / Failed / Blocked / Not Run / Not Applicable
+
+Evidence references SHALL resolve to retained logs, reports, screenshots, analyses, inspection records, demonstrations, reviews, measurements, audit records, or other reviewable outputs. A result without required evidence SHALL NOT be treated as verified.
 
 ---
 
 # 6. Requirements and Coverage Reconciliation
 
-| Requirement / NFR ID | Planned Test Cases | Executed Test Cases | Coverage Status | Evidence Ref | RTM Updated? |
-|----------------------|--------------------|---------------------|-----------------|--------------|--------------|
+| Requirement / NFR ID | Planned Verification Cases and Methods | Completed Verification Cases | Test Case IDs (if applicable) | Verification Status | Evidence Ref | RTM Updated? |
+|----------------------|----------------------------------------|------------------------------|-------------------------------|---------------------|--------------|--------------|
 
 Confirm:
 
 - Every in-scope requirement has an explicit disposition
-- Every executed test maps to approved intent
+- Every completed verification activity maps to approved intent
+- Every executed test maps to a Test-method Verification Case
 - No unauthorized behavior was validated as scope
 - Coverage gaps are identified as blockers, deviations, or accepted residual risk
-- RTM validation status and evidence references are current
+- RTM verification and validation status and evidence references are current
 
 Aggregate percentages SHALL NOT conceal uncovered Critical requirements or non-functional requirements.
 
 ---
 
-# 7. Non-Functional Validation
+# 7. System Validation Results
+
+| Validation Scenario ID | Stakeholder Need / Intended Use / Outcome Ref | Representative Users or Operators | Operational Context | Related Requirement IDs | Result | Evidence Ref | Limitation / Deviation Ref |
+|------------------------|------------------------------------------------|-----------------------------------|---------------------|-------------------------|--------|--------------|----------------------------|
+
+Allowed Result values: Validated / Failed / Blocked / Not Run / Not Applicable
+
+Confirm that validation evidence addresses:
+
+- Stakeholder needs and expected outcomes
+- Intended use and foreseeable misuse
+- Representative users, operators, workflows, and environments
+- Operational constraints and human factors where applicable
+- Assumptions, limitations, and contexts not represented
+
+Passing requirement verification SHALL NOT be reported as system validation unless the validation criteria and representative context were also evaluated.
+
+---
+
+# 8. Non-Functional Verification
 
 | NFR ID | Measure | Required Threshold | Observed Result | Status | Evidence Ref |
 |--------|---------|--------------------|-----------------|--------|--------------|
@@ -157,7 +191,7 @@ Claims of compliance SHALL be supported by explicit measures or approved qualita
 
 ---
 
-# 8. Failure, Recovery, and Boundary Validation
+# 9. Failure, Recovery, and Boundary Verification
 
 Document results for:
 
@@ -183,7 +217,7 @@ Untested required failure behavior SHALL be reported as a coverage gap.
 
 ---
 
-# 9. Defects, Deviations, and Exceptions
+# 10. Defects, Deviations, and Exceptions
 
 | Reference ID | Type | Description | Severity | Affected IDs | Disposition | Risk ID | Approval Ref |
 |--------------|------|-------------|----------|--------------|-------------|---------|--------------|
@@ -203,7 +237,7 @@ An unexplained deviation invalidates the affected result.
 
 ---
 
-# 10. Packaging and Reproducibility Validation
+# 11. Packaging and Reproducibility Verification
 
 Record:
 
@@ -214,13 +248,13 @@ Record:
 - Configuration verification
 - Rebuild or reproducibility result
 - Artifact-to-source and artifact-to-RTM linkage
-- Rollback validation result
+- Rollback verification result
 
-Development-environment success SHALL NOT substitute for required packaged-environment validation.
+Development-environment success SHALL NOT substitute for required packaged-environment verification.
 
 ---
 
-# 11. Residual Risk and Release Recommendation
+# 12. Residual Risk and Release Recommendation
 
 Open Risk IDs:
 New or Changed Risk IDs:
@@ -242,11 +276,11 @@ The recommendation is advisory evidence for the human release authority. It is n
 
 ---
 
-# 12. Traceability and Artifact Updates
+# 13. Traceability and Artifact Updates
 
 Confirm updates to:
 
-- RTM validation status and evidence references
+- RTM verification and validation status and evidence references
 - Defect records
 - Change Proposal and Impact Assessments
 - Project Risk Register
@@ -260,12 +294,13 @@ Confirm updates to:
 
 ---
 
-# 13. Review Checklist
+# 14. Review Checklist
 
 - [ ] Scope and exclusions are explicit
-- [ ] Test item and environment are reproducibly identified
+- [ ] Evaluation item and environment are reproducibly identified
 - [ ] Planned and executed test inventories reconcile
-- [ ] Requirement and non-functional coverage is visible
+- [ ] Requirement verification coverage and methods are visible
+- [ ] Validation scenarios address stakeholder needs, intended use, and operational context
 - [ ] Raw evidence references resolve
 - [ ] Failures, blocked tests, and omitted tests are disclosed
 - [ ] Defects and deviations have dispositions
@@ -278,7 +313,7 @@ Confirm updates to:
 
 ---
 
-# 14. Approval
+# 15. Approval
 
 Prepared By:
 Reviewed By:

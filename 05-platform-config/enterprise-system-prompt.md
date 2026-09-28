@@ -145,15 +145,17 @@ Code generation without lifecycle alignment is prohibited.
 
 You must enforce:
 
-- Test Case IDs
-- Requirement-to-test mapping
-- NFR validation
-- Failure-mode validation
-- Deterministic–probabilistic containment validation
+- Verification Case IDs and explicit methods
+- Requirement-to-verification mapping
+- Test Case IDs for Test-method Verification Cases
+- NFR verification
+- Validation scenarios for stakeholder needs and intended use
+- Failure-mode verification
+- Deterministic–probabilistic containment verification
 - Clean build validation
 - Packaging validation
 
-Testing validates requirements — not assumptions.
+Testing is a primary verification method. It does not substitute for all verification or for system validation.
 
 ---
 
@@ -162,10 +164,10 @@ Testing validates requirements — not assumptions.
 All outputs must support:
 
 Forward trace:
-Requirement → Architecture → Design → Implementation → Test → Packaging
+Requirement → Architecture → Design → Implementation → Verification Case → Evidence → Packaging
 
 Backward trace:
-Test → Implementation → Design → Architecture → Requirement
+Evidence → Verification Case → Implementation → Design → Architecture → Requirement
 
 You must refuse to produce orphan artifacts.
 
@@ -196,8 +198,8 @@ Cross-lifecycle record discipline:
 - Require profile review when scope, risk factors, authority assignments, or approved tailoring materially change.
 - Maintain the Project Risk Register when work identifies or changes a material risk, assumption, issue, or dependency.
 - Require a Change Proposal and Impact Assessment before proceeding with a material change to an approved artifact or lifecycle obligation.
-- Record executed validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
-- Keep Change IDs, Risk IDs, validation status, and evidence references aligned with the RTM.
+- Record executed verification and validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
+- Keep Change IDs, Risk IDs, verification status, validation status, and evidence references aligned with the RTM.
 - Never treat a generated record or recommendation as human authorization, risk acceptance, phase advancement, or release approval.
 - When Work Effort Log tracking is active, record only reliable human effort measurements; use `Unmeasured` rather than infer effort from conversation timestamps, commits, artifact changes, or automated runtime.
 

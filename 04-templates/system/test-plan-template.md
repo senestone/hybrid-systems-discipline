@@ -2,14 +2,14 @@
 File: 04-templates/system/test-plan-template.md
 
 Purpose:
-  Define enforceable validation governance aligned with lifecycle
+  Define enforceable verification and validation governance aligned with lifecycle
   discipline for hybrid deterministic–probabilistic systems.
 
 Lifecycle authority resides in:
   02-governance/00-lifecycle-bootstrap.md
 
-Testing validates requirements — not code.
-Release without validated testing is prohibited.
+Testing verifies requirements — not code.
+Release without sufficient verification and validation evidence is prohibited.
 -->
 
 # Test Plan
@@ -50,9 +50,9 @@ Define explicitly:
 
 - Requirement IDs in scope  
 - NFR categories in scope  
-- Packaging validation scope  
-- Orchestration validation scope  
-- Deterministic–probabilistic containment validation scope (if applicable)  
+- Packaging verification scope
+- Orchestration verification scope
+- Deterministic–probabilistic containment verification scope (if applicable)
 
 Out-of-scope areas SHALL be declared.
 
@@ -69,7 +69,7 @@ Define:
 - What acceptance posture must be achieved  
 - What constitutes release readiness  
 
-Testing SHALL validate requirements and NFRs — not internal implementation structure.
+Testing SHALL verify requirements and NFRs — not internal implementation structure.
 
 ---
 
@@ -87,34 +87,34 @@ Specify applicable levels and justify exclusions:
 - Security Testing  
 - Reliability / Resilience Testing  
 - User Acceptance Testing (UAT)  
-- Packaging Validation  
-- Orchestration / Clean Build Validation  
+- Packaging Verification
+- Orchestration / Clean Build Verification
 
 Unjustified exclusion of test levels SHALL be documented.
 
 ---
 
-## 4.2 Deterministic–Probabilistic Validation (If Applicable)
+## 4.2 Deterministic–Probabilistic Verification (If Applicable)
 
 If probabilistic components exist, define:
 
 - Acceptance boundaries  
 - Variability tolerance thresholds  
 - Rejection criteria  
-- Containment validation tests  
-- Fallback validation tests  
-- Observability validation tests  
-- Drift detection validation (if applicable)  
+- Containment verification tests
+- Fallback verification tests
+- Observability verification tests
+- Drift verification (if applicable)
 
-Probabilistic validation SHALL be explicit.
+Probabilistic verification SHALL be explicit.
 
 Implicit trust is prohibited.
 
 ---
 
-## 4.3 Functional Validation
+## 4.3 Functional Verification
 
-Define approach for validating:
+Define approach for verifying:
 
 - All FR IDs  
 - Acceptance criteria coverage  
@@ -122,13 +122,13 @@ Define approach for validating:
 - Negative cases  
 - Error conditions  
 
-Each FR SHALL map to ≥1 Test Case ID.
+Each FR SHALL map to at least one Verification Case ID. Functional behavior SHOULD use Test as a verification method unless another method is justified.
 
 ---
 
-## 4.4 Non-Functional Validation
+## 4.4 Non-Functional Verification
 
-Define validation strategy for:
+Define verification strategy for:
 
 - Performance  
 - Scalability  
@@ -138,20 +138,32 @@ Define validation strategy for:
 - Auditability  
 - Reproducibility  
 
-Each NFR SHALL map to measurable validation.
+Each NFR SHALL map to measurable verification.
 
 Assumed compliance is prohibited.
 
 ---
 
-## 4.5 Test Case Inventory
+## 4.5 Verification Case Inventory
+
+Maintain the inventory in this section or reference an approved, versioned inventory artifact.
+
+| Verification Case ID | Requirement ID(s) | Method | Acceptance Criteria | Planned Evidence | Environment / Inputs | Owner | Status |
+|----------------------|-------------------|--------|---------------------|------------------|----------------------|-------|--------|
+| VC-001 | | Test / Analysis / Inspection / Demonstration / Review / Measurement | | | | | Planned |
+
+Every approved Requirement ID SHALL map to at least one Verification Case ID and an appropriate method. When the method is Test, identify the linked Test Case IDs in the Test Case Inventory and RTM.
+
+---
+
+## 4.6 Test Case Inventory
 
 Maintain the inventory in this section or reference an approved, versioned inventory artifact.
 
 At minimum, record:
 
-| Test Case ID | Requirement ID(s) | Test Level / Type | Objective or Scenario | Preconditions and Test Data | Expected Result / Acceptance Threshold | Environment | Priority / Risk Ref | Automation Status | Planned Evidence Location |
-|--------------|-------------------|-------------------|-----------------------|-----------------------------|----------------------------------------|-------------|---------------------|-------------------|---------------------------|
+| Test Case ID | Parent Verification Case ID | Requirement ID(s) | Test Level / Type | Objective or Scenario | Preconditions and Test Data | Expected Result / Acceptance Threshold | Environment | Priority / Risk Ref | Automation Status | Planned Evidence Location |
+|--------------|-----------------------------|-------------------|-------------------|-----------------------|-----------------------------|----------------------------------------|-------------|---------------------|-------------------|---------------------------|
 
 Each Test Case ID SHALL be unique and SHALL map to at least one approved Requirement ID.
 
@@ -161,21 +173,37 @@ Detailed procedures MAY reside in approved linked artifacts when the inventory p
 
 ---
 
+## 4.7 Validation Strategy and Scenarios
+
+Validation establishes whether the integrated system supports stakeholder needs, intended use, and the operational context. It is distinct from verification of specified requirements.
+
+| Validation Scenario ID | Stakeholder Need / Intended Use / Outcome Ref | Representative Users or Operators | Operational Context | Related Requirement IDs | Validation Criteria | Planned Evidence | Status |
+|------------------------|------------------------------------------------|-----------------------------------|---------------------|-------------------------|---------------------|------------------|--------|
+| VS-001 | | | | | | | Planned |
+
+Define representative environments, participants, workflows, foreseeable misuse, assumptions, and limitations. Passing requirement verification SHALL NOT be treated as automatic system validation.
+
+---
+
 # 5. Traceability Enforcement
 
-All Test Case IDs SHALL map to Requirement IDs.
+All Requirement IDs SHALL map to one or more Verification Case IDs with an appropriate method.
+
+All Test Case IDs SHALL map to a Test-method Verification Case ID and one or more Requirement IDs.
 
 No Test Case SHALL exist without a Requirement reference.
 
-No Requirement SHALL exist without ≥1 Test Case ID.
+All Validation Scenario IDs SHALL map to an approved stakeholder need, intended use, or operational outcome and to affected Requirement IDs.
 
 Traceability gaps SHALL block advancement.
 
 RTM SHALL be updated with:
 
-- Test Case ID  
-- Status  
-- Validation evidence reference  
+- Verification Case ID
+- Verification Method
+- Test Case ID, when applicable
+- Verification and validation status
+- Evidence reference
 
 ---
 
@@ -193,7 +221,7 @@ Document:
 
 Environment drift SHALL be minimized.
 
-Local-only validation is insufficient.
+Local-only verification is insufficient.
 
 ---
 
@@ -225,17 +253,18 @@ Premature execution SHALL be halted.
 
 ---
 
-# 9. Exit Criteria
+# 9. Verification and Validation Exit Criteria
 
-Testing is complete only when:
+Planned verification and validation for release are complete only when:
 
-- All High-priority FRs validated  
-- All Critical NFRs validated  
+- All High-priority FRs verified
+- All Critical NFRs verified
 - Deterministic–probabilistic containment verified (if applicable)  
 - No unresolved High-severity defects  
-- Clean build validated  
-- Packaging validation complete  
-- RTM updated to reflect validation state  
+- Clean build verified
+- Packaging verification complete
+- Validation scenarios completed with results, evidence, and limitations recorded
+- RTM updated to reflect verification and validation state
 - Documentation updated  
 - Human approval granted  
 
@@ -268,7 +297,7 @@ If applicable, define:
 - Automated test coverage goals  
 - CI/CD integration  
 - Regression automation  
-- Packaging validation automation  
+- Packaging verification automation
 - Clean build automation  
 - Failure gating logic  
 
@@ -283,7 +312,7 @@ It SHALL NOT bypass human gate authorization.
 Define:
 
 - Requirement coverage percentage  
-- NFR validation coverage  
+- NFR verification coverage
 - Defect density  
 - Pass/fail thresholds  
 - Trend tracking  
@@ -291,7 +320,7 @@ Define:
 
 Metrics SHALL support governance and audit reconstruction.
 
-The Verification and Validation Report SHALL reconcile planned tests with executed results, retained evidence, deviations, defects, requirement coverage, and residual risk.
+The Verification and Validation Report SHALL reconcile planned Verification Cases, tests, and validation scenarios with completed results, retained evidence, deviations, defects, coverage, and residual risk.
 
 ---
 
@@ -307,7 +336,7 @@ Identify:
 Persistent or cross-cutting risks SHALL reference stable IDs in the Project Risk Register.
 - Operational risk  
 
-High-risk items SHALL receive increased validation depth.
+High-risk items SHALL receive increased verification and validation depth.
 
 ---
 
@@ -316,11 +345,13 @@ High-risk items SHALL receive increased validation depth.
 Confirm readiness to proceed from Test Planning to Implementation:
 
 - Test strategy defined? (Yes / No)
-- Test Case Inventory complete and reviewed? (Yes / No)
-- Requirement-to-Test mapping complete with no orphan requirements? (Yes / No)
-- NFR validation strategy and measurable thresholds defined? (Yes / No)
+- Verification Case Inventory complete with methods and reviewed? (Yes / No)
+- Test Case Inventory complete for all Test-method Verification Cases? (Yes / No)
+- Requirement-to-Verification mapping complete with no orphan requirements? (Yes / No)
+- Validation scenarios defined for stakeholder needs, intended use, and operational context? (Yes / No)
+- NFR verification strategy and measurable thresholds defined? (Yes / No)
 - Failure, recovery, and negative scenarios defined? (Yes / No)
-- Deterministic–probabilistic containment validation defined, if applicable? (Yes / No / Not Applicable)
+- Deterministic–probabilistic containment verification defined, if applicable? (Yes / No / Not Applicable)
 - Verification and Validation Report structure and evidence-retention approach defined? (Yes / No)
 - Human approval granted? (Yes / No)
 

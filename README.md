@@ -60,6 +60,7 @@ This repository defines:
 - Phase-gated advancement control
 - Deterministic–probabilistic boundary containment
 - Mandatory bidirectional traceability
+- Explicit separation of requirement verification from intended-use validation
 - Explicit rollback authority
 - Reproducible packaging enforcement
 - Release gating tied to validation and documentation
@@ -182,9 +183,9 @@ Create project-specific copies of these templates. Use stable IDs and links amon
 - [Requirements](04-templates/system/requirements-template.md)
 - [Architecture](04-templates/system/architecture-template.md)
 - [Detailed Design](04-templates/system/detailed-design-template.md)
-- [Traceability Matrix](04-templates/system/traceability-matrix-template.md)
-- [Test Plan](04-templates/system/test-plan-template.md)
-- [Verification and Validation Report](04-templates/system/verification-validation-report-template.md)
+- [Traceability Matrix](04-templates/system/traceability-matrix-template.md): requirements, verification methods, tests, validation scenarios, evidence, and release lineage.
+- [Test Plan](04-templates/system/test-plan-template.md): verification strategy, test inventory, validation scenarios, environments, and evidence planning.
+- [Verification and Validation Report](04-templates/system/verification-validation-report-template.md): executed verification and validation results, evidence, deviations, and release recommendation.
 - [Packaging Plan](04-templates/system/packaging-plan-template.md)
 
 **Documentation Templates**

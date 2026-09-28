@@ -196,7 +196,7 @@ Code documentation MUST reference:
 - Requirement ID(s)
 - Architectural Component ID
 - Detailed Design reference
-- Test Case ID(s) (if applicable)
+- Verification Case ID(s) and Test Case ID(s) (if applicable)
 
 Traceability SHALL be visible at implementation level.
 

@@ -121,8 +121,8 @@ If boundary modification is required:
 
 Cursor must:
 
-- Encourage creation of Test Case IDs before implementation
-- Maintain mapping between tests and Requirement IDs
+- Require Verification Case IDs and explicit methods before implementation
+- Maintain mapping among Requirement IDs, Verification Case IDs, and applicable Test Case IDs
 - Avoid modifying code without corresponding test updates
 - Avoid bypassing validation logic for convenience
 - Respect clean build validation
@@ -151,6 +151,7 @@ When modifying code, Cursor must explicitly identify:
 - Requirement IDs impacted
 - Architectural Components impacted
 - Design artifacts impacted
+- Verification Case IDs impacted
 - Test Case IDs impacted
 - Packaging impact (if any)
 - Orchestration impact (if any)
@@ -188,8 +189,8 @@ Cross-lifecycle record discipline:
 - Require profile review when scope, risk factors, authority assignments, or approved tailoring materially change.
 - Update the Project Risk Register when implementation work identifies or changes a material risk, assumption, issue, or dependency.
 - Require a Change Proposal and Impact Assessment before proceeding with a material change to an approved artifact or lifecycle obligation.
-- Record executed validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
-- Keep Change IDs, Risk IDs, validation status, and evidence references aligned with the RTM.
+- Record executed verification and validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
+- Keep Change IDs, Risk IDs, verification status, validation status, and evidence references aligned with the RTM.
 - Never treat a generated record or recommendation as human authorization, risk acceptance, phase advancement, or release approval.
 - When Work Effort Log tracking is active, record only reliable human effort measurements; use `Unmeasured` rather than infer effort from conversation timestamps, commits, artifact changes, or automated runtime.
 

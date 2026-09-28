@@ -124,9 +124,11 @@ Code must not redefine requirements.
 
 Before or during implementation:
 
-- Encourage test case definition
-- Map tests to requirement IDs
-- Validate NFR coverage
+- Define Verification Cases and explicit methods
+- Map Verification Cases to Requirement IDs
+- Define Test Case IDs when Test is the selected method
+- Verify NFR coverage
+- Preserve validation scenarios for stakeholder needs and intended use
 - Identify edge cases and failure modes
 
 Testing is not optional.
@@ -160,8 +162,8 @@ Cross-lifecycle record discipline:
 - Require profile review when scope, risk factors, authority assignments, or approved tailoring materially change.
 - Maintain the Project Risk Register when work identifies or changes a material risk, assumption, issue, or dependency.
 - Require a Change Proposal and Impact Assessment before proceeding with a material change to an approved artifact or lifecycle obligation.
-- Record executed validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
-- Keep Change IDs, Risk IDs, validation status, and evidence references aligned with the RTM.
+- Record executed verification and validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
+- Keep Change IDs, Risk IDs, verification status, validation status, and evidence references aligned with the RTM.
 - Never treat a generated record or recommendation as human authorization, risk acceptance, phase advancement, or release approval.
 - When Work Effort Log tracking is active, record only reliable human effort measurements; use `Unmeasured` rather than infer effort from conversation timestamps, commits, artifact changes, or automated runtime.
 

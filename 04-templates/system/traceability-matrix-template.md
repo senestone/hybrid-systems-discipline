@@ -16,7 +16,7 @@ Release without validated traceability is prohibited.
 
 Project Name:  
 Version:  
-Date (YYYY-MM-DD):  
+Last Updated (YYYY-MM-DD):
 Maintained By:  
 Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
 Status: Draft / Approved  
@@ -34,13 +34,14 @@ Verification and Validation Report Version Reference:
 
 Confirm:
 
-- Requirements approved? (Yes / No)  
-- Architecture approved? (Yes / No)  
-- Detailed Design approved? (Yes / No)  
-- Test Plan aligned? (Yes / No)  
+- Current lifecycle phase identified? (Yes / No)
+- Requirements approved when required by the current phase? (Yes / No / Not Yet Applicable)
+- Architecture approved when required by the current phase? (Yes / No / Not Yet Applicable)
+- Detailed Design approved when required by the current phase? (Yes / No / Not Yet Applicable)
+- Test Plan aligned when required by the current phase? (Yes / No / Not Yet Applicable)
 - Advancement to next phase authorized? (Yes / No)  
 
-If any answer is “No,” traceability validation is incomplete.
+If any answer required for the current phase is `No`, traceability validation is incomplete. Future-phase mappings MAY be marked `Pending` only with a target artifact and resolution gate; required current-phase mappings SHALL resolve before advancement.
 
 ---
 
@@ -52,22 +53,26 @@ The RTM SHALL ensure:
 - Every architectural element maps to requirements  
 - Every design artifact maps to architecture  
 - Every implementation artifact maps to design  
-- Every test case maps to requirements  
+- Every requirement maps to one or more Verification Cases with appropriate methods
+- Every test case maps to a Test-method Verification Case and approved requirements
+- Validation scenarios map stakeholder needs and intended use to affected requirements and evidence
 - Packaging and orchestration artifacts map to release state  
 - Deterministic–probabilistic boundaries are traceable  
 
 Traceability SHALL be bidirectional and complete.
 
+Completeness is phase-aware. At release, no required mapping may remain `Pending`.
+
 ---
 
 # 3. Core Traceability Matrix
 
-| Req ID | Req Type | HLA Component ID | DD Artifact | Implementation Unit | Test Case ID | Change Ref | Risk Ref | Packaging Ref | Orchestration Ref | Validation Status | Evidence Ref |
-|--------|----------|------------------|-------------|---------------------|--------------|------------|----------|---------------|-------------------|-------------------|--------------|
+| Req ID | Req Type | Requirement Summary | HLA Component ID | DD Artifact | Implementation Unit | Verification Case ID | Verification Method | Test Case ID | Change Ref | Risk Ref | Packaging Ref | Orchestration Ref | Verification Status | Evidence Ref |
+|--------|----------|---------------------|------------------|-------------|---------------------|----------------------|---------------------|--------------|------------|----------|---------------|-------------------|---------------------|--------------|
 
 Example:
 
-| FR-001 | FR | HLA-Auth | DD-Login | auth/login.py | TC-001 | CHG-001 | RSK-001 | PKG-v1.0 | ORCH-Build-01 | Verified | VAL-001 |
+| FR-001 | FR | User authentication | HLA-Auth | DD-Login | auth/login.py | VC-001 | Test | TC-001 | CHG-001 | RSK-001 | PKG-v1.0 | ORCH-Build-01 | Verified | VAL-001 |
 
 ---
 
@@ -79,6 +84,9 @@ FR-XXX or NFR-XXX identifier from SRS.
 **Req Type**  
 FR / NFR.
 
+**Requirement Summary**
+Concise description of the approved requirement; the SRS remains authoritative.
+
 **HLA Component ID**  
 Approved architectural component.
 
@@ -88,8 +96,14 @@ Design-level module, interface, or artifact identifier.
 **Implementation Unit**  
 Code module, package, service, or deployment unit.
 
+**Verification Case ID**
+Stable identifier for the planned verification activity, such as VC-001.
+
+**Verification Method**
+Test / Analysis / Inspection / Demonstration / Review / Measurement.
+
 **Test Case ID**  
-Validation case identifier.
+Executable test identifier when the Verification Method is Test; otherwise `Not Applicable`.
 
 **Change Ref**
 Change Proposal and Impact Assessment ID when the row is affected by a material change.
@@ -103,11 +117,23 @@ Reference to packaging plan artifact or release identifier.
 **Orchestration Ref**  
 Reference to build or pipeline identifier.
 
-**Validation Status**  
-Planned / Implemented / Tested / Verified / Blocked.
+**Verification Status**
+Planned / Ready / In Progress / Verified / Failed / Blocked / Not Applicable.
 
 **Evidence Ref**  
 Reference to test report, validation artifact, or audit evidence.
+
+## 3.1 Validation Traceability
+
+Validation SHALL be traced separately from requirement verification.
+
+| Validation Scenario ID | Stakeholder Need / Intended Use / Outcome Ref | Representative Users or Operators | Operational Context | Related Requirement IDs | Validation Criteria | Status | Evidence Ref |
+|------------------------|------------------------------------------------|-----------------------------------|---------------------|-------------------------|---------------------|--------|--------------|
+| VS-001 | | | | | | Planned | |
+
+Allowed Status values: Planned / Ready / In Progress / Validated / Failed / Blocked / Not Applicable
+
+Passing requirement verification SHALL NOT be treated as automatic validation of stakeholder need or intended use.
 
 ---
 
@@ -129,13 +155,14 @@ Each NFR SHALL explicitly map to:
 
 - Architectural mechanism  
 - Design enforcement  
-- Test validation  
+- Verification Case and method
+- Test Case when the method is Test
 - Packaging consideration  
 - Orchestration consideration  
 
 Example:
 
-| NFR ID | Architectural Mechanism | Design Artifact | Test Case | Packaging Impact | Status |
+| NFR ID | Architectural Mechanism | Design Artifact | Verification Case | Method | Test Case (if applicable) | Packaging Impact | Status |
 
 Assumed NFR compliance is prohibited.
 
@@ -146,10 +173,13 @@ Assumed NFR compliance is prohibited.
 Traceability MUST support:
 
 Forward tracing:
-Requirement → Architecture → Design → Implementation → Test → Packaging
+Requirement → Architecture → Design → Implementation → Verification Case → Evidence → Packaging
 
 Backward tracing:
-Test → Implementation → Design → Architecture → Requirement
+Evidence → Verification Case → Implementation → Design → Architecture → Requirement
+
+Validation tracing:
+Stakeholder Need / Intended Use / Outcome → Validation Scenario → Related Requirements → Evidence
 
 If any chain breaks, advancement is prohibited.
 
@@ -163,7 +193,10 @@ The following SHALL block progression:
 - Architectural component without requirement  
 - Design artifact without architecture parent  
 - Implementation unit without design reference  
+- Verification case without requirement reference
 - Test case without requirement reference  
+- Test case without a parent Test-method Verification Case
+- Validation scenario without an approved stakeholder need, intended use, or outcome basis
 - Packaging artifact without RTM linkage  
 - Orchestration artifact without RTM linkage  
 
@@ -179,7 +212,9 @@ When any of the following change:
 - Architecture  
 - Design  
 - Implementation  
+- Verification case or method
 - Test case  
+- Validation scenario
 - Packaging configuration  
 - Orchestration pipeline  
 
@@ -204,7 +239,9 @@ Before phase advancement, confirm:
 - 100% FR coverage to design  
 - 100% NFR coverage to architecture  
 - 100% implementation traceability  
-- 100% requirement-to-test coverage  
+- 100% requirement-to-verification coverage with methods
+- 100% Test-method Verification Cases linked to Test Case IDs
+- Validation scenarios cover approved stakeholder needs, intended use, and operational outcomes
 - Deterministic–probabilistic boundaries mapped (if applicable)  
 - Packaging traceability complete  
 - Orchestration traceability complete  
@@ -219,7 +256,7 @@ Failure blocks advancement.
 Before release authorization:
 
 - RTM Version incremented  
-- Validation status updated to release state  
+- Verification and validation status updated to release state
 - Evidence references finalized  
 - Verification and Validation Report version aligned
 - Release-relevant Risk IDs dispositioned

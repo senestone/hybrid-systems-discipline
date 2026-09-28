@@ -204,14 +204,15 @@ Assumed compliance is prohibited.
 
 ---
 
-# 8. Testing Alignment
+# 8. Verification and Testing Alignment
 
 Define:
 
+- Verification Case ID(s) and method(s)
 - Unit Test Case ID(s)  
 - Integration Test Case ID(s)  
 - Failure scenario tests  
-- NFR validation approach  
+- NFR verification approach
 - Probabilistic containment tests (if applicable)  
 
 Testing intent SHALL be explicit before implementation.
@@ -241,7 +242,7 @@ Confirm mapping between:
 - Architectural Component ID(s)  
 - Detailed Design section(s)  
 - Planned Implementation units  
-- Planned Test Case ID(s)  
+- Planned Verification Case ID(s), method(s), and applicable Test Case ID(s)
 
 No orphaned scope SHALL exist.
 

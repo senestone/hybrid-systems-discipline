@@ -248,7 +248,7 @@ Detailed Design MUST:
 
 - Reference Requirement IDs
 - Reference Architectural Component IDs
-- Establish forward linkage for Test Case IDs
+- Establish forward linkage for Verification Case IDs, methods, and applicable Test Case IDs
 - Maintain RTM continuity
 
 Traceability gaps SHALL prohibit advancement.

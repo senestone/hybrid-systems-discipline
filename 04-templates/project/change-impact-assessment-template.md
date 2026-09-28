@@ -123,7 +123,7 @@ Record:
 - Architecture component IDs affected
 - Detailed Design references affected
 - Implementation units affected
-- Test Case IDs affected
+- Verification Case IDs, methods, Test Case IDs, and Validation Scenario IDs affected
 - Packaging and orchestration references affected
 - Documentation deliverables affected
 - Risk IDs affected or created
@@ -177,7 +177,7 @@ Define:
 
 - Acceptance criteria
 - Test cases to add, revise, rerun, or retire
-- Non-functional validation required
+- Non-functional verification required
 - Regression scope
 - Clean-environment or packaging validation
 - Operational or documentation verification

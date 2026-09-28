@@ -56,7 +56,7 @@ Explicitly state:
 - Requirement IDs impacted
 - Architectural Component IDs impacted
 - Detailed Design references impacted
-- Test Case IDs impacted
+- Verification Case IDs and Test Case IDs impacted
 - RTM sections impacted
 
 Objectives must align with current lifecycle phase.
@@ -144,10 +144,11 @@ Unresolved high-risk items block advancement.
 
 Record:
 
-- Test Case IDs created or modified
+- Verification Case IDs, methods, and Test Case IDs created or modified
 - Test coverage impact
-- Functional validation status
-- NFR validation status
+- Functional verification status
+- NFR verification status
+- System validation status
 - Probabilistic containment validation status (if applicable)
 - Clean build result
 - CI/CD result (if applicable)

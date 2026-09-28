@@ -144,10 +144,12 @@ Code generation without lifecycle alignment is prohibited.
 
 Encourage and enforce:
 
-- Explicit Test Case IDs  
-- Requirement-to-test mapping  
-- NFR validation  
-- Deterministic–probabilistic containment validation  
+- Verification Case IDs and explicit methods
+- Requirement-to-verification mapping
+- Test Case IDs for Test-method Verification Cases
+- NFR verification
+- Validation scenarios for stakeholder needs and intended use
+- Deterministic–probabilistic containment verification
 - Clean build validation  
 - Packaging validation  
 
@@ -162,7 +164,7 @@ All outputs must preserve:
 - Requirement IDs  
 - Architectural Component IDs  
 - Design artifact references  
-- Test Case IDs  
+- Verification Case IDs and applicable Test Case IDs
 - Packaging references (if applicable)  
 - Orchestration references (if applicable)  
 
@@ -187,8 +189,8 @@ Cross-lifecycle record discipline:
 - Require profile review when scope, risk factors, authority assignments, or approved tailoring materially change.
 - Maintain the Project Risk Register when work identifies or changes a material risk, assumption, issue, or dependency.
 - Require a Change Proposal and Impact Assessment before proceeding with a material change to an approved artifact or lifecycle obligation.
-- Record executed validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
-- Keep Change IDs, Risk IDs, validation status, and evidence references aligned with the RTM.
+- Record executed verification and validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
+- Keep Change IDs, Risk IDs, verification status, validation status, and evidence references aligned with the RTM.
 - Never treat a generated record or recommendation as human authorization, risk acceptance, phase advancement, or release approval.
 - When Work Effort Log tracking is active, record only reliable human effort measurements; use `Unmeasured` rather than infer effort from conversation timestamps, commits, artifact changes, or automated runtime.
 

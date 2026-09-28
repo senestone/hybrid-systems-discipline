@@ -16,12 +16,16 @@ It is not a post-implementation activity.
 
 ## 1. Purpose
 
-Testing is a compensating verification architecture.
+Verification and validation provide the compensating evidence architecture. Testing is a primary verification method within that architecture.
+
+Verification establishes objective evidence that specified requirements are fulfilled.
+
+Validation establishes objective evidence that the delivered system supports stakeholder needs, intended use, and operational context.
 
 It SHALL:
 
-- Validate functional requirements
-- Validate non-functional requirements
+- Verify functional requirements
+- Verify non-functional requirements
 - Confirm architectural assumptions
 - Enforce deterministic behavior
 - Contain probabilistic uncertainty
@@ -31,7 +35,7 @@ It SHALL:
 
 Testing is defined prior to implementation.
 
-Implementation without defined validation intent is prohibited.
+Implementation without defined verification and validation intent is prohibited.
 
 ---
 
@@ -50,7 +54,7 @@ Lifecycle authority resides in:
 
 `02-governance/00-lifecycle-bootstrap.md`
 
-No phase advancement is authorized without defined test alignment.
+No phase advancement is authorized without defined verification and validation alignment.
 
 ---
 
@@ -61,18 +65,20 @@ Before Implementation begins, the following test-planning content SHALL exist:
 - Approved Test Plan
 - Test Strategy
 - Test Case Inventory
-- Requirement-to-Test mapping
+- Verification Case Inventory with selected methods
+- Requirement-to-Verification Case mapping
+- Validation scenarios for stakeholder needs, intended use, and operational context
 - Acceptance criteria
 - Failure scenario definitions
-- NFR validation strategy
+- NFR verification strategy
 
-The Test Plan is the governing test-planning artifact. The Test Strategy and Test Case Inventory MAY be maintained as sections of the Test Plan or as approved, versioned artifacts linked from it.
+The Test Plan is the governing verification-and-validation planning artifact. The Test Strategy, Verification Case Inventory, Test Case Inventory, and validation scenarios MAY be maintained as sections of the Test Plan or as approved, versioned artifacts linked from it.
 
 Requirement acceptance criteria and failure scenarios MAY remain in their approved source artifacts when the Test Plan and RTM reference them unambiguously. Separate documents are not required solely to satisfy this mandate.
 
-If test artifacts are incomplete, implementation SHALL NOT begin.
+If verification-and-validation planning content is incomplete, implementation SHALL NOT begin.
 
-As tests are executed, results SHALL be recorded in a Verification and Validation Report that reconciles the planned inventory, actual execution, retained evidence, deviations, defects, and requirement coverage.
+As verification and validation activities are performed, results SHALL be recorded in a Verification and Validation Report that reconciles the planned inventories, actual execution, retained evidence, deviations, defects, and coverage.
 
 ---
 
@@ -80,22 +86,27 @@ As tests are executed, results SHALL be recorded in a Verification and Validatio
 
 Every Requirement ID MUST map to:
 
-- At least one Test Case ID
-- Defined validation criteria
+- At least one Verification Case ID
+- A selected method: Test / Analysis / Inspection / Demonstration / Review / Measurement
+- Defined acceptance criteria and planned evidence
 
-If a requirement cannot be tested, it is incomplete.
+When Test is the selected method, the Verification Case SHALL map to at least one Test Case ID. A non-test method SHALL include a rationale appropriate to the requirement and risk profile.
+
+If a requirement cannot be verified by an appropriate method, it is incomplete.
 
 Traceability Matrix (RTM) SHALL include:
 
-- Requirement → Design → Implementation → Test mapping
+- Requirement → Design → Implementation → Verification Case → Evidence mapping
+- Test Case linkage where Test is the selected method
+- Validation Scenario linkage to stakeholder need, intended use, or operational outcome
 
 Unmapped requirements SHALL block advancement.
 
-Each completed validation status SHALL reference evidence in the Verification and Validation Report or another approved evidence artifact.
+Each completed verification or validation status SHALL reference evidence in the Verification and Validation Report or another approved evidence artifact.
 
 ---
 
-## 5. Functional Validation
+## 5. Functional Verification
 
 Functional tests SHALL verify:
 
@@ -107,15 +118,15 @@ Functional tests SHALL verify:
 - State transitions
 - Cross-component interaction integrity
 
-Functional validation MUST be deterministic wherever possible.
+Functional verification MUST be deterministic wherever possible.
 
 ---
 
-## 6. Non-Functional Validation
+## 6. Non-Functional Verification
 
-Non-functional requirements MUST be validated explicitly.
+Non-functional requirements MUST be verified explicitly using methods appropriate to the characteristic and acceptance threshold.
 
-Testing SHALL define validation strategy for:
+Planning SHALL define verification strategy for:
 
 - Performance thresholds
 - Latency constraints
@@ -132,18 +143,33 @@ Assumed NFR compliance is prohibited.
 
 ---
 
+## 6.1 System Validation
+
+Validation SHALL evaluate the integrated system against:
+
+- Stakeholder needs
+- Intended use and foreseeable misuse
+- Representative users and operators
+- Operational workflows and environments
+- Business, mission, or service outcomes
+- Human factors and user expectations where applicable
+
+Validation scenarios SHALL remain traceable to their approved basis, affected Requirement IDs, results, and evidence. Passing requirement verification does not by itself establish system validation.
+
+---
+
 ## 7. Deterministic–Probabilistic Containment Testing
 
 If probabilistic components exist, testing MUST:
 
-- Validate boundary enforcement
-- Validate invocation contract
-- Validate acceptance/rejection logic
-- Validate fallback behavior
-- Validate deterministic state protection
-- Validate logging and observability
-- Validate reproducibility constraints (where applicable)
-- Validate drift detection posture (if defined)
+- Verify boundary enforcement
+- Verify invocation contract
+- Verify acceptance/rejection logic
+- Verify fallback behavior
+- Verify deterministic state protection
+- Verify logging and observability
+- Verify reproducibility constraints (where applicable)
+- Verify drift detection posture (if defined)
 
 Probabilistic outputs SHALL NOT be treated as self-validating.
 
@@ -151,7 +177,7 @@ Containment integrity is mandatory.
 
 ---
 
-## 8. Failure Modeling Validation
+## 8. Failure Modeling Verification
 
 Tests SHALL explicitly exercise:
 
@@ -178,11 +204,11 @@ Where feasible, tests SHALL be:
 - Deterministic in outcome (where determinism is expected)
 - Repeatable in clean environments
 
-Manual-only validation increases risk and SHALL be justified.
+Manual-only testing increases risk and SHALL be justified.
 
 ---
 
-## 10. Clean Environment Validation
+## 10. Clean Environment Verification
 
 Tests MUST execute successfully in:
 
@@ -191,7 +217,7 @@ Tests MUST execute successfully in:
 - Packaged runtime artifacts
 - Deployment-equivalent environments (where feasible)
 
-Local success without packaging validation is insufficient.
+Local success without packaging verification is insufficient.
 
 ---
 
@@ -230,10 +256,10 @@ AI SHALL refuse to:
 
 - Begin implementation without test plan
 - Declare coverage sufficient without mapping
-- Skip NFR validation
-- Ignore probabilistic containment validation
-- Advance phase without test alignment
-- Approve release without passing validation
+- Skip NFR verification
+- Ignore probabilistic containment verification
+- Advance phase without verification and validation alignment
+- Approve release without sufficient verification and validation evidence
 - Declare verification complete without an evidence-bearing Verification and Validation Report
 - Conceal failed, blocked, omitted, or deviating test execution
 
@@ -241,27 +267,29 @@ Refusal preserves verification integrity.
 
 ---
 
-## 14. Validation Completion and Release Criteria
+## 14. Verification and Validation Completion and Release Criteria
 
-Testing requirements are satisfied only when:
+Verification and validation obligations are satisfied only when:
 
-- All Requirement IDs map to Test Case IDs
-- Functional validation passes
-- NFR validation strategy is executed
+- All Requirement IDs map to Verification Case IDs with appropriate methods
+- Every Test-method Verification Case maps to executed Test Case IDs
+- Functional verification passes
+- NFR verification strategy is executed
+- Validation scenarios establish stakeholder need, intended use, and operational-context disposition
 - Probabilistic containment tests pass (if applicable)
 - Failure paths are exercised
 - Tests pass in clean environment
-- Packaging validation succeeds
-- Verification and Validation Report reconciles planned and executed tests
+- Packaging verification succeeds
+- Verification and Validation Report reconciles planned and completed verification cases, tests, and validation scenarios
 - Evidence references resolve and are reflected in the RTM
 - Defects, deviations, exceptions, and residual risks are dispositioned
-- Project Risk Register reflects validation findings
+- Project Risk Register reflects verification and validation findings
 - RTM reflects complete coverage
 - Human approval is granted
 
 If any condition is unmet, advancement to release is prohibited. These execution criteria do not apply to the Test Planning to Implementation gate, which is governed by the approved planning content in Section 3 and the phase-gate checklist.
 
-Release SHALL NOT proceed without validated test confirmation.
+Release SHALL NOT proceed without sufficient verification and validation evidence for the governed increment and its approved risk profile.
 
 ---
 

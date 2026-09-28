@@ -178,11 +178,12 @@ Human approval required.
 - Test Plan approved
 - Test Strategy defined in the Test Plan or an approved linked artifact
 - Test Case Inventory complete in the Test Plan or an approved linked artifact
-- Requirement-to-Test mapping complete  
-- NFR validation strategy defined  
+- Requirement-to-Verification Case mapping complete with methods selected
+- NFR verification strategy defined
 - Failure scenario coverage defined  
 - Deterministic–probabilistic containment validation defined  
-- RTM updated with Test Case IDs  
+- RTM updated with Verification Case IDs, methods, and applicable Test Case IDs
+- Validation scenarios defined for stakeholder needs, intended use, and operational context
 - Material technology choices required by implementation are Approved for Implementation with linked selection and decision records
 - Glossary entries current for test terminology, acronyms, and abbreviations
 - Verification and Validation Report structure and evidence-retention approach defined
@@ -202,6 +203,8 @@ Human approval required.
 - No unauthorized scope present  
 - Code documentation complete  
 - Tests implemented and passing  
+- Implementation-stage verification activities complete with evidence
+- Planned validation performed or explicitly scheduled for the representative packaged or operational context
 - Verification and Validation Report reconciles executed tests, evidence, defects, and deviations
 - Deterministic–probabilistic containment verified  
 - RTM fully updated  

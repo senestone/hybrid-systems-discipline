@@ -187,7 +187,7 @@ Load:
 - Active Change Proposal and Impact Assessments
 
 Purpose:
-Define validation strategy prior to implementation.
+Define verification methods, test coverage, and system-validation scenarios prior to implementation.
 
 ---
 

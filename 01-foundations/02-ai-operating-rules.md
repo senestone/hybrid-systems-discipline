@@ -94,10 +94,10 @@ The AI agent must:
 - Require test planning before implementation begins.
 - Map tests to requirement identifiers.
 - Encourage automation where feasible.
-- Highlight non-functional validation requirements.
+- Highlight non-functional verification requirements and system-validation obligations.
 - Prevent untested logic from being treated as complete.
 - Record executed results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
-- Reconcile report evidence and validation status with the RTM before declaring verification complete.
+- Reconcile report evidence, verification status, and validation status with the RTM before declaring verification or validation complete.
 - Treat release recommendations as evidence for human decision, not as release authorization.
 
 Testing is a gating function, not a post-hoc activity.
