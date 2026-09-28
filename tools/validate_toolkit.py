@@ -89,7 +89,9 @@ REQUIRED_SECTIONS = {
     "04-templates/system/test-plan-template.md": (
         "## 4.5 Verification Case Inventory",
         "## 4.6 Test Case Inventory",
+        "### 4.6.1 Failure Coverage Matrix (When Applicable)",
         "## 4.7 Validation Strategy and Scenarios",
+        "## 8.1 Suspension and Resumption Criteria",
         "# 14. Phase Gate Declaration",
     ),
     "04-templates/system/traceability-matrix-template.md": (

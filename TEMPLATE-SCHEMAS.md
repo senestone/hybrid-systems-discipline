@@ -1,6 +1,6 @@
 # Template Schema Registry
 
-Registry Version: 1.0.0
+Registry Version: 1.1.0
 Applicable Toolkit Development Baseline: 0.9.0-dev
 
 Schema versions describe template structure and meaning. They are distinct from the version of a project artifact instantiated from a template.
@@ -23,7 +23,7 @@ Schema versions describe template structure and meaning. They are distinct from 
 | HSD-SYS-PACKAGING | 1.0.0 | [Packaging Plan](04-templates/system/packaging-plan-template.md) | Packaging and Orchestration |
 | HSD-SYS-REQ | 1.0.0 | [Requirements](04-templates/system/requirements-template.md) | Requirements |
 | HSD-SYS-RTM | 1.0.0 | [Requirements Traceability Matrix](04-templates/system/traceability-matrix-template.md) | Traceability |
-| HSD-SYS-TEST | 1.0.0 | [Test Plan](04-templates/system/test-plan-template.md) | Verification and validation planning |
+| HSD-SYS-TEST | 1.1.0 | [Test Plan](04-templates/system/test-plan-template.md) | Verification and validation planning |
 | HSD-SYS-VVR | 1.0.0 | [Verification and Validation Report](04-templates/system/verification-validation-report-template.md) | Verification and validation evidence |
 | HSD-DOC-ADMIN | 1.0.0 | [Administration Guide](04-templates/documentation/administration-guide-template.md) | Documentation and operations |
 | HSD-DOC-INSTALL | 1.0.0 | [Installation Guide](04-templates/documentation/installation-guide-template.md) | Documentation and deployment |

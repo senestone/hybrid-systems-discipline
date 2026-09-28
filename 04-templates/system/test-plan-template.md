@@ -171,6 +171,15 @@ The inventory SHALL include nominal, boundary, negative, failure, recovery, and 
 
 Detailed procedures MAY reside in approved linked artifacts when the inventory preserves their identifiers, requirement mappings, versions, and locations.
 
+### 4.6.1 Failure Coverage Matrix (When Applicable)
+
+When the system has a governed failure catalogue, error taxonomy, state-transition failure model, or material recovery contract, map each applicable failure condition to planned coverage in this section or an approved linked artifact.
+
+| Failure Contract ID | Trigger or Injection Method | Expected Status and Prohibited Side Effects | Recovery / Retry Expectation | Test Case ID(s) | Planned Evidence |
+|---------------------|-----------------------------|---------------------------------------------|------------------------------|-----------------|------------------|
+
+The matrix MAY group failures that share one deterministic rule, but every governed condition SHALL have an explicit disposition. The existence of an error code, enum, or branch is not evidence that its behavior is covered.
+
 ---
 
 ## 4.7 Validation Strategy and Scenarios
@@ -233,9 +242,27 @@ Define:
 - Data generation strategy  
 - Data anonymization (if applicable)  
 - Edge-case coverage  
-- Data retention rules  
+- Data retention rules
+- Expected-result authority and review
+- Privacy, licensing, and redistribution constraints
 
 Invalid or uncontrolled data SHALL invalidate test results.
+
+When test data is generated, versioned, security-sensitive, licensed, shared across cases, or relied upon as a reproducibility oracle, define in this section or an approved linked fixture plan:
+
+- Stable fixture and expected-result identifiers and versions
+- Integrity metadata such as size and digest where appropriate
+- Generator source, parameters, deterministic seed, toolchain, and command identity
+- Linked Test Case IDs and bounded fixture purpose
+- Expected results derived independently from candidate implementation output
+- Positive, boundary, negative, failure, recovery, and prohibited-side-effect coverage
+- Distribution, access, retention, and destruction classifications
+- Representative workload assembly and environment-dependent comparison rules
+- Change-control and regression effects when a fixture or expected result changes
+
+Prefer minimal synthetic and redistributable fixtures. Production, personal, secret, protected, access-controlled, or ambiguously licensed data SHALL NOT enter a portable fixture set without explicit authorization and controls.
+
+A separate Test Data and Fixture Plan is optional. Use one only when the complexity would make this Test Plan difficult to review or maintain.
 
 ---
 
@@ -250,6 +277,20 @@ Testing may begin when:
 - Automation (if applicable) prepared  
 
 Premature execution SHALL be halted.
+
+Define execution ordering or waves when later activities depend on earlier contract, integration, safety, or environment evidence. Later evidence SHALL NOT waive an earlier failed invariant.
+
+## 8.1 Suspension and Resumption Criteria
+
+Define conditions that invalidate or suspend an execution, such as:
+
+- Fixture, expected-result, build, dependency, or environment identity mismatch
+- Environment contamination or loss of required isolation
+- Unsafe logging, privacy exposure, or uncontrolled resource behavior
+- Missing evidence capture or inability to distinguish product failure from infrastructure failure
+- Failure of a prerequisite invariant or containment boundary
+
+For each applicable condition, define evidence preservation, responsible disposition, corrective action, and the criteria for resuming or restarting execution.
 
 ---
 

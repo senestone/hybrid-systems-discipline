@@ -26,6 +26,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Reframed positioning as an extension of established software and systems engineering.
 - Reconciled loading guidance with Baseline, Elevated, and High Assurance profiles.
 - Refined phase-gate orphan rules to distinguish Verification Cases, Test Cases, and Validation Scenarios.
+- Expanded the Test Plan schema with optional failure-coverage, complex fixture/oracle, and execution suspension guidance without adding mandatory companion artifacts.
 
 ### Fixed
 

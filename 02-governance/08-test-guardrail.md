@@ -76,6 +76,10 @@ The Test Plan is the governing verification-and-validation planning artifact. Th
 
 Requirement acceptance criteria and failure scenarios MAY remain in their approved source artifacts when the Test Plan and RTM reference them unambiguously. Separate documents are not required solely to satisfy this mandate.
 
+When a governed failure catalogue, error taxonomy, state-transition failure model, or material recovery contract exists, each applicable condition SHALL map to planned verification coverage. A separate failure matrix is optional.
+
+When fixtures or expected results require governed identity, generation provenance, licensing or privacy controls, reusable workload assembly, or independent oracle review, the Test Plan SHALL define those controls directly or link an approved Test Data and Fixture Plan. A separate fixture plan is not required for simple, self-contained test data.
+
 If verification-and-validation planning content is incomplete, implementation SHALL NOT begin.
 
 As verification and validation activities are performed, results SHALL be recorded in a Verification and Validation Report that reconciles the planned inventories, actual execution, retained evidence, deviations, defects, and coverage.
@@ -205,6 +209,8 @@ Where feasible, tests SHALL be:
 - Repeatable in clean environments
 
 Manual-only testing increases risk and SHALL be justified.
+
+Execution planning SHALL define suspension and resumption criteria when an invalid fixture, environment, evidence path, safety boundary, or infrastructure condition could make results unreliable.
 
 ---
 
