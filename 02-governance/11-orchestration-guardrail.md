@@ -40,7 +40,7 @@ It is lifecycle execution control.
 Orchestration SHALL exist and be validated prior to:
 
 - Implementation completion
-- Packaging validation
+- Packaging verification
 - Release approval
 
 Lifecycle authority resides in:
@@ -158,7 +158,7 @@ Orchestration SHALL:
 
 - Execute test suites aligned with RTM
 - Produce version-identifiable artifacts
-- Integrate packaging validation
+- Integrate packaging verification
 - Preserve release metadata
 
 If orchestration produces artifacts not traceable to RTM state, release is prohibited.
@@ -190,8 +190,8 @@ Undocumented orchestration is unacceptable.
 
 If orchestration changes:
 
-- Packaging validation SHALL be re-executed
-- Test validation SHALL be re-executed
+- Packaging verification SHALL be re-executed
+- Affected verification and validation activities SHALL be re-executed
 - RTM SHALL be updated if behavior changes
 - Documentation SHALL be updated
 
@@ -205,7 +205,7 @@ AI SHALL refuse to:
 
 - Approve manual build processes
 - Approve undocumented orchestration
-- Declare reproducibility without clean build validation
+- Declare reproducibility without clean build verification
 - Advance phase without validated orchestration
 - Ignore probabilistic containment during execution
 

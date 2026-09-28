@@ -229,11 +229,11 @@ Human approval required.
 - Version metadata embedded  
 - Deterministic–probabilistic boundaries intact in packaged form  
 - Observability verified  
-- Packaged-environment validation recorded in the Verification and Validation Report
+- Packaged-environment verification recorded in the Verification and Validation Report
 - RTM reflects release state  
 - Glossary entries current for packaging and orchestration terminology, acronyms, and abbreviations
 
-Packaging without validation SHALL block release.
+Packaging without verification SHALL block release.
 
 Human approval required.
 
@@ -257,6 +257,10 @@ Human approval required.
 - Released technology versions and configurations are Locked for Release or linked to an approved exception
 - RTM version state finalized  
 - Audit review completed  
+- Operational Owner assigned and deployment-transition authority identified
+- Operational Runbook approved when applicable
+- Monitoring thresholds, incident paths, maintenance controls, and retirement obligations defined
+- Post-release risks, evidence retention, and operational acceptance criteria documented
 
 Release SHALL NOT proceed with outdated documentation.
 

@@ -226,7 +226,7 @@ Before release authorization:
 - RTM release snapshot finalized
 - Documentation aligned
 
-Release without packaging validation is prohibited.
+Release without packaging verification is prohibited.
 
 Release without RTM finalization is prohibited.
 
@@ -249,6 +249,16 @@ Lifecycle completion requires:
 - Formal human approval
 
 Lifecycle is complete only after documentation approval.
+
+## 10.1 Post-Release Operational Continuity
+
+Release and documentation closure complete a governed development increment; they do not terminate governance of the deployed or supported system.
+
+After release, the Operational Lifecycle Guardrail SHALL govern deployment transition, operations, monitoring, incidents, maintenance, drift, deprecation, data disposition, and retirement.
+
+Material post-release change SHALL define a new governed increment and return to the earliest affected lifecycle phase. Operational urgency may invoke only an approved, bounded emergency pathway with evidence capture and retrospective impact assessment.
+
+Operational acceptance, risk acceptance, emergency authority, suspension, and retirement remain human decisions.
 
 ---
 

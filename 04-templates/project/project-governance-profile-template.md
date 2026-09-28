@@ -65,6 +65,8 @@ Future product scope outside this increment need not be fully specified. It SHAL
 Selected Profile: Baseline / Elevated / High Assurance
 Selection Rationale:
 Profile Decision ID:
+AI Assurance Profile: Activated / Not Activated / Not Applicable
+AI Assurance Activation or Exclusion Rationale:
 
 Use the [Tailoring and Authority Guardrail](../../02-governance/13-tailoring-and-authority-guardrail.md) to determine obligations. A lower profile than indicated by a material factor requires explicit rationale, risk disposition, and human approval.
 

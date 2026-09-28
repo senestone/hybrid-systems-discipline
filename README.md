@@ -61,6 +61,8 @@ This repository defines:
 - Deterministic–probabilistic boundary containment
 - Mandatory bidirectional traceability
 - Explicit separation of requirement verification from intended-use validation
+- Post-release governance through operation, maintenance, deprecation, and retirement
+- Optional AI-assurance controls for material probabilistic behavior
 - Explicit rollback authority
 - Reproducible packaging enforcement
 - Release gating tied to validation and documentation
@@ -142,6 +144,8 @@ Constitutional lifecycle control and guardrails:
   - Orchestration
 - [Phase Gate Checklist](02-governance/12-phase-gate-checklist.md)
 - [Tailoring and Authority Guardrail](02-governance/13-tailoring-and-authority-guardrail.md)
+- [Operational Lifecycle Guardrail](02-governance/14-operational-lifecycle-guardrail.md)
+- [AI Assurance Profile](02-governance/15-ai-assurance-profile.md) (optional)
 
 The [Guardrails Index](02-governance/guardrails-index.md) links every phase guardrail.
 
@@ -196,7 +200,7 @@ Create project-specific copies of these templates. Use stable IDs and links amon
 - [Administration Guide](04-templates/documentation/administration-guide-template.md)
 - [Online Help / In-Product Help](04-templates/documentation/online-help-template.md)
 - [Release Notes](04-templates/documentation/release-notes-template.md)
-- [Operational Runbook](04-templates/documentation/operational-runbook-template.md)
+- [Operational Runbook](04-templates/documentation/operational-runbook-template.md): operational ownership, monitoring, incident response, maintenance, drift, deprecation, data disposition, and retirement.
 
 Templates convert abstract discipline into executable structure.
 
@@ -320,7 +324,7 @@ Release is prohibited without:
 
 - Traceability completion
 - Clean build reproducibility
-- Packaging validation
+- Packaging verification
 - Documentation alignment
 - Human approval
 

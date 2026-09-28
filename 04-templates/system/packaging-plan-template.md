@@ -150,7 +150,7 @@ Manual packaging steps are prohibited.
 
 ---
 
-# 9. Clean Build and Reproducibility Validation
+# 9. Clean Build and Reproducibility Verification
 
 Define procedure to:
 
@@ -176,16 +176,16 @@ Non-reproducible artifacts block release.
 Document:
 
 - Smoke test procedure  
-- Runtime startup validation  
+- Runtime startup verification
 - Configuration verification  
 - Dependency verification  
-- Failure scenario validation  
+- Failure scenario verification
 - Observability verification  
-- Performance validation (if required)  
+- Performance verification (if required)
 
 Testing SHALL occur in packaging-equivalent environment.
 
-Local-only validation is insufficient.
+Local-only verification is insufficient.
 
 ---
 

@@ -251,7 +251,26 @@ Align delivered system to governance artifacts.
 
 ---
 
-# 3. Minimal Mode vs Enterprise Mode
+# 3. Post-Release Operational Governance
+
+For deployed, supported, or retained systems, load:
+
+- Operational Lifecycle Guardrail
+- Approved Operational Runbook
+- Active Project Governance Profile
+- Released RTM snapshot and Verification and Validation Report
+- Active Project Risk Register
+- Change Proposal and Impact Assessment template
+- AI Assurance Profile when activated
+
+Material maintenance, dependency, model, prompt, data, provider, configuration, or operational changes SHALL define a governed increment and return to the earliest affected lifecycle phase.
+
+Purpose:
+Preserve ownership, evidence, change control, and risk governance through operation, maintenance, deprecation, data disposition, and retirement.
+
+---
+
+# 4. Minimal Mode vs Enterprise Mode
 
 ## Minimal Mode
 
@@ -288,7 +307,7 @@ Use for:
 
 ---
 
-# 4. Agent Capability Rules
+# 5. Agent Capability Rules
 
 Agent access and actions SHALL be governed by capability and current lifecycle phase, not by vendor or product name.
 
@@ -302,7 +321,7 @@ Platform-specific configurations, including `05-platform-config/cursor-rules.md`
 
 ---
 
-# 5. Deterministic–Probabilistic Systems
+# 6. Deterministic–Probabilistic Systems
 
 If probabilistic components exist:
 
@@ -311,6 +330,7 @@ Beginning at Architecture phase, always load:
 - RTM template
 - Guardrails governing probabilistic boundaries
 - Enterprise System Prompt
+- AI Assurance Profile when activated by the Project Governance Profile
 
 Do NOT defer boundary governance to implementation.
 
@@ -318,20 +338,20 @@ Containment is structural.
 
 ---
 
-# 6. What Not to Do
+# 7. What Not to Do
 
 Do not:
 
 - Load all templates simultaneously during ideation
 - Generate implementation before Detailed Design approval
 - Skip RTM alignment prior to implementation
-- Package without clean build validation
+- Package without clean build verification
 - Allow AI to redefine scope silently
 - Suppress refusal protocol for speed
 
 ---
 
-# 7. Operational Summary
+# 8. Operational Summary
 
 The toolkit is:
 
@@ -341,6 +361,7 @@ The toolkit is:
 - Reproducibility-focused
 - AI-aware
 - Release-gated
+- Operationally continuous through retirement
 
 It is not a prompt library.
 

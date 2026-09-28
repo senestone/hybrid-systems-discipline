@@ -179,7 +179,7 @@ Define:
 - Test cases to add, revise, rerun, or retire
 - Non-functional verification required
 - Regression scope
-- Clean-environment or packaging validation
+- Clean-environment or packaging verification
 - Operational or documentation verification
 - Evidence to retain
 - Verification and Validation Report reference to be produced

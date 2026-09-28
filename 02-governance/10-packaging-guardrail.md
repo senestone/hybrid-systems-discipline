@@ -24,7 +24,7 @@ Packaging SHALL:
 - Preserve traceability continuity
 - Preserve version identity
 - Preserve reproducibility posture
-- Validate deployment assumptions
+- Verify deployment assumptions
 - Reduce release risk
 
 Packaging is not a final-stage convenience.
@@ -38,7 +38,7 @@ It is a governance checkpoint.
 Packaging SHALL NOT proceed unless:
 
 - Implementation phase is complete
-- Test validation has passed
+- Required verification and validation activities have passed or been explicitly dispositioned
 - Verification and Validation Report records passing or explicitly accepted results
 - Release-relevant risks and change assessments are dispositioned
 - Traceability Matrix is current
@@ -134,21 +134,21 @@ Hidden environment coupling is prohibited.
 
 ---
 
-## 8. Packaging Validation
+## 8. Packaging Verification
 
-Packaging validation SHALL include:
+Packaging verification SHALL include:
 
 - Installation or deployment of artifact
-- Runtime startup validation
+- Runtime startup verification
 - Configuration verification
 - Dependency resolution confirmation
 - Smoke testing
-- Failure scenario validation (where feasible)
-- Validation of logging and observability
+- Failure scenario verification (where feasible)
+- Verification of logging and observability
 
 Local development success is insufficient.
 
-Validation SHALL occur in packaging-equivalent environment.
+Verification SHALL occur in a packaging-equivalent environment.
 
 ---
 
@@ -203,7 +203,7 @@ AI SHALL refuse to:
 - Declare packaging complete without automation
 - Approve non-reproducible artifacts
 - Suppress version identifiers
-- Advance lifecycle phase without packaging validation
+- Advance lifecycle phase without packaging verification
 - Ignore probabilistic containment integrity in packaged form
 
 Refusal preserves release integrity.
@@ -217,7 +217,7 @@ Packaging is complete only when:
 - Packaging definition is explicit
 - Automation exists and functions
 - Artifacts are reproducible
-- Packaging validation passes
+- Packaging verification passes
 - Deterministic–probabilistic boundaries remain intact
 - Versioning metadata is embedded
 - RTM is updated

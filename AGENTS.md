@@ -29,6 +29,8 @@ Agents must maintain the governed records that connect change, risk, and validat
 - Require a Change Proposal and Impact Assessment before proceeding with a material change to approved scope, requirements, architecture, design, validation obligations, packaging, operations, or documentation.
 - Record executed verification and validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
 - Keep Change IDs, Risk IDs, verification status, validation status, and evidence references aligned with the RTM and affected lifecycle artifacts.
+- After release, apply the Operational Lifecycle Guardrail and preserve operational ownership, incident, maintenance, drift, deprecation, data-disposition, and retirement controls.
+- Apply the AI Assurance Profile when activated by the Project Governance Profile; do not infer safety, compliance, or fitness from profile use.
 - Do not treat a generated record, recommendation, or status as human authorization, risk acceptance, phase advancement, or release approval.
 - When a Work Effort Log is active, record only reliable human effort measurements supplied by an accountable person or captured under an agreed measurement protocol. Mark effort `Unmeasured` rather than infer it from conversation timestamps, artifact changes, commits, or agent runtime; record automated runtime separately.
 

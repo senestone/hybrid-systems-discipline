@@ -217,7 +217,7 @@ Document:
 - External integrations  
 - Configuration model  
 - Packaging-equivalent environment  
-- Clean build validation environment  
+- Clean build verification environment
 
 Environment drift SHALL be minimized.
 

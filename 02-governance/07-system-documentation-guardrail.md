@@ -47,6 +47,7 @@ This guardrail operates across:
 - Packaging
 - Orchestration
 - Release approval
+- Operations, maintenance, deprecation, and retirement
 
 Lifecycle authority resides in:
 
@@ -182,10 +183,12 @@ Documentation SHALL be updated:
 - When controlled terminology, acronyms, or abbreviations are introduced or changed
 - Before packaging approval
 - Before release approval
+- After material operational changes, incidents, drift findings, or maintenance releases
+- At deprecation and retirement
 
-Deferred documentation updates are prohibited.
+Deferred documentation updates are prohibited unless an approved emergency pathway defines the owner and deadline for reconciliation.
 
-Documentation retrofitting post-release is a governance failure.
+Uncontrolled documentation drift after release is a governance failure.
 
 ---
 

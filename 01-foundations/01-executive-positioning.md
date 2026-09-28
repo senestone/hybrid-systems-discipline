@@ -22,11 +22,9 @@ Modern software systems increasingly combine:
 - Automated build and deployment pipelines
 - Multi-environment runtime configurations
 
-Traditional lifecycle models were not designed to govern probabilistic behavior.
+Established software and systems engineering provides the lifecycle foundation. Conventional implementations often leave AI-assisted execution and deterministic–probabilistic boundaries implicit.
 
-Agile optimizes iteration speed.  
-Waterfall optimizes documentation sequencing.  
-Neither explicitly governs containment of probabilistic systems.
+Agile and waterfall practices can both operate within disciplined systems engineering. Neither delivery style, by itself, guarantees explicit containment of probabilistic behavior.
 
 This toolkit addresses that structural gap.
 
@@ -46,7 +44,7 @@ Hybrid systems introduce new categories of risk:
 
 These risks accumulate gradually and often invisibly.
 
-Traditional SDLC discipline alone does not contain them.
+Lifecycle discipline must be extended with explicit controls to contain them consistently.
 
 ---
 
@@ -64,7 +62,7 @@ It provides:
 - Deterministic–probabilistic boundary containment
 - Structural rollback authority
 - Packaging and reproducibility enforcement
-- Release gating tied to traceability and validation
+- Release gating tied to traceability, verification, and validation
 - AI-agent behavioral enforcement alignment
 
 It integrates lifecycle governance with AI-assisted development.
@@ -91,9 +89,9 @@ Governance must scale with capability.
 
 ---
 
-# Differentiation from Traditional Frameworks
+# Extension of Established Frameworks
 
-This toolkit differs from traditional SDLC models in three key ways:
+This toolkit extends established lifecycle models in three key ways:
 
 The toolkit is development-model neutral: its phases are stabilization checkpoints for artifacts and decisions, not a mandate for linear waterfall delivery.
 

@@ -172,8 +172,8 @@ You must enforce:
 - Validation scenarios for stakeholder needs and intended use
 - Failure-mode verification
 - Deterministic–probabilistic containment verification
-- Clean build validation
-- Packaging validation
+- Clean build verification
+- Packaging verification
 
 Testing is a primary verification method. It does not substitute for all verification or for system validation.
 
@@ -212,6 +212,8 @@ Cross-lifecycle record discipline:
 - Require a Change Proposal and Impact Assessment before proceeding with a material change to an approved artifact or lifecycle obligation.
 - Record executed verification and validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.
 - Keep Change IDs, Risk IDs, verification status, validation status, and evidence references aligned with the RTM.
+- After release, apply the Operational Lifecycle Guardrail and preserve operational ownership, incident, maintenance, drift, deprecation, data-disposition, and retirement controls.
+- Apply the AI Assurance Profile when activated by the Project Governance Profile; do not infer safety, compliance, or fitness from profile use.
 - Never treat a generated record or recommendation as human authorization, risk acceptance, phase advancement, or release approval.
 - When Work Effort Log tracking is active, record only reliable human effort measurements; use `Unmeasured` rather than infer effort from conversation timestamps, commits, artifact changes, or automated runtime.
 
@@ -228,7 +230,7 @@ Before release-oriented output, verify:
 - RTM release snapshot finalized
 - Documentation version aligned
 
-Release without packaging validation is prohibited.
+Release without packaging verification is prohibited.
 
 ---
 

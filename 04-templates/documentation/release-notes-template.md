@@ -23,6 +23,8 @@ Glossary Version Reference:
 Risk Register Version Reference:
 Verification and Validation Report Reference:
 Release-Relevant Change Assessment References:
+Operational Runbook Reference:
+Operational Owner:
 
 ---
 
@@ -46,6 +48,7 @@ Document:
 - Major capabilities delivered
 - NFRs materially affected
 - Documentation versions included
+- Operational acceptance and monitoring changes
 
 Release notes SHALL align with approved scope and packaged artifact version.
 
@@ -91,6 +94,7 @@ Document:
 - Migration requirements
 - Compatibility constraints
 - Rollback considerations
+- Monitoring, alert, support, and end-of-support changes
 
 ---
 

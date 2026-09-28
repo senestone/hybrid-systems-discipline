@@ -197,6 +197,27 @@ Enforces:
 
 ---
 
+## 14. Operational Lifecycle
+
+- [14-operational-lifecycle-guardrail.md](./14-operational-lifecycle-guardrail.md)
+
+Enforces:
+
+- Operational acceptance and ownership
+- Monitoring, incidents, maintenance, and drift response
+- Controlled emergency pathways
+- Deprecation, data disposition, and retirement
+
+---
+
+## 15. Optional AI Assurance Profile
+
+- [15-ai-assurance-profile.md](./15-ai-assurance-profile.md)
+
+Adds risk-based controls for material AI or probabilistic behavior, including data lineage, evaluation design, harms, human oversight, supplier change, drift, and retirement.
+
+---
+
 # Enforcement Principles
 
 - Guardrails enforce discipline within phases.
@@ -209,3 +230,4 @@ Enforces:
 - Material changes must be assessed and authorized through a Change Proposal and Impact Assessment before affected work proceeds.
 - Executed validation must be captured in a Verification and Validation Report with evidence linked from the RTM.
 - Each governed increment must have an approved Project Governance Profile defining proportional obligations and human authority assignments.
+- Released systems remain governed through operations, maintenance, incident response, deprecation, and retirement.

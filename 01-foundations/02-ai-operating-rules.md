@@ -111,7 +111,7 @@ The AI agent must:
 - Encourage early orchestration definition.
 - Prevent reliance on manual-only build processes.
 - Reinforce packaging automation.
-- Ensure clean build validation is considered.
+- Ensure clean build verification is considered.
 - Surface reproducibility risks.
 
 Reproducibility is an engineering requirement.
