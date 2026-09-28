@@ -49,7 +49,11 @@ For authorship and attribution, the core principles are:
 
 ## Versioning Guidance
 
-Use a simple version number whenever standing instruction wording changes, such as `1.0`, `1.1`, and `2.0`.
+Toolkit releases and template schemas follow the [Toolkit Release and Compatibility Policy](01-foundations/06-toolkit-release-compatibility-policy.md). `TOOLKIT_VERSION` is the authoritative working version, and `TEMPLATE-SCHEMAS.md` is the authoritative template registry.
+
+When a change affects a registered template, classify its schema impact and update the registry in the same change. When a change affects compatibility, add migration guidance and update the changelog. A `-dev` version remains unreleased; do not create a release tag without accountable human authorization.
+
+Standing instruction documents may also carry their own document version when needed for synchronization and audit history.
 
 Suggested changelog format:
 
@@ -69,7 +73,7 @@ Before committing a toolkit change, run:
 python3 tools/validate_toolkit.py
 ```
 
-The validator checks internal Markdown links, file metadata paths, table shape, lifecycle ordering, required governance and template sections, platform-instruction parity, stale paths and rules, and local-only artifact exclusions. The same command runs in continuous integration.
+The validator checks internal Markdown links, file metadata paths, table shape, lifecycle ordering, required governance and template sections, release metadata, template-registry coverage, platform-instruction parity, stale paths and rules, and local-only artifact exclusions. The same command runs in continuous integration.
 
 The validator is intentionally bounded. A passing result does not establish semantic correctness, standards conformity, approval, risk acceptance, phase advancement, or release authorization. Reviewers remain responsible for cross-document meaning, proportionality, and engineering judgment.
 

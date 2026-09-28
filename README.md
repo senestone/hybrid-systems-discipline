@@ -98,6 +98,8 @@ python3 tools/validate_toolkit.py
 
 The same bounded conformance check runs in continuous integration. It detects structural inconsistencies; it does not approve artifacts, gates, risk acceptance, or release.
 
+The current working version is recorded in [`TOOLKIT_VERSION`](TOOLKIT_VERSION). Development versions ending in `-dev` are not published releases. See the [Changelog](CHANGELOG.md), [Toolkit Release and Compatibility Policy](01-foundations/06-toolkit-release-compatibility-policy.md), and [Template Schema Registry](TEMPLATE-SCHEMAS.md) before adopting or upgrading a governed baseline.
+
 ---
 
 ## Intended Audience
@@ -128,6 +130,8 @@ Conceptual, strategic, and operational posture:
 - `03-debug-triage-playbook.md`
 - `04-pilot-program-guide.md`
 - `05-toolkit-usage-model.md`
+- [Toolkit Release and Compatibility Policy](01-foundations/06-toolkit-release-compatibility-policy.md)
+- [Standards Alignment Crosswalk](01-foundations/07-standards-crosswalk.md)
 
 These documents define why the discipline exists and how it is operationalized.
 
@@ -188,8 +192,9 @@ Structured execution artifacts.
 - [Technology Selection Record](04-templates/project/technology-selection-template.md): lifecycle-aware evidence, baselines, and impacts for material technology choices; link its ID to the Decision Log.
 - [Technology Selection Review Checklist](04-templates/project/technology-selection-review-checklist.md): review the selection record before approval and adoption.
 - [Work Effort Log](04-templates/project/work-effort-log-template.md): optional measured human effort with lifecycle, artifact, and governed-ID links; automated runtime remains separate.
+- [Process Assessment Report](04-templates/project/process-assessment-report-template.md): evidence, limitations, governance conformance, and decision inputs for pilots and process assessments without unsupported causal claims.
 
-Create project-specific copies of these templates. Use stable IDs and links among decisions, changes, risks, technology selections, and affected Requirements, Architecture, Detailed Design, RTM, Test Plan, validation evidence, and release artifacts. Mark downstream references pending until that phase produces them; resolve them before the applicable approval gate. The [Lifecycle Bootstrap](02-governance/00-lifecycle-bootstrap.md) and [Phase Gate Checklist](02-governance/12-phase-gate-checklist.md) govern when those links become required.
+Create project-specific copies of these templates. Record their Schema IDs and versions from the [Template Schema Registry](TEMPLATE-SCHEMAS.md). Use stable IDs and links among decisions, changes, risks, technology selections, and affected Requirements, Architecture, Detailed Design, RTM, Test Plan, validation evidence, and release artifacts. Mark downstream references pending until that phase produces them; resolve them before the applicable approval gate. The [Lifecycle Bootstrap](02-governance/00-lifecycle-bootstrap.md) and [Phase Gate Checklist](02-governance/12-phase-gate-checklist.md) govern when those links become required.
 
 **System Templates**
 - [Requirements](04-templates/system/requirements-template.md)

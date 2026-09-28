@@ -88,15 +88,18 @@ Pilots must model enterprise behavior.
 
 # 5. Define Measurement Strategy
 
-Establish metrics such as:
+Before observation begins, define questions, qualified hypotheses, operational definitions, data sources, denominators, baseline or comparison method, sampling rules, and success or concern thresholds.
 
-- Cycle time reduction
-- Rework reduction
+Establish metrics relevant to the pilot, such as:
+
+- Artifact production, review, correction, and approval effort
+- Architecture and design rework
 - Documentation completeness
-- Defect trends
+- Requirements, traceability, and escaped-defect trends
 - Traceability adherence
-- Knowledge reuse improvements
-- Onboarding time reduction
+- Phase-gate reversals and packaging failures
+- Unsupported inference and human-correction incidents
+- Knowledge reuse and onboarding outcomes
 
 Metrics must include:
 
@@ -105,6 +108,8 @@ Metrics must include:
 - Governance adherence indicators
 
 Measurement informs scale decisions.
+
+Use the [Process Assessment Report](../04-templates/project/process-assessment-report-template.md) to preserve provenance, confounders, contradictory evidence, limitations, and causal restraint. Report human effort only from an active [Work Effort Log](../04-templates/project/work-effort-log-template.md) or another approved measurement protocol. Use `Unmeasured` when reliable human effort is unavailable, and keep automated runtime separate.
 
 ---
 
@@ -118,6 +123,10 @@ Equip pilot teams with:
 - Traceability Matrix
 - Decision Log
 - Daily Log Template
+- Project Governance Profile
+- Project Risk Register
+- Work Effort Log when human-effort measurement is in scope
+- Process Assessment Report
 
 Templates convert discipline into executable behavior.
 
@@ -166,9 +175,13 @@ At pilot completion:
 
 - Evaluate metrics against defined objectives.
 - Assess lifecycle adherence.
+- Reconcile quantitative, qualitative, contradictory, and null evidence.
+- Document data provenance, missing observations, confounders, and limits to generalization.
 - Identify governance refinements.
 - Document structural lessons learned.
 - Determine scalability readiness.
+
+Approval of the assessment confirms its accuracy, not authorization to scale. Broader rollout requires a separate accountable human decision and any required change, risk, and authority records.
 
 Do not scale practices that lack measurement or discipline.
 

@@ -32,6 +32,18 @@ LIFECYCLE_SOURCES = {
 }
 
 REQUIRED_SECTIONS = {
+    "01-foundations/06-toolkit-release-compatibility-policy.md": (
+        "## 3. Compatibility Contract",
+        "## 4. Template Schema Discipline",
+        "## 6. Instantiated-Project Upgrade",
+        "## 7. Release Readiness Checklist",
+    ),
+    "01-foundations/07-standards-crosswalk.md": (
+        "## 2. Reference Baseline",
+        "## 3. High-Level Alignment",
+        "## 4. Material Gaps and Intentional Boundaries",
+        "## 6. Maintenance",
+    ),
     "02-governance/00-lifecycle-bootstrap.md": (
         "## 2.1 Governed Increment Application",
         "## 10.1 Post-Release Operational Continuity",
@@ -56,9 +68,17 @@ REQUIRED_SECTIONS = {
     ),
     "04-templates/project/project-governance-profile-template.md": (
         "# 1. Governed Increment",
+        "## 1.1 Toolkit and Artifact Baseline",
         "# 2. Risk-Based Profile Assessment",
         "# 3. Authority and Decision Rights",
         "# 4. Tailoring Decisions",
+    ),
+    "04-templates/project/process-assessment-report-template.md": (
+        "# 3. Assessment Design",
+        "# 4. Measurement Plan and Results",
+        "# 6. Governance Conformance",
+        "# 9. Limitations and Causal Restraint",
+        "# 11. Review and Approval for Accuracy",
     ),
     "04-templates/system/test-plan-template.md": (
         "## 4.5 Verification Case Inventory",
@@ -166,6 +186,14 @@ class Validator:
                         header_cells == separator_cells,
                         f"table shape mismatch in {relative}:{index + 1}",
                     )
+                    row_index = index + 2
+                    while row_index < len(lines) and lines[row_index].lstrip().startswith("|"):
+                        row_cells = lines[row_index].count("|") - 1
+                        self.check(
+                            row_cells == header_cells,
+                            f"table row shape mismatch in {relative}:{row_index + 1}",
+                        )
+                        row_index += 1
 
     def extract_numbered_list(self, text: str, marker: str) -> list[str]:
         start = text.find(marker)
@@ -202,6 +230,91 @@ class Validator:
                     heading in text,
                     f"required section missing from {relative}: {heading}",
                 )
+
+    def check_release_metadata(self) -> None:
+        version = self.read("TOOLKIT_VERSION").strip()
+        self.check(
+            re.fullmatch(r"\d+\.\d+\.\d+(?:-dev)?", version) is not None,
+            "TOOLKIT_VERSION must be MAJOR.MINOR.PATCH or MAJOR.MINOR.PATCH-dev",
+        )
+
+        changelog = self.read("CHANGELOG.md")
+        self.check("## [Unreleased]" in changelog, "CHANGELOG.md has no Unreleased section")
+        self.check(
+            "accountable human authority" in changelog,
+            "CHANGELOG.md must preserve human release authority",
+        )
+
+        registry = self.read("TEMPLATE-SCHEMAS.md")
+        registry_version_match = re.search(
+            r"^Registry Version:\s*(\S+)\s*$",
+            registry,
+            re.MULTILINE,
+        )
+        self.check(
+            registry_version_match is not None
+            and re.fullmatch(r"\d+\.\d+\.\d+", registry_version_match.group(1)) is not None,
+            "Template Schema Registry version must use MAJOR.MINOR.PATCH",
+        )
+        baseline_match = re.search(
+            r"^Applicable Toolkit Development Baseline:\s*(\S+)\s*$",
+            registry,
+            re.MULTILINE,
+        )
+        self.check(
+            baseline_match is not None and baseline_match.group(1) == version,
+            "Template Schema Registry baseline does not match TOOLKIT_VERSION",
+        )
+
+    def check_template_registry(self) -> None:
+        registry = self.read("TEMPLATE-SCHEMAS.md")
+        schema_ids: set[str] = set()
+        registered_templates: set[str] = set()
+        entry_count = 0
+
+        for line in registry.splitlines():
+            cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+            if len(cells) < 4 or not cells[0].startswith("HSD-"):
+                continue
+
+            entry_count += 1
+            schema_id, schema_version, template_cell = cells[:3]
+            self.check(
+                re.fullmatch(r"HSD-[A-Z0-9-]+", schema_id) is not None,
+                f"invalid Template Schema ID: {schema_id}",
+            )
+            self.check(
+                schema_id not in schema_ids,
+                f"duplicate Template Schema ID: {schema_id}",
+            )
+            schema_ids.add(schema_id)
+            self.check(
+                re.fullmatch(r"\d+\.\d+\.\d+", schema_version) is not None,
+                f"invalid schema version for {schema_id}: {schema_version}",
+            )
+
+            target_match = re.search(r"\]\((04-templates/[^)#]+\.md)\)", template_cell)
+            self.check(
+                target_match is not None,
+                f"schema registry entry has no template link: {schema_id}",
+            )
+            if target_match:
+                target = target_match.group(1)
+                self.check(
+                    target not in registered_templates,
+                    f"template registered more than once: {target}",
+                )
+                registered_templates.add(target)
+
+        expected_templates = {
+            path.relative_to(ROOT).as_posix()
+            for path in (ROOT / "04-templates").rglob("*.md")
+        }
+        self.check(entry_count > 0, "Template Schema Registry has no entries")
+        for template in sorted(expected_templates - registered_templates):
+            self.check(False, f"template is absent from Template Schema Registry: {template}")
+        for template in sorted(registered_templates - expected_templates):
+            self.check(False, f"registry references a non-template path: {template}")
 
     def check_platform_parity(self) -> None:
         platform_dir = ROOT / "05-platform-config"
@@ -244,6 +357,8 @@ class Validator:
         self.check_markdown_tables(files)
         self.check_lifecycle_order()
         self.check_required_sections()
+        self.check_release_metadata()
+        self.check_template_registry()
         self.check_platform_parity()
         self.check_stale_patterns(files)
         self.check_local_only_files()

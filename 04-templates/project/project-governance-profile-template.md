@@ -20,6 +20,10 @@ Status: Draft / Approved / Superseded
 Effective Date (YYYY-MM-DD):
 Prepared By:
 Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
+Toolkit Version or Approved Commit Reference:
+Template Schema Registry Version:
+Template Schema ID: HSD-PROJ-GOVERNANCE
+Template Schema Version: 1.0.0
 Project Primer Version Reference:
 Risk Register Version Reference:
 Glossary Version Reference:
@@ -43,6 +47,16 @@ Define the bounded body of work governed by this lifecycle instance:
 The increment SHALL be coherent enough to baseline, trace, verify, validate, release or otherwise disposition, and transfer to an operational owner where applicable.
 
 Future product scope outside this increment need not be fully specified. It SHALL NOT be introduced into this increment without change control.
+
+## 1.1 Toolkit and Artifact Baseline
+
+Record the governing toolkit release or explicitly approved development commit and the Template Schema Registry version. For each governed artifact, record its Schema ID, schema version, project-specific artifact version, approval status, and location.
+
+| Artifact | Schema ID | Schema Version | Artifact Version | Status | Location / Baseline Reference |
+|----------|-----------|----------------|------------------|--------|-------------------------------|
+| Project Governance Profile | HSD-PROJ-GOVERNANCE | 1.0.0 | | | |
+
+Mixing templates, guardrails, or platform configurations from different toolkit versions requires an approved impact assessment.
 
 ---
 
