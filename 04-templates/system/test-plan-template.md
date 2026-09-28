@@ -144,6 +144,23 @@ Assumed compliance is prohibited.
 
 ---
 
+## 4.5 Test Case Inventory
+
+Maintain the inventory in this section or reference an approved, versioned inventory artifact.
+
+At minimum, record:
+
+| Test Case ID | Requirement ID(s) | Test Level / Type | Objective or Scenario | Preconditions and Test Data | Expected Result / Acceptance Threshold | Environment | Priority / Risk Ref | Automation Status | Planned Evidence Location |
+|--------------|-------------------|-------------------|-----------------------|-----------------------------|----------------------------------------|-------------|---------------------|-------------------|---------------------------|
+
+Each Test Case ID SHALL be unique and SHALL map to at least one approved Requirement ID.
+
+The inventory SHALL include nominal, boundary, negative, failure, recovery, and deterministic-probabilistic containment cases where applicable.
+
+Detailed procedures MAY reside in approved linked artifacts when the inventory preserves their identifiers, requirement mappings, versions, and locations.
+
+---
+
 # 5. Traceability Enforcement
 
 All Test Case IDs SHALL map to Requirement IDs.
@@ -296,16 +313,18 @@ High-risk items SHALL receive increased validation depth.
 
 # 14. Phase Gate Declaration
 
-Confirm readiness to proceed to Packaging & Orchestration:
+Confirm readiness to proceed from Test Planning to Implementation:
 
-- All mandatory tests executed? (Yes / No)  
-- Validation evidence documented? (Yes / No)  
-- Traceability updated? (Yes / No)  
-- No orphan requirements? (Yes / No)  
-- Deterministic–probabilistic containment validated? (Yes / No)  
-- Human approval granted? (Yes / No)  
+- Test strategy defined? (Yes / No)
+- Test Case Inventory complete and reviewed? (Yes / No)
+- Requirement-to-Test mapping complete with no orphan requirements? (Yes / No)
+- NFR validation strategy and measurable thresholds defined? (Yes / No)
+- Failure, recovery, and negative scenarios defined? (Yes / No)
+- Deterministic–probabilistic containment validation defined, if applicable? (Yes / No / Not Applicable)
+- Verification and Validation Report structure and evidence-retention approach defined? (Yes / No)
+- Human approval granted? (Yes / No)
 
-If any answer is “No,” remain in Testing phase.
+If any required answer is “No,” remain in Test Planning.
 
 ---
 
@@ -317,7 +336,7 @@ Role:
 Date:  
 Version Incremented: Yes / No  
 
-Release without approved Test Plan closure is prohibited.
+Implementation without an approved Test Plan is prohibited.
 
 ---
 

@@ -1,5 +1,5 @@
 <!--
-File: toolkit/platforms/gemini_custom_instructions.md
+File: 05-platform-config/gemini-custom-instructions.md
 
 Purpose:
   Configure Gemini to operate within the structured,

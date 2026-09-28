@@ -168,8 +168,9 @@ Human approval required.
 
 ### Mandatory Exit Criteria
 
-- Test Strategy defined  
-- Test Plan defined  
+- Test Plan approved
+- Test Strategy defined in the Test Plan or an approved linked artifact
+- Test Case Inventory complete in the Test Plan or an approved linked artifact
 - Requirement-to-Test mapping complete  
 - NFR validation strategy defined  
 - Failure scenario coverage defined  

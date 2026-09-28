@@ -1,6 +1,6 @@
 ```{=html}
 <!--
-File: toolkit/platforms/cursor-rules.md
+File: 05-platform-config/cursor-rules.md
 
 Purpose:
   Configure Cursor to operate within the structured,

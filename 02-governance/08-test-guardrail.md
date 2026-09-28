@@ -56,15 +56,19 @@ No phase advancement is authorized without defined test alignment.
 
 ## 3. Test Planning Mandate
 
-Before Implementation begins, the following SHALL exist:
+Before Implementation begins, the following test-planning content SHALL exist:
 
+- Approved Test Plan
 - Test Strategy
-- Test Plan
 - Test Case Inventory
 - Requirement-to-Test mapping
 - Acceptance criteria
 - Failure scenario definitions
 - NFR validation strategy
+
+The Test Plan is the governing test-planning artifact. The Test Strategy and Test Case Inventory MAY be maintained as sections of the Test Plan or as approved, versioned artifacts linked from it.
+
+Requirement acceptance criteria and failure scenarios MAY remain in their approved source artifacts when the Test Plan and RTM reference them unambiguously. Separate documents are not required solely to satisfy this mandate.
 
 If test artifacts are incomplete, implementation SHALL NOT begin.
 
@@ -237,7 +241,7 @@ Refusal preserves verification integrity.
 
 ---
 
-## 14. Completion Criteria
+## 14. Validation Completion and Release Criteria
 
 Testing requirements are satisfied only when:
 
@@ -255,7 +259,7 @@ Testing requirements are satisfied only when:
 - RTM reflects complete coverage
 - Human approval is granted
 
-If any condition is unmet, advancement is prohibited.
+If any condition is unmet, advancement to release is prohibited. These execution criteria do not apply to the Test Planning to Implementation gate, which is governed by the approved planning content in Section 3 and the phase-gate checklist.
 
 Release SHALL NOT proceed without validated test confirmation.
 

@@ -1,5 +1,5 @@
 <!--
-File: toolkit/platforms/chatgpt_custom_instructions.md
+File: 05-platform-config/chatgpt-custom-instructions.md
 
 Purpose:
   Configure ChatGPT to operate within the structured AI lifecycle

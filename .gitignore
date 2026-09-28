@@ -42,3 +42,6 @@ __pycache__/
 .env.*
 # --- Local archives ---
 toolkit.zip
+
+# --- Local review artifacts ---
+agent-critique.md

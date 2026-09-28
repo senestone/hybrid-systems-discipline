@@ -38,8 +38,8 @@ This document prevents that.
 At minimum, load:
 
 - 02-governance/00-lifecycle-bootstrap.md
-- toolkit/platforms/<agent-config>.md
-- toolkit/platforms/enterprise-system-prompt.md
+- 05-platform-config/<agent-config>.md
+- 05-platform-config/enterprise-system-prompt.md
 
 This establishes:
 
@@ -199,7 +199,7 @@ Load:
 - Active Change Proposal and Impact Assessments
 - Verification and Validation Report template when recording executed results
 - Platform configuration
-- Cursor rules (if using Cursor)
+- Implementation-capable platform configuration (for example, Cursor rules when using Cursor)
 - Technology selection record and review checklist when a material implementation choice is pending
 
 Purpose:
@@ -281,18 +281,17 @@ Use for:
 
 ---
 
-# 4. Cursor-Specific Rules
+# 4. Agent Capability Rules
 
-Cursor is loaded only during Implementation.
+Agent access and actions SHALL be governed by capability and current lifecycle phase, not by vendor or product name.
 
-Cursor must NOT be used during:
+Before Implementation authorization, agents SHALL NOT generate, modify, or refactor implementation code. They MAY support authorized lifecycle work such as ideation, requirements, architecture, design, traceability, and test planning when the active platform configuration enforces the applicable phase guardrail.
 
-- Ideation
-- Requirements
-- Architecture
-- Traceability consolidation
+During Implementation, code-generation and code-modification capabilities MAY be used only within approved requirements, architecture, design, traceability, and test constraints.
 
-Cursor is enforcement for code generation — not lifecycle design.
+During Packaging and Orchestration or Documentation Closure, agent actions SHALL remain limited to the artifacts and changes authorized for that phase. Access to implementation capabilities does not authorize implementation changes or lifecycle advancement.
+
+Platform-specific configurations, including `05-platform-config/cursor-rules.md`, SHALL implement these capability controls without overriding lifecycle authority.
 
 ---
 

@@ -1,5 +1,5 @@
 <!--
-File: toolkit/platforms/claude.md
+File: 05-platform-config/claude.md
 
 Purpose:
   Configure Claude to operate within the structured,

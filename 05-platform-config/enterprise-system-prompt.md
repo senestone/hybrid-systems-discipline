@@ -1,5 +1,5 @@
 <!--
-File: toolkit/platforms/enterprise-system-prompt.md
+File: 05-platform-config/enterprise-system-prompt.md
 
 Purpose:
   Define the authoritative behavioral contract for AI systems
