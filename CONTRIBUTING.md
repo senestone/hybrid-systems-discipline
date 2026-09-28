@@ -61,6 +61,18 @@ Version 1.1 - YYYY-MM-DD
 
 Review instruction wording after recurring failure patterns, especially cases where an assistant either over-agrees or challenges a stronger claim than the one actually made.
 
+## Toolkit Conformance
+
+Before committing a toolkit change, run:
+
+```bash
+python3 tools/validate_toolkit.py
+```
+
+The validator checks internal Markdown links, file metadata paths, table shape, lifecycle ordering, required governance and template sections, platform-instruction parity, stale paths and rules, and local-only artifact exclusions. The same command runs in continuous integration.
+
+The validator is intentionally bounded. A passing result does not establish semantic correctness, standards conformity, approval, risk acceptance, phase advancement, or release authorization. Reviewers remain responsible for cross-document meaning, proportionality, and engineering judgment.
+
 ## Verification Checklist
 
 Use this checklist after revising standing assistant instructions or attribution rules.
@@ -73,6 +85,7 @@ Use this checklist after revising standing assistant instructions or attribution
 - README, ChatGPT desktop guidance, ChatGPT Work guidance, platform configs, and repository guidance use the same canonical wording or a faithful shortened form.
 - `AGENTS.md` includes `Review Behavior` guidance or an equivalent with both adversarial collaboration and epistemic fidelity intact.
 - Artifact templates and persistent assistant instructions prevent AI systems from claiming authorship, ownership, maintenance responsibility, approval authority, source-control authorship, commit attribution, or equivalent attribution.
+- `python3 tools/validate_toolkit.py` passes.
 
 ## Commit Metadata
 

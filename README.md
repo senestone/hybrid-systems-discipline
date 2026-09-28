@@ -90,6 +90,14 @@ Correct loading is part of governance.
 
 See the [Toolkit Usage Model](01-foundations/05-toolkit-usage-model.md) for operational guidance.
 
+Validate repository structure locally with:
+
+```bash
+python3 tools/validate_toolkit.py
+```
+
+The same bounded conformance check runs in continuous integration. It detects structural inconsistencies; it does not approve artifacts, gates, risk acceptance, or release.
+
 ---
 
 ## Intended Audience

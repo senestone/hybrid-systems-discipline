@@ -124,8 +124,8 @@ Code must not redefine requirements.
 
 Before or during implementation:
 
-- Define Verification Cases and explicit methods
-- Map Verification Cases to Requirement IDs
+- Define Verification Case IDs and explicit methods
+- Map Verification Case IDs to Requirement IDs
 - Define Test Case IDs when Test is the selected method
 - Verify NFR coverage
 - Preserve validation scenarios for stakeholder needs and intended use
