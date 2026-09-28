@@ -31,6 +31,7 @@ No unreleased changes.
 - Reconciled loading guidance with Baseline, Elevated, and High Assurance profiles.
 - Refined phase-gate orphan rules to distinguish Verification Cases, Test Cases, and Validation Scenarios.
 - Expanded the Test Plan schema with optional failure-coverage, complex fixture/oracle, and execution suspension guidance without adding mandatory companion artifacts.
+- Updated continuous-integration actions to supported Node.js 24-based major versions.
 
 ### Fixed
 
