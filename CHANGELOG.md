@@ -6,6 +6,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+No unreleased changes.
+
+## [0.9.0] - 2026-09-28
+
 ### Added
 
 - Risk-based Baseline, Elevated, and High Assurance governance profiles.
@@ -34,10 +38,21 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Made RTM completeness phase-aware while prohibiting unresolved mappings at release.
 - Distinguished packaging and clean-build verification from intended-use validation.
 
+### Compatibility and Migration
+
+- This is the first supported toolkit release; there is no prior supported release baseline to migrate.
+- Projects instantiated from an untagged development commit should retain that exact commit reference and assess lifecycle, profile, traceability, verification, validation, operational, and template-schema changes before adopting `0.9.0`.
+- The Template Schema Registry is version `1.1.0`. The Test Plan schema is `1.1.0`; all other registered template schemas are `1.0.0`.
+- No controls or schemas are deprecated in this release.
+
 ### Known Limitations
 
 - The executable validator checks this toolkit repository; it does not yet validate instantiated project artifacts.
 - Structural checks do not establish semantic correctness, evidence authenticity, standards conformity, or human approval.
 - Toolkit effectiveness has not yet been established through a sufficiently broad body of completed, independently assessed projects.
 
-No version listed above is released until accountable human authority approves the release and creates the corresponding signed or annotated repository tag under the release policy.
+### Release Authorization
+
+- Authorized by the repository owner on 2026-09-28.
+
+No version listed above is released until accountable human authority approves the release and creates the corresponding annotated repository tag under the release policy.

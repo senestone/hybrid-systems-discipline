@@ -275,8 +275,12 @@ class Validator:
             and re.fullmatch(r"\d+\.\d+\.\d+", registry_version_match.group(1)) is not None,
             "Template Schema Registry version must use MAJOR.MINOR.PATCH",
         )
+        if version.endswith("-dev"):
+            baseline_label = "Applicable Toolkit Development Baseline"
+        else:
+            baseline_label = "Applicable Toolkit Release"
         baseline_match = re.search(
-            r"^Applicable Toolkit Development Baseline:\s*(\S+)\s*$",
+            rf"^{re.escape(baseline_label)}:\s*(\S+)\s*$",
             registry,
             re.MULTILINE,
         )
@@ -284,6 +288,21 @@ class Validator:
             baseline_match is not None and baseline_match.group(1) == version,
             "Template Schema Registry baseline does not match TOOLKIT_VERSION",
         )
+
+        if not version.endswith("-dev"):
+            self.check(
+                re.search(rf"^## \[{re.escape(version)}\] - \d{{4}}-\d{{2}}-\d{{2}}$", changelog, re.MULTILINE)
+                is not None,
+                f"CHANGELOG.md has no dated release entry for {version}",
+            )
+            self.check(
+                "### Compatibility and Migration" in changelog,
+                "released changelog has no compatibility and migration notes",
+            )
+            self.check(
+                "### Release Authorization" in changelog,
+                "released changelog has no human release authorization record",
+            )
 
     def check_template_registry(self) -> None:
         registry = self.read("TEMPLATE-SCHEMAS.md")

@@ -1,7 +1,7 @@
 # Template Schema Registry
 
 Registry Version: 1.1.0
-Applicable Toolkit Development Baseline: 0.9.0-dev
+Applicable Toolkit Release: 0.9.0
 
 Schema versions describe template structure and meaning. They are distinct from the version of a project artifact instantiated from a template.
 
