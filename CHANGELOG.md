@@ -24,11 +24,19 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Replaced vendor-specific lifecycle restrictions with capability-based controls.
 - Corrected stale platform paths and aligned platform instructions.
 - Reframed positioning as an extension of established software and systems engineering.
+- Reconciled loading guidance with Baseline, Elevated, and High Assurance profiles.
+- Refined phase-gate orphan rules to distinguish Verification Cases, Test Cases, and Validation Scenarios.
 
 ### Fixed
 
 - Removed the requirement that every requirement map directly to a Test Case ID.
 - Made RTM completeness phase-aware while prohibiting unresolved mappings at release.
 - Distinguished packaging and clean-build verification from intended-use validation.
+
+### Known Limitations
+
+- The executable validator checks this toolkit repository; it does not yet validate instantiated project artifacts.
+- Structural checks do not establish semantic correctness, evidence authenticity, standards conformity, or human approval.
+- Toolkit effectiveness has not yet been established through a sufficiently broad body of completed, independently assessed projects.
 
 No version listed above is released until accountable human authority approves the release and creates the corresponding signed or annotated repository tag under the release policy.

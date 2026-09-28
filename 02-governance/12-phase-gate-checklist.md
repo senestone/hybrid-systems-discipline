@@ -204,14 +204,14 @@ Human approval required.
 - Code documentation complete  
 - Tests implemented and passing  
 - Implementation-stage verification activities complete with evidence
-- Planned validation performed or explicitly scheduled for the representative packaged or operational context
+- Validation executable before packaging is complete; validation requiring representative packaged or operational context is explicitly scheduled with owner, environment, and release-blocking criteria
 - Verification and Validation Report reconciles executed tests, evidence, defects, and deviations
 - Deterministic–probabilistic containment verified  
 - RTM fully updated  
 - Clean build succeeds  
 - Glossary entries current for implementation-facing terminology, acronyms, and abbreviations
 
-Unvalidated implementation SHALL NOT proceed.
+Implementation lacking required verification evidence or a controlled disposition for remaining validation SHALL NOT proceed.
 
 Human approval required.
 
@@ -276,7 +276,9 @@ At any gate, the following SHALL block advancement:
 - Architecture without requirement mapping  
 - Design without architecture parent  
 - Implementation without requirement reference  
-- Test without requirement mapping  
+- Verification Case without requirement mapping
+- Test Case without Verification Case mapping
+- Validation Scenario without stakeholder-need, intended-use, or operational-context mapping
 - Packaging configuration undocumented  
 - Undeclared probabilistic boundary  
 

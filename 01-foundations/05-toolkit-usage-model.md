@@ -9,7 +9,7 @@ This document explains:
   - What artifacts are loaded into the AI agent
   - When they are loaded
   - How enforcement changes by lifecycle phase
-  - Minimal vs enterprise operating modes
+  - Risk-based governance profiles
 -->
 
 # Toolkit Usage Model
@@ -270,40 +270,25 @@ Preserve ownership, evidence, change control, and risk governance through operat
 
 ---
 
-# 4. Minimal Mode vs Enterprise Mode
+# 4. Profile-Based Loading
 
-## Minimal Mode
+The approved Project Governance Profile selects Baseline, Elevated, or High Assurance obligations under the [Tailoring and Authority Guardrail](../02-governance/13-tailoring-and-authority-guardrail.md). Team size, internal use, or organizational label does not by itself determine the profile.
 
-Load:
+Every profile loads the Core Bootstrap Set, current phase artifacts, and triggered cross-lifecycle records. The selected profile controls review depth, independence, evidence, retention, and specialist obligations; it does not authorize lifecycle skipping.
 
-- Lifecycle Bootstrap
-- Platform config
-- Current phase template only
-- Active cross-lifecycle control artifacts when applicable
+## Baseline Profile
 
-Use for:
-- Smaller teams
-- Internal projects
-- Low regulatory pressure
+Load the applicable phase guardrail and template plus active risk, glossary, change, decision, and traceability records required by the current phase. Load optional artifacts only when their defined trigger occurs.
 
----
+## Elevated Profile
 
-## Enterprise Mode
+In addition to Baseline materials, load all guardrails and specialist controls relevant to the rated risk factors, the complete evidence and authority obligations from the Project Governance Profile, and any required independent-review criteria.
 
-Load:
+## High Assurance Profile
 
-- Lifecycle Bootstrap
-- All relevant guardrails
-- Enterprise System Prompt
-- Platform configuration
-- Active phase template
-- RTM (from Architecture onward)
+In addition to Elevated materials, load the complete approved assurance baseline, independence and segregation-of-duties constraints, domain-specific obligations, evidence-retention requirements, and activated AI Assurance Profile. Context reduction SHALL NOT omit a control needed to evaluate a gate or material risk.
 
-Use for:
-- Regulated environments
-- External-facing products
-- AI-integrated systems
-- High audit exposure
+Loading more documents does not itself create assurance. Applicability, evidence quality, review independence, and accountable human decisions remain controlling.
 
 ---
 

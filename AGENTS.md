@@ -58,3 +58,13 @@ AI agents, assistants, models, tools, and automation must not claim authorship, 
 - Behavioral language such as "adversarial collaboration" describes an operating method only. It does not confer collaborator status, authorship, contribution credit, repository access, or any other human or organizational role.
 - If AI assistance must be disclosed for process, audit, or compliance reasons, record it as tooling/process context, not as authorship or attribution.
 - Human gate authority, approval authority, and lifecycle accountability remain with the designated human or organizational role.
+
+## Repository Validation
+
+After changing toolkit documents, templates, platform configurations, or repository governance, run:
+
+```bash
+python3 tools/validate_toolkit.py
+```
+
+Resolve structural failures before committing. A passing validator result does not establish semantic correctness, artifact approval, standards conformity, risk acceptance, phase advancement, or release authorization.

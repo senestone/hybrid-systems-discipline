@@ -12,6 +12,9 @@ When proposing changes:
 - Avoid weakening traceability, packaging, testing, documentation, or human approval requirements.
 - Distinguish defects from risks, uncertainties, tradeoffs, and preferences.
 - Preserve epistemic qualifiers when revising user-facing or agent-facing guidance.
+- Preserve a lightweight core. Before adding a mandatory artifact, field, review, or gate, show the distinct risk it controls and why an existing record cannot carry the obligation.
+- Prefer triggered, profile-specific controls over universal requirements when the risk is not universal.
+- Consolidate or remove duplicated governance rather than adding another parallel record.
 
 Changes that affect lifecycle behavior should identify the impacted files and explain whether corresponding templates, platform configs, or agent instructions also need updates.
 

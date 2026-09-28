@@ -32,6 +32,12 @@ LIFECYCLE_SOURCES = {
 }
 
 REQUIRED_SECTIONS = {
+    "AGENTS.md": (
+        "## Repository Validation",
+    ),
+    "01-foundations/05-toolkit-usage-model.md": (
+        "# 4. Profile-Based Loading",
+    ),
     "01-foundations/06-toolkit-release-compatibility-policy.md": (
         "## 3. Compatibility Contract",
         "## 4. Template Schema Discipline",
@@ -116,7 +122,18 @@ PROHIBITED_STALE_PATTERNS = {
     r"All Requirement IDs map to Test Case IDs": "obsolete all-requirements-to-tests rule",
     r"Traditional (?:SDLC|lifecycle) models were not designed": "superseded positioning claim",
     r"Cursor is loaded only during Implementation": "vendor-specific lifecycle restriction",
+    r"Minimal Mode vs Enterprise Mode": "retired loading-mode model",
 }
+
+PUBLISHED_INDEX_REQUIRED_PATHS = (
+    "01-foundations/06-toolkit-release-compatibility-policy.md",
+    "01-foundations/07-standards-crosswalk.md",
+    "02-governance/13-tailoring-and-authority-guardrail.md",
+    "02-governance/14-operational-lifecycle-guardrail.md",
+    "02-governance/15-ai-assurance-profile.md",
+    "TEMPLATE-SCHEMAS.md",
+    "tools/validate_toolkit.py",
+)
 
 
 class Validator:
@@ -349,6 +366,30 @@ class Validator:
         for relative in LOCAL_ONLY_FILES:
             self.check(relative in ignored_lines, f"local-only file is not ignored: {relative}")
 
+    def check_published_index(self) -> None:
+        index = self.read("docs/index.html")
+        for path in PUBLISHED_INDEX_REQUIRED_PATHS:
+            self.check(path in index, f"published index does not expose: {path}")
+
+        repository_link = re.compile(
+            r'href="https://github\.com/senestone/hybrid-systems-discipline/'
+            r'(?:blob|tree)/main/([^"#?]+)'
+        )
+        for target in repository_link.findall(index):
+            relative = unquote(target)
+            self.check(
+                (ROOT / relative).exists(),
+                f"published index references a missing repository path: {relative}",
+            )
+
+        local_asset = re.compile(r'(?:href|src)="\.\/([^"#?]+)"')
+        for target in local_asset.findall(index):
+            relative = unquote(target)
+            self.check(
+                (ROOT / "docs" / relative).exists(),
+                f"published index references a missing local asset: {relative}",
+            )
+
     def run(self) -> int:
         files = self.markdown_files()
         self.check(bool(files), "no Markdown files found")
@@ -362,6 +403,7 @@ class Validator:
         self.check_platform_parity()
         self.check_stale_patterns(files)
         self.check_local_only_files()
+        self.check_published_index()
 
         if self.failures:
             print(f"Toolkit conformance: FAIL ({len(self.failures)} issue(s))")

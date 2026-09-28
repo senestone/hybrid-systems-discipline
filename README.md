@@ -98,7 +98,7 @@ Validate repository structure locally with:
 python3 tools/validate_toolkit.py
 ```
 
-The same bounded conformance check runs in continuous integration. It detects structural inconsistencies; it does not approve artifacts, gates, risk acceptance, or release.
+The same bounded conformance check runs in continuous integration. It checks this toolkit repository, not projects instantiated from its templates. It detects structural inconsistencies; it does not approve artifacts, gates, risk acceptance, or release.
 
 The current working version is recorded in [`TOOLKIT_VERSION`](TOOLKIT_VERSION). Development versions ending in `-dev` are not published releases. See the [Changelog](CHANGELOG.md), [Toolkit Release and Compatibility Policy](01-foundations/06-toolkit-release-compatibility-policy.md), and [Template Schema Registry](TEMPLATE-SCHEMAS.md) before adopting or upgrading a governed baseline.
 
