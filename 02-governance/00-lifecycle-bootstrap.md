@@ -70,6 +70,22 @@ Projects SHALL follow this order:
 
 No phase may be skipped, collapsed, merged, or reordered without explicit human authorization.
 
+## 2.1 Governed Increment Application
+
+The lifecycle applies to a bounded governed increment, which MAY be a product, release, capability, feature set, change, or architectural increment.
+
+Each governed increment SHALL have:
+
+- A stable identifier and explicit scope boundary
+- Approved baselines appropriate to its current phase
+- End-to-end traceability for included scope
+- Defined verification, validation, release, and operational obligations
+- An approved Project Governance Profile identifying tailoring decisions and human authority roles
+
+A project need not fully specify its entire future product before implementation of an authorized increment begins. Scope outside the governed increment SHALL remain excluded, deferred, or controlled through an approved change.
+
+The lifecycle sequence SHALL be completed for each governed increment. Iteration within a phase and repetition across increments are permitted; implicit phase skipping is not.
+
 ---
 
 # 3. Phase Gate Model
@@ -99,7 +115,11 @@ The AI agent must:
 
 Silence is not compliance.
 
-Ambiguity requires clarification.
+Material ambiguity or uncertainty requires explicit control.
+
+Unresolved material uncertainty SHALL be recorded with a stable Risk, Assumption, Issue, or Dependency ID; bounded by its possible downstream effect; assigned to an accountable human role; and given a resolution, monitoring, or disposition plan.
+
+Advancement is prohibited when unresolved uncertainty could invalidate downstream work. Non-material residual uncertainty MAY remain when it is explicit, bounded, linked to affected artifacts, and accepted within the approving role's authority.
 
 ---
 

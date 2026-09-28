@@ -49,9 +49,12 @@ No phase skipping is permitted.
 
 At every gate:
 
+- The governed increment and current Project Governance Profile SHALL be identified.
+- Required human authority roles and any segregation-of-duties constraints SHALL be satisfied.
 - The Project Risk Register SHALL be reviewed and current.
 - Material changes SHALL have approved Change Proposal and Impact Assessments linked to affected artifacts.
 - New or revised controlled terminology SHALL be reflected in the Project Glossary.
+- Material uncertainties SHALL be bounded, assigned, linked to affected artifacts, and dispositioned for the proposed advancement.
 - Unresolved High or Critical risks, unapproved material changes, or invalidated assumptions SHALL block advancement unless explicitly dispositioned by accountable human authority.
 
 ---
@@ -69,9 +72,11 @@ At every gate:
 - Success criteria defined  
 - Alternative solution paths explored  
 - Initial project glossary for the governed project instance created or explicitly deferred with justification
-- No unresolved ambiguity in problem framing  
+- Governed increment bounded and assigned a stable identifier
+- Project Governance Profile approved with tailoring and human authority assignments
+- No unresolved material ambiguity that could invalidate Requirements work
 
-If ambiguity persists, advancement is prohibited.
+Residual uncertainty MAY remain only when it is recorded, bounded, assigned, linked to affected artifacts, and dispositioned for Requirements work.
 
 Human approval required.
 
@@ -112,6 +117,7 @@ Human approval required.
 - Failure posture summarized  
 - Deployment model declared  
 - Requirement-to-Architecture mapping complete  
+- Technologies required as architectural dependencies have a Provisional Architectural Baseline or later approved status
 - Glossary entries current for architectural terminology, acronyms, and abbreviations
 - Architecture risks and dependencies linked to the Project Risk Register
 
@@ -134,6 +140,7 @@ Human approval required.
 - Security posture refined  
 - Performance assumptions documented  
 - Requirement-to-Design mapping complete  
+- Technologies relied upon by Detailed Design are Approved for Detailed Design or have a later approved status
 - Glossary entries current for design terminology, acronyms, and abbreviations
 - Design risks, assumptions, and interface dependencies linked to the Project Risk Register
 
@@ -176,7 +183,7 @@ Human approval required.
 - Failure scenario coverage defined  
 - Deterministic–probabilistic containment validation defined  
 - RTM updated with Test Case IDs  
-- Material implementation technology choices have approved, linked selection and decision records, or remain explicitly pending until before adoption in Implementation
+- Material technology choices required by implementation are Approved for Implementation with linked selection and decision records
 - Glossary entries current for test terminology, acronyms, and abbreviations
 - Verification and Validation Report structure and evidence-retention approach defined
 
@@ -244,6 +251,7 @@ Human approval required.
 - Verification and Validation Report approved as an accurate evidence record
 - Release-relevant Change Proposal and Impact Assessments closed or explicitly carried forward
 - Version identifiers aligned across artifacts  
+- Released technology versions and configurations are Locked for Release or linked to an approved exception
 - RTM version state finalized  
 - Audit review completed  
 

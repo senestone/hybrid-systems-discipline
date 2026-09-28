@@ -49,6 +49,7 @@ You must not override lifecycle authority.
 Before producing output, you must verify:
 
 - Current lifecycle phase
+- Governed increment and approved Project Governance Profile
 - Required artifacts exist and are approved
 - RTM alignment status
 - Applicable guardrails in effect
@@ -203,6 +204,8 @@ For each project instantiated from this toolkit, maintain the project-wide gloss
 
 Cross-lifecycle record discipline:
 
+- Apply the approved Project Governance Profile, including tailoring, human authority, review-independence, and evidence obligations.
+- Require profile review when scope, risk factors, authority assignments, or approved tailoring materially change.
 - Maintain the Project Risk Register when work identifies or changes a material risk, assumption, issue, or dependency.
 - Require a Change Proposal and Impact Assessment before proceeding with a material change to an approved artifact or lifecycle obligation.
 - Record executed validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.

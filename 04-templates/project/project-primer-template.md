@@ -15,6 +15,8 @@ It does not authorize architecture or implementation.
 # Project Primer
 
 Project Name:  
+Governed Increment ID:
+Governed Increment Type: Product / Release / Capability / Feature Set / Change / Architectural Increment / Other
 Initiation Date (YYYY-MM-DD):  
 Author(s):  
 Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
@@ -23,6 +25,7 @@ Version:
 RTM Scaffold Created? (Yes / No)  
 Glossary Created? (Yes / No)
 Project Risk Register Created? (Yes / No)
+Project Governance Profile Reference:
 
 ---
 
@@ -176,8 +179,14 @@ Clarify:
 - Clearly out-of-scope areas  
 - Areas requiring further validation  
 - Explicit exclusions  
+- Governed increment outcome and completion boundary
+- Product or system baseline affected
+- Dependencies on other increments
+- Conditions requiring a new increment or formal change
 
 Scope clarity reduces drift.
+
+The governed increment SHALL be coherent enough to baseline, trace, verify, validate, release or otherwise disposition, and transfer to an operational owner where applicable. Future product scope outside the increment need not be fully specified.
 
 ---
 
@@ -193,6 +202,9 @@ Before advancing to Requirements phase, confirm:
 - No architectural commitments made  
 - No implementation assumptions embedded  
 - RTM scaffold prepared  
+- Governed increment assigned a stable identifier
+- Project Governance Profile approved with tailoring and authority assignments
+- Material uncertainty recorded, bounded, assigned, and linked
 
 If any condition is unmet, remain in Ideation.
 

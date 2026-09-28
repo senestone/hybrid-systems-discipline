@@ -37,6 +37,7 @@ Cursor must not override lifecycle discipline.
 Before generating, modifying, or refactoring code, verify:
 
 - Current lifecycle phase
+- Governed increment and approved Project Governance Profile
 - Implementation phase authorized
 - High-Level Architecture approved
 - Detailed Design approved
@@ -183,6 +184,8 @@ For each project instantiated from this toolkit, Cursor must preserve project gl
 
 Cross-lifecycle record discipline:
 
+- Apply the approved Project Governance Profile, including tailoring, human authority, review-independence, and evidence obligations.
+- Require profile review when scope, risk factors, authority assignments, or approved tailoring materially change.
 - Update the Project Risk Register when implementation work identifies or changes a material risk, assumption, issue, or dependency.
 - Require a Change Proposal and Impact Assessment before proceeding with a material change to an approved artifact or lifecycle obligation.
 - Record executed validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.

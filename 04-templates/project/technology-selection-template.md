@@ -2,8 +2,8 @@
 File: 04-templates/project/technology-selection-template.md
 
 Purpose:
-  Record the evidence, alternatives, rationale, and lifecycle impact behind
-  implementation technology choices.
+  Record the evidence, alternatives, rationale, staged approval, and lifecycle
+  impact behind material technology choices.
 
 Lifecycle authority resides in:
   02-governance/00-lifecycle-bootstrap.md
@@ -13,7 +13,7 @@ Lifecycle authority resides in:
 
 Project:
 Decision ID:
-Status: Proposed / Approved / Superseded
+Status: Hypothesis / Candidate / Under Investigation / Provisional Architectural Baseline / Approved for Detailed Design / Approved for Implementation / Locked for Release / Superseded
 Date:
 Owner:
 Attribution: Human/organizational accountability only; AI tools must not be listed as authors, maintainers, owners, preparers, creators, contributors, or attribution recipients.
@@ -27,7 +27,7 @@ Glossary version:
 Risk Register version:
 Related Change ID(s):
 
-Use `Not yet available` with a reason for downstream artifact versions that do not exist in the current phase. Replace these before approval for implementation.
+Use `Not yet available` with a reason for downstream artifact versions that do not exist in the current phase. Resolve each reference before the status that depends on it.
 
 ---
 
@@ -35,9 +35,24 @@ Use `Not yet available` with a reason for downstream artifact versions that do n
 
 State the specific choice under review: language, runtime, storage adapter, build tool, framework, deployment technology, or another bounded concern. State what this decision does not select. Identify the approved phase gate that permits the choice and any unresolved prerequisite.
 
-Evidence gathering may begin earlier, but a Proposed record is not an implementation baseline. Apply the current phase guardrail to any prototype or candidate discussion. Approve a material implementation choice only after the Test Planning to Implementation gate, when the approved requirements, architecture, design, RTM, and test mapping support it. A requirement-mandated choice made earlier still needs the applicable phase approval and impact review.
+Evidence gathering may begin in any authorized phase, but a Hypothesis, Candidate, or Under Investigation record is not a baseline. Apply the current phase guardrail to every prototype or candidate discussion.
 
-Do not treat a prototype, a default tool preference, or an available dependency as approval. If the choice changes an approved requirement, architecture boundary, or design contract, return to the earliest affected phase under change control.
+Use lifecycle-aware status deliberately:
+
+| Status | Meaning and Earliest Use |
+|--------|--------------------------|
+| Hypothesis | A possible option or claim identified during authorized exploration; no selection implied. |
+| Candidate | An option admitted for comparative evaluation after relevant constraints are known. |
+| Under Investigation | Evidence gathering or a bounded prototype is active; production use is not authorized. |
+| Provisional Architectural Baseline | Human-approved for a stated architectural dependency or constraint; unresolved evidence and rollback triggers remain explicit. |
+| Approved for Detailed Design | Human-approved for design reliance after affected requirements and architecture are approved. |
+| Approved for Implementation | Human-approved for production adoption no earlier than the Test Planning to Implementation gate and before implementation use. |
+| Locked for Release | The selected version and configuration are included in the release baseline; change requires formal impact assessment. |
+| Superseded | Replaced by a linked decision; historical rationale and evidence are retained. |
+
+A status SHALL NOT authorize work outside the current lifecycle phase. Earlier baseline status is permitted only when the choice is necessary to complete that phase and the applicable authority approves its stated scope, evidence, uncertainty, and rollback triggers.
+
+Do not treat a prototype, a default tool preference, or an available dependency as production approval. Prototype and spike outputs are non-production evidence unless the governed implementation is separately approved and traced. If the choice changes an approved requirement, architecture boundary, or design contract, return to the earliest affected phase under change control.
 
 ## 2. Drivers and Constraints
 

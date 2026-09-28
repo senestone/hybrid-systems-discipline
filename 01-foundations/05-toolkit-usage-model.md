@@ -38,6 +38,8 @@ This document prevents that.
 At minimum, load:
 
 - 02-governance/00-lifecycle-bootstrap.md
+- 02-governance/13-tailoring-and-authority-guardrail.md
+- Active Project Governance Profile
 - 05-platform-config/<agent-config>.md
 - 05-platform-config/enterprise-system-prompt.md
 
@@ -58,6 +60,10 @@ The Change Proposal and Impact Assessment template SHALL be loaded whenever a pr
 
 The Work Effort Log template MAY be loaded in any phase when the project elects to measure human effort. It is a planning and audit-support artifact, not a phase-gate deliverable or evidence of engineering quality.
 
+The approved Project Governance Profile SHALL remain available throughout the governed increment. It defines scope, tailoring, authority assignments, review independence, and evidence obligations.
+
+The Technology Selection Record and review checklist MAY be loaded in any phase where a material technology hypothesis, candidate, investigation, or baseline affects authorized work. The record's status SHALL match the current lifecycle authority; prototype evidence does not authorize production use.
+
 ---
 
 # 2. Phase-Specific Loading Model
@@ -69,6 +75,7 @@ Load:
 - Lifecycle Bootstrap
 - Enterprise System Prompt
 - Platform configuration
+- Project Governance Profile template
 - Project Glossary template when terminology is being formalized
 - Project Risk Register template
 

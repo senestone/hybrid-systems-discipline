@@ -13,13 +13,15 @@ Lifecycle authority resides in:
 
 Apply this checklist to a completed [technology selection record](technology-selection-template.md). It supplements the applicable phase gate; it does not authorize a new lifecycle phase.
 
-For a Proposed record, mark downstream items `Pending` with an owner and revisit point. All applicable items must be satisfied before the record becomes an Approved implementation baseline.
+For a pre-baseline record, mark downstream items `Pending` with an owner and revisit point. Apply only the criteria required by the requested status, but satisfy every applicable item before the record becomes Approved for Implementation or Locked for Release.
 
 ## Authority
 
 - [ ] The current lifecycle phase and approving owner are identified.
 - [ ] Available Requirements, Architecture, Detailed Design, and RTM versions are linked; missing downstream versions are identified and resolved before approval.
-- [ ] The Test Planning to Implementation gate is approved before a material implementation choice becomes a baseline; any earlier requirement-mandated choice follows its applicable phase guardrail.
+- [ ] The requested lifecycle-aware status is identified and does not authorize work outside the current phase.
+- [ ] A Provisional Architectural Baseline or Approved for Detailed Design decision identifies unresolved evidence and rollback triggers.
+- [ ] The Test Planning to Implementation gate is approved before a material choice becomes Approved for Implementation.
 - [ ] The proposed choice does not silently change an approved boundary or requirement.
 - [ ] Any required rollback and renewed approval are identified before adoption.
 
@@ -34,6 +36,7 @@ For a Proposed record, mark downstream items `Pending` with an owner and revisit
 ## Validation
 
 - [ ] A narrow prototype tests the highest-risk claims when documentation alone is insufficient.
+- [ ] Prototype or spike outputs are identified as non-production evidence and are not treated as approval for production use.
 - [ ] Failures, rollback, recovery, and trust-boundary behavior are exercised where applicable.
 - [ ] Unmeasured properties are marked unknown; no result is generalized beyond its test environment.
 - [ ] Remaining tests, owners, and revisit triggers are explicit.
@@ -46,4 +49,4 @@ For a Proposed record, mark downstream items `Pending` with an owner and revisit
 - [ ] Material lifecycle impacts have an approved Change Proposal and Impact Assessment.
 - [ ] Selection risks, assumptions, issues, and dependencies are reflected in the active Project Risk Register.
 - [ ] The choice, rejected alternatives, rationale, residual risks, and approval are recorded in the [project decision log](decision-log-template.md), with links in both directions.
-- [ ] The record distinguishes Proposed, Approved, and Superseded states.
+- [ ] The record uses the defined lifecycle-aware status and links any superseded decision.

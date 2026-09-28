@@ -182,6 +182,20 @@ Enforces:
 
 ---
 
+## 13. Tailoring and Authority
+
+- [13-tailoring-and-authority-guardrail.md](./13-tailoring-and-authority-guardrail.md)
+
+Enforces:
+
+- Governed-increment boundaries
+- Risk-based governance profiles
+- Explicit human decision rights
+- Controlled tailoring and exceptions
+- Controlled residual uncertainty
+
+---
+
 # Enforcement Principles
 
 - Guardrails enforce discipline within phases.
@@ -193,3 +207,4 @@ Enforces:
 - The Project Risk Register must remain current across lifecycle phases.
 - Material changes must be assessed and authorized through a Change Proposal and Impact Assessment before affected work proceeds.
 - Executed validation must be captured in a Verification and Validation Report with evidence linked from the RTM.
+- Each governed increment must have an approved Project Governance Profile defining proportional obligations and human authority assignments.

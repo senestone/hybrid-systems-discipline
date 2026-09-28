@@ -23,6 +23,8 @@ Agents must maintain the project-wide glossary for each project instantiated fro
 
 Agents must maintain the governed records that connect change, risk, and validation evidence for each project instantiated from this toolkit.
 
+- Confirm the governed increment and apply its approved Project Governance Profile, including tailoring, human authority, review-independence, and evidence obligations.
+- Require profile review when scope, risk factors, authority assignments, or approved tailoring materially change.
 - Add or update Project Risk Register entries when work identifies or changes a material risk, assumption, issue, or dependency.
 - Require a Change Proposal and Impact Assessment before proceeding with a material change to approved scope, requirements, architecture, design, validation obligations, packaging, operations, or documentation.
 - Record executed verification and validation results, deviations, defects, evidence references, and residual risks in the Verification and Validation Report.

@@ -13,7 +13,7 @@ They increasingly integrate deterministic subsystems with probabilistic componen
 
 Hybrid systems inherit the properties — and failure modes — of both modalities.
 
-Traditional SDLC models were not designed to govern probabilistic behavior.
+Established software and systems engineering provides the lifecycle foundation. This toolkit adds explicit controls for AI-assisted execution and deterministic-probabilistic boundaries that conventional implementations often leave unspecified.
 
 This toolkit provides structured lifecycle discipline for integrating probabilistic systems into deterministic architectures without sacrificing rigor, traceability, auditability, or economic control.
 
@@ -55,6 +55,8 @@ This toolkit establishes the missing governance layer.
 This repository defines:
 
 - A constitutional lifecycle authority
+- Governed increments with proportional, risk-based tailoring
+- Explicit human authority and decision-right assignments
 - Phase-gated advancement control
 - Deterministic–probabilistic boundary containment
 - Mandatory bidirectional traceability
@@ -138,6 +140,7 @@ Constitutional lifecycle control and guardrails:
   - Packaging
   - Orchestration
 - [Phase Gate Checklist](02-governance/12-phase-gate-checklist.md)
+- [Tailoring and Authority Guardrail](02-governance/13-tailoring-and-authority-guardrail.md)
 
 The [Guardrails Index](02-governance/guardrails-index.md) links every phase guardrail.
 
@@ -163,12 +166,13 @@ Structured execution artifacts.
 
 **Project Templates**
 - [Project Primer](04-templates/project/project-primer-template.md): intent and scope during Ideation.
+- [Project Governance Profile](04-templates/project/project-governance-profile-template.md): governed increment, risk-based tailoring, human authority assignments, controlled uncertainty, and evidence obligations.
 - [Decision Log](04-templates/project/decision-log-template.md): approved decisions, authority, and change lineage across phases.
 - [Project Glossary](04-templates/project/project-glossary-template.md): authoritative normative terms, abbreviations, and acronyms for a project instantiated from the toolkit.
 - [Project Risk Register](04-templates/project/project-risk-register-template.md): lifecycle-wide risks, assumptions, issues, dependencies, responses, and human acceptance.
 - [Change Proposal and Impact Assessment](04-templates/project/change-impact-assessment-template.md): proposed change scope, affected artifacts, rollback phase, risks, verification, and authorization.
 - [Daily Log](04-templates/project/daily-log-template.md): phase status, work, issues, and traceability updates.
-- [Technology Selection Record](04-templates/project/technology-selection-template.md): evidence and impacts for material implementation choices; link its ID to the Decision Log.
+- [Technology Selection Record](04-templates/project/technology-selection-template.md): lifecycle-aware evidence, baselines, and impacts for material technology choices; link its ID to the Decision Log.
 - [Technology Selection Review Checklist](04-templates/project/technology-selection-review-checklist.md): review the selection record before approval and adoption.
 - [Work Effort Log](04-templates/project/work-effort-log-template.md): optional measured human effort with lifecycle, artifact, and governed-ID links; automated runtime remains separate.
 
