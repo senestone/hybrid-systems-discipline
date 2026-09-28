@@ -90,6 +90,8 @@ Correct loading is part of governance.
 
 See the [Toolkit Usage Model](01-foundations/05-toolkit-usage-model.md) for operational guidance.
 
+The validator requires Python 3.9 or newer and uses only the Python standard library. Continuous integration currently runs it with Python 3.12.
+
 Validate repository structure locally with:
 
 ```bash
