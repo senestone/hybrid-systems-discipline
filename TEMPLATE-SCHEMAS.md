@@ -1,7 +1,7 @@
 # Template Schema Registry
 
-Registry Version: 1.1.0
-Applicable Toolkit Release: 0.9.0
+Registry Version: 1.1.1
+Applicable Toolkit Release: 0.9.1
 
 Schema versions describe template structure and meaning. They are distinct from the version of a project artifact instantiated from a template.
 
@@ -15,8 +15,8 @@ Schema versions describe template structure and meaning. They are distinct from 
 | HSD-PROJ-PRIMER | 1.0.0 | [Project Primer](04-templates/project/project-primer-template.md) | Ideation |
 | HSD-PROJ-PROCESS-ASSESSMENT | 1.0.0 | [Process Assessment Report](04-templates/project/process-assessment-report-template.md) | Pilot and process measurement |
 | HSD-PROJ-RISK | 1.0.0 | [Project Risk Register](04-templates/project/project-risk-register-template.md) | Cross-lifecycle risk |
-| HSD-PROJ-TECH-REVIEW | 1.0.0 | [Technology Selection Review Checklist](04-templates/project/technology-selection-review-checklist.md) | Technology decision review |
-| HSD-PROJ-TECH-SELECTION | 1.0.0 | [Technology Selection Record](04-templates/project/technology-selection-template.md) | Technology decision evidence |
+| HSD-PROJ-TECH-REVIEW | 1.0.1 | [Technology Selection Review Checklist](04-templates/project/technology-selection-review-checklist.md) | Technology decision review |
+| HSD-PROJ-TECH-SELECTION | 1.0.1 | [Technology Selection Record](04-templates/project/technology-selection-template.md) | Technology decision evidence |
 | HSD-PROJ-WORK-EFFORT | 1.0.0 | [Work Effort Log](04-templates/project/work-effort-log-template.md) | Optional human-effort measurement |
 | HSD-SYS-ARCH | 1.0.0 | [Architecture](04-templates/system/architecture-template.md) | High-Level Architecture |
 | HSD-SYS-DD | 1.0.0 | [Detailed Design](04-templates/system/detailed-design-template.md) | Detailed Design |

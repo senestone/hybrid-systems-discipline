@@ -8,6 +8,27 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 No unreleased changes.
 
+## [0.9.1] - 2026-09-28
+
+### Fixed
+
+- Removed the circular approval order between the Test Planning-to-Implementation gate and `Approved for Implementation` technology status by making both outcomes part of the same accountable human decision.
+
+### Compatibility and Migration
+
+- Projects using `0.9.0` may adopt the corrected ordering without changing lifecycle scope, authority, evidence, or gate criteria.
+- The Template Schema Registry advances to `1.1.1`; `HSD-PROJ-TECH-REVIEW` and `HSD-PROJ-TECH-SELECTION` advance to `1.0.1` for the approval-order correction. Other schema versions are unchanged.
+
+### Known Limitations
+
+- The executable validator checks this toolkit repository; it does not yet validate instantiated project artifacts.
+- Structural checks do not establish semantic correctness, evidence authenticity, standards conformity, or human approval.
+- Toolkit effectiveness has not yet been established through a sufficiently broad body of completed, independently assessed projects.
+
+### Release Authorization
+
+- Authorized by the repository owner on 2026-09-28.
+
 ## [0.9.0] - 2026-09-28
 
 ### Added

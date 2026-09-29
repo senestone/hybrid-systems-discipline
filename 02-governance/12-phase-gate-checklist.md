@@ -184,7 +184,7 @@ Human approval required.
 - Deterministic–probabilistic containment validation defined  
 - RTM updated with Verification Case IDs, methods, and applicable Test Case IDs
 - Validation scenarios defined for stakeholder needs, intended use, and operational context
-- Material technology choices required by implementation are Approved for Implementation with linked selection and decision records
+- Material technology choices required by implementation have satisfied all criteria for `Approved for Implementation`, with linked selection and decision records; their status transitions SHALL be recorded in the same accountable human decision that approves this gate
 - Glossary entries current for test terminology, acronyms, and abbreviations
 - Verification and Validation Report structure and evidence-retention approach defined
 

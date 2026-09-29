@@ -21,7 +21,7 @@ For a pre-baseline record, mark downstream items `Pending` with an owner and rev
 - [ ] Available Requirements, Architecture, Detailed Design, and RTM versions are linked; missing downstream versions are identified and resolved before approval.
 - [ ] The requested lifecycle-aware status is identified and does not authorize work outside the current phase.
 - [ ] A Provisional Architectural Baseline or Approved for Detailed Design decision identifies unresolved evidence and rollback triggers.
-- [ ] The Test Planning to Implementation gate is approved before a material choice becomes Approved for Implementation.
+- [ ] The material choice has satisfied all criteria for `Approved for Implementation`, and its status transition will be recorded in the same accountable human decision that approves the Test Planning-to-Implementation gate; a later material change requires impact assessment and renewed gate validation before implementation use.
 - [ ] The proposed choice does not silently change an approved boundary or requirement.
 - [ ] Any required rollback and renewed approval are identified before adoption.
 

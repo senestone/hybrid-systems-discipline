@@ -46,7 +46,7 @@ Use lifecycle-aware status deliberately:
 | Under Investigation | Evidence gathering or a bounded prototype is active; production use is not authorized. |
 | Provisional Architectural Baseline | Human-approved for a stated architectural dependency or constraint; unresolved evidence and rollback triggers remain explicit. |
 | Approved for Detailed Design | Human-approved for design reliance after affected requirements and architecture are approved. |
-| Approved for Implementation | Human-approved for production adoption no earlier than the Test Planning to Implementation gate and before implementation use. |
+| Approved for Implementation | Human-approved for production adoption through the same accountable human decision that approves the Test Planning-to-Implementation gate, or through a later approved change with renewed gate validation, and always before implementation use. |
 | Locked for Release | The selected version and configuration are included in the release baseline; change requires formal impact assessment. |
 | Superseded | Replaced by a linked decision; historical rationale and evidence are retained. |
 

@@ -125,6 +125,7 @@ PROHIBITED_STALE_PATTERNS = {
     r"Traditional (?:SDLC|lifecycle) models were not designed": "superseded positioning claim",
     r"Cursor is loaded only during Implementation": "vendor-specific lifecycle restriction",
     r"Minimal Mode vs Enterprise Mode": "retired loading-mode model",
+    r"The Test Planning to Implementation gate is approved before a material choice becomes Approved for Implementation": "circular technology-approval ordering",
 }
 
 PUBLISHED_INDEX_REQUIRED_PATHS = (
@@ -354,6 +355,29 @@ class Validator:
         for template in sorted(registered_templates - expected_templates):
             self.check(False, f"registry references a non-template path: {template}")
 
+    def check_technology_approval_order(self) -> None:
+        gate = self.read("02-governance/12-phase-gate-checklist.md")
+        checklist = self.read("04-templates/project/technology-selection-review-checklist.md")
+        record = self.read("04-templates/project/technology-selection-template.md")
+
+        required_phrase = "same accountable human decision"
+        self.check(
+            required_phrase in gate,
+            "Test Planning-to-Implementation gate does not define atomic technology approval",
+        )
+        self.check(
+            required_phrase in checklist,
+            "technology-selection review checklist does not define atomic gate approval",
+        )
+        self.check(
+            required_phrase in record,
+            "technology-selection record does not define atomic gate approval",
+        )
+        self.check(
+            "renewed gate validation" in checklist and "renewed gate validation" in record,
+            "later material technology changes do not require renewed gate validation",
+        )
+
     def check_platform_parity(self) -> None:
         platform_dir = ROOT / "05-platform-config"
         platform_files = sorted(platform_dir.glob("*.md"))
@@ -421,6 +445,7 @@ class Validator:
         self.check_required_sections()
         self.check_release_metadata()
         self.check_template_registry()
+        self.check_technology_approval_order()
         self.check_platform_parity()
         self.check_stale_patterns(files)
         self.check_local_only_files()
